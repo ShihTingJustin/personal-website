@@ -15,11 +15,12 @@ a {
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 7s ease infinite;
   height: 100vh;
+  color: #fff;
 }
 
 @keyframes gradient {
@@ -32,16 +33,47 @@ body {
   100% {
     background-position: 50% 0%;
   }
+} */
+
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
 }
 
+#intro {
+  width: 100%;
+  min-height: 100vh;
+    padding: 0;
+  margin: 0;
+  /* RWD */
+  /* display: flex;   */
+}
+
+#intro-image {
+  background-attachment: fixed;
+  background: url("../public/me.jpg") no-repeat center/contain;
+  /* background-position: 54.25% 5%; */
+  background-size: cover;
+  position: relative;
+  height: 50vh;
+  width: 100%;
+}
+
+#intro-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
 .item {
   width: 200px;
   height: 200px;
   margin: 50px auto;
   padding-top: 75px;
-  background: tomato;
+  background: rgba(200, 213, 240, 0.5);
   text-align: center;
-  color: #fff;
   font-size: 3em;
 }
 
@@ -50,8 +82,14 @@ body {
   width: 100%;
 }
 
+.fixed {
+  background-attachment: fixed;
+  position: relative;
+  height: 100vh;
+}
+
 #cover {
-  /* background: url("../public/IMG_7420_2.jpg") no-repeat; */
+  /* background: url("../public/mountain.jpg") no-repeat; */
   background-size: cover;
   background-attachment: fixed;
   background-position: 60% 0%;
@@ -64,68 +102,34 @@ body {
 }
 
 #cover-text {
-  color: #000;
   font-size: 2.5em;
   width: 100%;
   margin-left: 0.25em;
-}
-
-.fade {
-  animation: fadeIn linear 7s;
-  -webkit-animation: fadeIn linear 7s;
-  -moz-animation: fadeIn linear 7s;
-  -o-animation: fadeIn linear 7s;
-  -ms-animation: fadeIn linear 7s;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-o-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 }
 
 #cover-text div {
   width: 100%;
 }
 
-.fixed {
-  background: url("../public/IMG_7420_2.jpg") no-repeat;
+#developer {
+  background: url("../public/matrix.jpg") no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 
-.fixed1 {
-  background: url("../public/Nite.jpg") no-repeat center/contain;
+
+.fixed .content {
+  position: absolute;
+  top: 32%;
+  left: 20%;
+  background: rgba(200, 213, 240, 0.5);
+  width: 30%;
+  height: 20vw;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+#petrolHead {
+  background: url("../public/roadster.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
