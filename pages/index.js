@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect/dist/core";
 import Head from "next/head";
