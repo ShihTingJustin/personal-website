@@ -62,11 +62,19 @@ a {
 }
 
 #intro-content {
+  text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 50vh;
+  align-items: flex-start;
+  height: 100vh;
 }
+
+
+
+#intro-content .content p {
+  padding: 0 30px;
+}
+
 .item {
   width: 200px;
   height: 200px;
