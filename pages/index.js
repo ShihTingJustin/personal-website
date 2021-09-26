@@ -30,11 +30,32 @@ export default function Home() {
         <div id="cover-text"></div>
       </div>
       <div id="intro" className="">
-        <div id="intro-image"></div>
+        {/* <div id="intro-image"></div> */}
         <div id="intro-content">
           <div className="content" data-aos="fade-up">
-            <h2>賈斯丁·黃</h2>
+            <h1>賈斯丁·黃</h1>
             <h3>不安分的靈魂</h3>
+            {/* <p>
+              一個非典型技術宅，既鑽研技術也享受打造產品和琢磨細節的過程。
+              <br />
+              被敏捷開發燒到後決定前往軟體領域一探究竟，目前在電商產業擔任前端工程師。
+            </p>
+            <p>
+              汽車愛好者，對德國工藝特別著迷，尤其是賓士全方位的產品配置和保時捷獨樹一格的德式激情。
+              <br />
+              熱衷於分析市場和規格，曾在台灣唯一整車研發企業擔任產品經理。
+            </p>
+            <p>
+              指數化投資的實踐者，經歷美股兩週四次熔斷和後續V型反轉的洗禮後，領悟了一套適合自己的投資哲學。
+            </p>
+            <p>
+              喜歡看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等。
+            </p> */}
+          </div>
+        </div>
+      </div>
+      <div id="about" className="fixed">
+        <div id="about-content">
             <p>
               一個非典型技術宅，既鑽研技術也享受打造產品和琢磨細節的過程。
               <br />
@@ -52,7 +73,6 @@ export default function Home() {
               喜歡看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等。
             </p>
           </div>
-        </div>
       </div>
       <div id="developer" className="fixed">
         <div className="content" data-aos="fade-up">

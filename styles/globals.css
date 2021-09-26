@@ -40,64 +40,7 @@ a {
   height: 100%;
   background-color: #000;
   color: #fff;
-}
-
-#intro {
-  width: 100%;
-  min-height: 100vh;
-    padding: 0;
-  margin: 0;
-  /* RWD */
-  /* display: flex;   */
-}
-
-#intro-image {
-  background-attachment: fixed;
-  background: url("../public/me.jpg") no-repeat center/contain;
-  /* background-position: 54.25% 5%; */
-  background-size: cover;
   position: relative;
-  height: 50vh;
-  width: 100%;
-}
-
-#intro-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-}
-
-#intro-content .content h3 {
-  margin-bottom: 1em;
-}
-
-#intro-content .content p {
-  padding: 0 30px;
-  line-height: 1.5em;
-  text-align: left;
-}
-
-.item {
-  width: 200px;
-  height: 200px;
-  margin: 50px auto;
-  padding-top: 75px;
-  background: rgba(200, 213, 240, 0.5);
-  text-align: center;
-  font-size: 3em;
-}
-
-.expand {
-  height: 500px;
-  width: 100%;
-}
-
-.fixed {
-  background-attachment: fixed;
-  position: relative;
-  height: 100vh;
 }
 
 #cover {
@@ -123,11 +66,70 @@ a {
   width: 100%;
 }
 
+.fixed {
+  position: relative;
+  height: 100vh;
+}
+
+#intro {
+  position: relative;
+  background: url("../public/me.jpg") no-repeat center/contain;
+  background-size: 36em;
+  background-position: 0 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+#intro-image {
+  background-attachment: fixed;
+  background: url("../public/me.jpg") no-repeat center/contain;
+  /* background-position: 54.25% 5%; */
+  background-size: cover;
+  position: relative;
+  height: 50vh;
+  width: 100%;
+}
+
+#intro-content {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  text-align: left;
+}
+
+#intro-content .content h3 {
+  margin-bottom: 1em;
+}
+
+#intro-content .content p {
+  line-height: 1.5em;
+  text-align: left;
+}
+
+#about {
+  background: url("../public/mountain.jpg") no-repeat;
+  background-position: 70% 0;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#about-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
 #developer {
   background: url("../public/matrix.jpg") no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
-
 
 .fixed .content {
   position: absolute;
@@ -144,10 +146,4 @@ a {
   background: url("../public/roadster.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-}
-
-.fixed p,
-.fixed1 p {
-  height: 200px;
-  margin: auto;
 }
