@@ -10,7 +10,14 @@ import linkedinIcon from "../public/linkedin_icon.svg";
 export default function Home() {
   useEffect(() => {
     new Typewriter("#cover-text", {
-      strings: ["Developer", "Learner", "TA", "Petrol-head", "Product Manager"],
+      strings: [
+        "Developer",
+        "Investor",
+        "Petrol-head",
+        "Product Manager",
+        "Learner",
+        "Teaching Assistant",
+      ],
       autoStart: true,
       loop: true,
       deleteSpeed: 50,
@@ -29,13 +36,20 @@ export default function Home() {
             <h2>賈斯丁·黃</h2>
             <h3>不安分的靈魂</h3>
             <p>
-              一個非典型技術宅，喜歡打造產品，琢磨細節設定。被敏捷開發燒到後決定前往軟體領域一探究竟，目前在電商產業擔任前端工程師。
+              一個非典型技術宅，既鑽研技術也享受打造產品和琢磨細節的過程。
+              <br />
+              被敏捷開發燒到後決定前往軟體領域一探究竟，目前在電商產業擔任前端工程師。
             </p>
             <p>
-              指數化投資的實踐者，經歷美股兩週內四次熔斷和後續V型反轉的洗禮後，對投資哲學有了更深的領悟。
+              汽車愛好者，對德國工藝特別著迷，尤其是賓士全方位的產品配置和保時捷獨樹一格的德式激情。
+              <br />
+              熱衷於分析市場和規格，曾在台灣唯一整車研發企業擔任產品經理。
             </p>
             <p>
-              汽車愛好者，認為汽車是人類智慧的結晶，也是力與美的結合。熱衷於鑽研市場和規格，對德國工藝特別著迷，尤其是賓士的全面和保時捷的浪漫。曾在台灣唯一整車研發企業擔任產品經理。
+              指數化投資的實踐者，經歷美股兩週四次熔斷和後續V型反轉的洗禮後，領悟了一套適合自己的投資哲學。
+            </p>
+            <p>
+              喜歡看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等。
             </p>
           </div>
         </div>
