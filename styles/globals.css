@@ -76,6 +76,7 @@ a {
   background: url("../public/me.jpg") no-repeat center/contain;
   background-size: 36em;
   background-position: 0 0;
+  background-attachment: fixed;
   width: 100%;
   min-height: 100vh;
   padding: 0;
@@ -111,6 +112,7 @@ a {
 #about {
   background: url("../public/mountain.jpg") no-repeat;
   background-position: 70% 0;
+  -webkit-background-position: 70% 0;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -126,6 +128,7 @@ a {
 }
 
 #developer {
+  width: 100%;
   background: url("../public/matrix.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -143,6 +146,7 @@ a {
 }
 
 #petrolHead {
+  width: 100%;
   background: url("../public/roadster.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
