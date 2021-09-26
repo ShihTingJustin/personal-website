@@ -73,25 +73,24 @@ a {
 
 #intro {
   position: relative;
-  background: url("../public/me.jpg") no-repeat center/contain;
-  background-size: 36em;
+  background: url("../public/me.jpg") no-repeat;
   background-position: 0 0;
   background-attachment: fixed;
-  width: 100%;
   min-height: 100vh;
-  padding: 0;
-  margin: 0;
+  -webkit-background-size: 36em;
+  -moz-background-size: 36em;
+  -o-background-size: 36em;
+  background-size: 36em;
 }
 
-#intro-image {
+/* #intro-image {
   background-attachment: fixed;
   background: url("../public/me.jpg") no-repeat center/contain;
-  /* background-position: 54.25% 5%; */
   background-size: cover;
   position: relative;
   height: 50vh;
   width: 100%;
-}
+} */
 
 #intro-content {
   position: absolute;
@@ -112,7 +111,6 @@ a {
 #about {
   background: url("../public/mountain.jpg") no-repeat;
   background-position: 70% 0;
-  -webkit-background-position: 70% 0;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -128,10 +126,16 @@ a {
 }
 
 #developer {
-  width: 100%;
   background: url("../public/matrix.jpg") no-repeat;
-  background-size: cover;
   background-attachment: fixed;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .fixed .content {
@@ -146,8 +150,14 @@ a {
 }
 
 #petrolHead {
-  width: 100%;
   background: url("../public/roadster.jpg") no-repeat center;
-  background-size: cover;
   background-attachment: fixed;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
