@@ -74,14 +74,14 @@ a {
 #intro {
   position: relative;
   background: url("../public/me.jpg");
-  background-repeat: no-repeat; /* safari */
+  /* background-repeat: no-repeat; safari */
   background-position: 0 0;
   background-attachment: fixed;
   min-height: 100vh;
-  -webkit-background-size: 36em;
-  -moz-background-size: 36em;
-  -o-background-size: 36em;
-  background-size: 36em;
+  -webkit-background-size: 38em;
+  -moz-background-size: 38em;
+  -o-background-size: 38em;
+  background-size: 38em;
 }
 
 /* #intro-image {
@@ -111,7 +111,7 @@ a {
 
 #about {
   background: url("../public/mountain.jpg");
-  background-repeat: no-repeat; /* safari */
+  /* background-repeat: no-repeat; safari */
   background-position: 70% 0;
   background-size: cover;
   -webkit-background-size: cover;
@@ -133,7 +133,7 @@ a {
 
 #developer {
   background: url("../public/matrix.jpg");
-  background-repeat: no-repeat; /* safari */
+  /* background-repeat: no-repeat; safari */
   background-attachment: fixed;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -158,7 +158,7 @@ a {
 
 #petrolHead {
   background: url("../public/roadster.jpg");
-  background-repeat: no-repeat; /* safari */
+  /* background-repeat: no-repeat; safari */
   background-position: center;
   background-attachment: fixed;
   -webkit-background-size: 100%;
