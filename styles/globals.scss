@@ -1,0 +1,107 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+
+#cover, #intro {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed; // safari disable
+
+  #cover-text {
+    width: 100%;
+    font-size: 2.5em;
+    margin-left: 0.25em;
+  }
+}
+
+
+.fixed {
+  position: relative;
+  height: 100vh;
+}
+
+#intro {
+  position: relative;
+  background: url("../public/me.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 38em;
+  background-attachment: fixed;
+  
+  #intro-content {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    text-align: left;
+  }
+}
+
+
+#about {
+  background: url("../public/mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70% 0;
+  background-attachment: fixed;
+
+  #about-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+  }
+}
+
+#developer {
+  background: url("../public/matrix.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.fixed .content {
+  position: absolute;
+  top: 32%;
+  left: 20%;
+  background: rgba(200, 213, 240, 0.5);
+  width: 30%;
+  height: 20vw;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+#petrolHead {
+  background: url("../public/roadster.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
