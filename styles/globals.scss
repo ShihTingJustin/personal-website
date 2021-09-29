@@ -23,7 +23,9 @@ a {
   position: relative;
 }
 
-#cover, #intro {
+#cover,
+#intro,
+#intro-content {
   width: 100%;
   min-height: 100vh;
 }
@@ -41,28 +43,47 @@ a {
   }
 }
 
-
 .fixed {
   position: relative;
   height: 100vh;
 }
 
 #intro {
-  position: relative;
-  background: url("../public/me.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 38em;
-  // background-attachment: fixed;
-  
+  display: flex;
+  align-items: center;
+
+  #intro-image {
+    width: 100vw;
+    min-height: 100vh;
+    background: url("../public/me.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 45%;
+    background-size: cover;
+    // background-attachment: fixed;
+  }
+
   #intro-content {
-    position: absolute;
-    top: 10%;
-    left: 10%;
+    min-height: 50vh;
     text-align: left;
   }
 }
 
+@media (max-width: 1010px) {
+  #intro {
+    flex-wrap: wrap;
+
+    #intro-image,
+    #intro-content {
+      min-height: 50vh;
+    }
+
+    #intro-image {
+      width: 100vw;
+      background-size: cover;
+      background-position: 0 35%;
+    }
+  }
+}
 
 #about {
   background: url("../public/mountain.jpg");
