@@ -104,28 +104,21 @@ a {
   }
 }
 
-#about {
-  background: url("../public/image/mountain.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 70% 0;
-  // background-attachment: fixed;
-
-  #about-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 20px;
-  }
-}
-
 #developer {
   background: url("../public/image/matrix.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   // background-attachment: fixed;
 }
+
+#coding {
+  background: url("../public/image/mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70% 0;
+  // background-attachment: fixed;
+}
+
 
 .fixed .content {
   position: absolute;
@@ -146,10 +139,18 @@ a {
   // background-attachment: fixed;
 }
 
-#contact {
-  .content {
-    .icon {
-      
-    }
-  }
+#sea {
+  background: url("../public/image/sea.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
 }
+
+// #contact {
+//   .content {
+//     .icon {
+      
+//     }
+//   }
+// }
