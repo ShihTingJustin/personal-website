@@ -5,7 +5,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-import linkedinIcon from "../public/linkedin_icon.svg";
+import linkedinIcon from "../public/icon/linkedin-icon.svg";
+import igIcon from "../public/icon/ig-icon.svg";
+import mediumIcon from "../public/icon/medium-icon.svg";
+import mailIcon from "../public/icon/mail-icon.svg";
 
 export default function Home() {
   useEffect(() => {
@@ -52,12 +55,12 @@ export default function Home() {
         <div id="intro-image"></div>
         <div id="intro-content">
           <div className="title" data-aos="fade-up">
-            <h2>賈斯丁·黃</h2>
+            <h2>賈斯丁黃</h2>
             <h3>不安分的靈魂</h3>
           </div>
           <div className="content" data-aos="fade-up">
             一個非典型技術宅，鑽研技術也享受打造產品和琢磨細節的過程，被敏捷開發燒到後決定前往軟體領域一探究竟。
-            <br/>
+            <br />
             目前在電商產業擔任前端工程師，也在程式教育機構兼職助教。
           </div>
           <div className="content" data-aos="fade-up">
@@ -103,11 +106,30 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="social-media" className="fixed">
+      <div id="contact" className="fixed">
         <div className="content" data-aos="fade-up">
-          <div>
-            <Image src={linkedinIcon} alt="" />
-          </div>
+          <Image
+            className="icon"
+            width="24"
+            height="24"
+            src={linkedinIcon}
+            alt=""
+          />
+          <Image
+            className="icon"
+            width="30"
+            height="30"
+            src={mediumIcon}
+            alt=""
+          />
+          <Image
+            className="icon"
+            width="30"
+            height="30"
+            src={mailIcon}
+            alt=""
+          />
+          <Image className="icon" width="25" height="25" src={igIcon} alt="" />
         </div>
       </div>
     </div>
