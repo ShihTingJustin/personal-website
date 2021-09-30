@@ -84,9 +84,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="about" className="fixed">
+      <section id="coding" className="fixed">
         <div className="content" data-aos="fade-up">
-          愛看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等。
+          寫程式
         </div>
       </section>
       <section id="petrolHead" className="fixed">
@@ -95,8 +95,13 @@ export default function Home() {
           <p></p>
         </div>
       </section>
-
-      <div id="quote" className="fixed">
+      <section id="sea" className="fixed">
+        <div className="content" data-aos="fade-up">
+          <h3>看海</h3>
+          <p></p>
+        </div>
+      </section>
+      <section id="quote" className="fixed">
         <div className="content" data-aos="fade-up">
           <h5>
             "Your time is limited, so don't waste it living someone else's
@@ -104,9 +109,9 @@ export default function Home() {
           </h5>
           <p>Steve Jobs</p>
         </div>
-      </div>
+      </section>
 
-      <div id="contact" className="fixed">
+      <section id="contact" className="fixed">
         <div className="content" data-aos="fade-up">
           <Image
             className="icon"
@@ -131,7 +136,7 @@ export default function Home() {
           />
           <Image className="icon" width="25" height="25" src={igIcon} alt="" />
         </div>
-      </div>
+      </section>
     </div>
   );
 }
