@@ -6,9 +6,10 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import linkedinIcon from "../public/icon/linkedin-icon.svg";
-import igIcon from "../public/icon/ig-icon.svg";
+import githubIcon from "../public/icon/github-icon.svg";
+import instagramIcon from "../public/icon/ig-icon.svg";
 import mediumIcon from "../public/icon/medium-icon.svg";
-import mailIcon from "../public/icon/mail-icon.svg";
+import gmailIcon from "../public/icon/gmail-icon.svg";
 
 export default function Home() {
   useEffect(() => {
@@ -131,10 +132,23 @@ export default function Home() {
             className="icon"
             width="30"
             height="30"
-            src={mailIcon}
+            src={gmailIcon}
             alt=""
           />
-          <Image className="icon" width="25" height="25" src={igIcon} alt="" />
+          <Image
+            className="icon"
+            width="25"
+            height="25"
+            src={instagramIcon}
+            alt=""
+          />
+          <Image
+            className="icon"
+            width="25"
+            height="25"
+            src={githubIcon}
+            alt=""
+          />
         </div>
       </section>
     </div>
