@@ -52,7 +52,7 @@ export default function Home() {
       <div id="cover">
         <div id="cover-text"></div>
       </div>
-      <section id="intro" className="">
+      <section id="intro" className="wrapper">
         <div id="intro-image"></div>
         <div id="intro-content">
           <div className="title" data-aos="fade-up">
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="developer" className="fixed">
+      <section id="developer" className="wrapper">
         <div className="bg">
           <div className="content" data-aos="fade-up">
             <h3>Developer</h3>
@@ -85,24 +85,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="coding" className="fixed">
-        <div className="content" data-aos="fade-up">
-          寫程式
-        </div>
-      </section>
-      <section id="petrolHead" className="fixed">
+      <section id="petrolHead" className="wrapper">
         <div className="content" data-aos="fade-up">
           <h3>汽車愛好者</h3>
           <p></p>
         </div>
       </section>
-      <section id="sea" className="fixed">
+      <section id="sea" className="wrapper">
         <div className="content" data-aos="fade-up">
           <h3>看海</h3>
           <p></p>
         </div>
       </section>
-      <section id="quote" className="fixed">
+      <section id="quote" className="wrapper">
         <div className="content" data-aos="fade-up">
           <h5>
             "Your time is limited, so don't waste it living someone else's
@@ -112,43 +107,64 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="fixed">
+      <section id="contact" className="wrapper">
+        {/* <div className="content" data-aos="fade-up">
+         歡迎透過社群媒體與我聯繫
+        </div> */}
+        <div className="title">社群媒體</div>
         <div className="content" data-aos="fade-up">
-          <Image
-            className="icon"
-            width="24"
-            height="24"
-            src={linkedinIcon}
-            alt=""
-          />
-          <Image
-            className="icon"
-            width="30"
-            height="30"
-            src={mediumIcon}
-            alt=""
-          />
-          <Image
-            className="icon"
-            width="30"
-            height="30"
-            src={gmailIcon}
-            alt=""
-          />
-          <Image
-            className="icon"
-            width="25"
-            height="25"
-            src={instagramIcon}
-            alt=""
-          />
-          <Image
-            className="icon"
-            width="25"
-            height="25"
-            src={githubIcon}
-            alt=""
-          />
+          <a
+            target="_tab"
+            rel="noopener noreferrer"
+            href="https://linkedin.com/in/justinhuang777"
+          >
+            <Image
+              className="icon"
+              width="24"
+              height="24"
+              src={linkedinIcon}
+              alt=""
+            />
+          </a>
+          <a
+            target="_tab"
+            rel="noopener noreferrer"
+            href="https://github.com/ShihTingJustin"
+          >
+            <Image
+              className="icon github-icon"
+              width="25"
+              height="25"
+              src={githubIcon}
+              alt=""
+            />
+          </a>
+          <a
+            target="_tab"
+            rel="noopener noreferrer"
+            href="https://medium.com/life-after-hello-world"
+          >
+            <Image
+              className="icon"
+              width="30"
+              height="30"
+              src={mediumIcon}
+              alt=""
+            />
+          </a>
+          <a
+            target="_tab"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/mb722656355s/"
+          >
+            <Image
+              className="icon"
+              width="25"
+              height="25"
+              src={instagramIcon}
+              alt=""
+            />
+          </a>
         </div>
       </section>
     </div>
