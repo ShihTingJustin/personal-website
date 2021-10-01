@@ -31,6 +31,11 @@ a {
   min-height: 100vh;
 }
 
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
 #cover {
   display: flex;
   justify-content: center;
@@ -42,11 +47,6 @@ a {
     font-size: 2.5em;
     margin-left: 0.25em;
   }
-}
-
-.fixed {
-  position: relative;
-  height: 100vh;
 }
 
 #intro {
@@ -111,15 +111,6 @@ a {
   // background-attachment: fixed;
 }
 
-#coding {
-  background: url("../public/image/mountain.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 70% 0;
-  // background-attachment: fixed;
-}
-
-
 .fixed .content {
   position: absolute;
   top: 32%;
@@ -147,10 +138,51 @@ a {
   // background-attachment: fixed;
 }
 
+#contact {
+  // background: url("../public/image/mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70% 0;
+  // background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    // position: absolute;
+    // top: 32%;
+    // left: 15%;
+    background: rgba(255, 253, 251, 0.7);
+    width: 60%;
+    height: 15vw;
+    color: #000;
+    font-size: 1.25em;
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 0.5em;
+  }
+
+  .title {
+    width: 60%;
+    margin-top: -5em;
+    margin-bottom: 2em;
+    text-align: left;
+  }
+
+  .icon {
+    border-radius: 5%;
+  }
+}
+
 // #contact {
 //   .content {
 //     .icon {
-      
+
 //     }
 //   }
 // }
