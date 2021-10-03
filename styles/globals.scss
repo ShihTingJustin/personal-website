@@ -7,6 +7,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 200;
+  scrollbar-width: none;
 }
 
 html {
@@ -17,6 +18,8 @@ html {
 
 body {
   max-width: 425px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 a {
@@ -63,10 +66,11 @@ a {
 
 #intro {
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   #intro-image {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background: url("../public/image//me.jpg");
     background-repeat: no-repeat;
@@ -99,22 +103,61 @@ a {
   }
 }
 
-@media (max-width: 1010px) {
-  #intro {
-    flex-wrap: wrap;
+// RWD
+// #intro {
+//   display: flex;
+//   align-items: center;
 
-    #intro-image,
-    #intro-content {
-      min-height: 50vh;
-    }
+//   #intro-image {
+//     width: 100vw;
+//     min-height: 100vh;
+//     background: url("../public/image//me.jpg");
+//     background-repeat: no-repeat;
+//     background-position: 0 45%;
+//     background-size: cover;
+//     // background-attachment: fixed;
+//   }
 
-    #intro-image {
-      width: 100vw;
-      background-size: cover;
-      background-position: 0 35%;
-    }
-  }
-}
+//   #intro-content {
+//     min-height: 50vh;
+//     text-align: left;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     margin-bottom: 2em;
+//     .title {
+//       margin-left: 2em;
+//       h2 {
+//         font-size: 3em;
+//       }
+//       h3 {
+//         margin-top: -1.5em;
+//         font-size: 1.25em;
+//       }
+//     }
+//     .content {
+//       margin: 0.75em 2em;
+//       line-height: 1.5em;
+//     }
+//   }
+// }
+
+// @media (max-width: 1010px) {
+//   #intro {
+//     flex-wrap: wrap;
+
+//     #intro-image,
+//     #intro-content {
+//       min-height: 50vh;
+//     }
+
+//     #intro-image {
+//       width: 100vw;
+//       background-size: cover;
+//       background-position: 0 35%;
+//     }
+//   }
+// }
 
 #developer {
   background: url("../public/image/matrix.jpg");
@@ -161,6 +204,7 @@ a {
     -webkit-filter: blur(4px);
     width: 100%;
     height: 100vh;
+    transform: scale(1.03); // avoid blur border
   }
 
   // background-attachment: fixed;
@@ -183,7 +227,7 @@ a {
     position: absolute;
     top: 40%;
     width: 80%;
-    height: 60vw;
+    // height: 60vw;
     color: #000;
     display: flex;
     justify-content: space-around;
@@ -196,7 +240,7 @@ a {
       border-radius: 22.5%;
       min-width: 3.25em;
       min-height: 3.25em;
-      margin: auto 2em;
+      margin: 3em 2em;
     }
 
     #linkedIn {
