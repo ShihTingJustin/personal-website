@@ -1,15 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Typewriter from "typewriter-effect/dist/core";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-
-import linkedinIcon from "../public/icon/linkedin-icon.svg";
-import githubIcon from "../public/icon/github-icon.svg";
-import instagramIcon from "../public/icon/ig-icon.svg";
-import mediumIcon from "../public/icon/medium-icon.svg";
-import gmailIcon from "../public/icon/gmail-icon.svg";
 
 export default function Home() {
   useEffect(() => {
