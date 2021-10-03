@@ -111,59 +111,40 @@ export default function Home() {
         {/* <div className="content" data-aos="fade-up">
          歡迎透過社群媒體與我聯繫
         </div> */}
-        <div className="title">社群媒體</div>
+        <div className="bg-blur"></div>
+        <h3 className="title" data-aos="fade-up">
+          透過社群媒體
+          <br />
+          更加認識賈斯丁
+        </h3>
         <div className="content" data-aos="fade-up">
           <a
             target="_tab"
             rel="noopener noreferrer"
             href="https://linkedin.com/in/justinhuang777"
           >
-            <Image
-              className="icon"
-              width="24"
-              height="24"
-              src={linkedinIcon}
-              alt=""
-            />
+            <div id="linkedIn" className="icon"></div>
           </a>
           <a
             target="_tab"
             rel="noopener noreferrer"
             href="https://github.com/ShihTingJustin"
           >
-            <Image
-              className="icon github-icon"
-              width="25"
-              height="25"
-              src={githubIcon}
-              alt=""
-            />
+            <div id="github" className="icon"></div>
           </a>
           <a
             target="_tab"
             rel="noopener noreferrer"
             href="https://medium.com/life-after-hello-world"
           >
-            <Image
-              className="icon"
-              width="30"
-              height="30"
-              src={mediumIcon}
-              alt=""
-            />
+            <div id="medium" className="icon"></div>
           </a>
           <a
             target="_tab"
             rel="noopener noreferrer"
             href="https://www.instagram.com/mb722656355s/"
           >
-            <Image
-              className="icon"
-              width="25"
-              height="25"
-              src={instagramIcon}
-              alt=""
-            />
+            <div id="instagram" className="icon"></div>
           </a>
         </div>
       </section>
