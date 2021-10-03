@@ -2,9 +2,21 @@ html,
 body {
   padding: 0;
   margin: 0;
+  // width: 100%;
+  // height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 200;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+body {
+  max-width: 425px;
 }
 
 a {
@@ -139,43 +151,76 @@ a {
 }
 
 #contact {
-  // background: url("../public/image/mountain.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 70% 0;
+  .bg-blur {
+    background: url("../public/image/mountain.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: 70% 0;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    width: 100%;
+    height: 100vh;
+  }
+
   // background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .content {
-    // position: absolute;
-    // top: 32%;
-    // left: 15%;
-    background: rgba(255, 253, 251, 0.7);
-    width: 60%;
-    height: 15vw;
-    color: #000;
-    font-size: 1.25em;
-    display: flex;
-    // flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-    line-height: 0.5em;
-  }
+  background-color: rgba(255, 253, 251, 0.7);
 
   .title {
+    position: absolute;
+    top: 20%;
     width: 60%;
-    margin-top: -5em;
-    margin-bottom: 2em;
     text-align: left;
+    line-height: 2em;
   }
 
-  .icon {
-    border-radius: 5%;
+  .content {
+    // background: rgba(255, 253, 251, 0.7);
+    position: absolute;
+    top: 40%;
+    width: 80%;
+    height: 60vw;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2;
+
+    .icon {
+      border-radius: 22.5%;
+      min-width: 3.25em;
+      min-height: 3.25em;
+      margin: auto 2em;
+    }
+
+    #linkedIn {
+      background: url("../public/icon/linkedin-icon.svg");
+      background-size: cover;
+    }
+
+    #github {
+      background: url("../public/icon/github-icon.svg");
+      background-size: cover;
+      background-position: center;
+      background-color: #fff;
+    }
+
+    #medium {
+      background: url("../public/icon/medium-icon.svg");
+      background-size: cover;
+      background-color: #fff;
+    }
+
+    #instagram {
+      background: url("../public/icon/ig-icon.svg");
+      background-size: cover;
+    }
   }
 }
 
