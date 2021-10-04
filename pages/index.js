@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </section> */}
       <section id="contact" className="wrapper">
-        <div className="title">透過社群媒體認識賈斯丁黃</div>
+        <div className="title">點擊社群媒體認識賈斯丁黃</div>
         <div className="content">
           <div id="linkedIn" className="card" data-aos="fade-up-right">
             <a
