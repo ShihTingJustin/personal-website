@@ -99,10 +99,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="wrapper">
-        {/* <div className="content" data-aos="fade-up">
-         歡迎透過社群媒體與我聯繫
-        </div> */}
+      {/* <section id="contact" className="wrapper">
         <div className="bg-blur"></div>
         <h3 className="title" data-aos="fade-up">
           透過社群媒體
@@ -138,6 +135,39 @@ export default function Home() {
           >
             <div id="instagram" className="icon"></div>
           </a>
+        </div>
+      </section> */}
+      <section id="contact" className="wrapper">
+        <div className="title">透過社群媒體認識賈斯丁黃</div>
+        <div className="content">
+          <div id="linkedIn" className="card" data-aos="fade-up-right">
+            <a
+              target="_tab"
+              rel="noopener noreferrer"
+              href="https://linkedin.com/in/justinhuang777"
+            ></a>
+          </div>
+          <div id="github" className="card" data-aos="fade-up-left">
+            <a
+              target="_tab"
+              rel="noopener noreferrer"
+              href="https://github.com/ShihTingJustin"
+            ></a>
+          </div>
+          <div id="medium" className="card" data-aos="fade-up-right">
+            <a
+              target="_tab"
+              rel="noopener noreferrer"
+              href="https://medium.com/life-after-hello-world"
+            ></a>
+          </div>
+          <div id="instagram" className="card" data-aos="fade-up-left">
+            <a
+              target="_tab"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/mb722656355s/"
+            ></a>
+          </div>
         </div>
       </section>
     </div>
