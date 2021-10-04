@@ -140,28 +140,28 @@ export default function Home() {
       <section id="contact" className="wrapper">
         <div className="title">點擊社群媒體認識賈斯丁黃</div>
         <div className="content">
-          <div id="linkedIn" className="card" data-aos="fade-up-right">
+          <div id="linkedIn" className="card" data-aos="zoom-in">
             <a
               target="_tab"
               rel="noopener noreferrer"
               href="https://linkedin.com/in/justinhuang777"
             ></a>
           </div>
-          <div id="github" className="card" data-aos="fade-up-left">
+          <div id="github" className="card" data-aos="zoom-in">
             <a
               target="_tab"
               rel="noopener noreferrer"
               href="https://github.com/ShihTingJustin"
             ></a>
           </div>
-          <div id="medium" className="card" data-aos="fade-up-right">
+          <div id="medium" className="card" data-aos="zoom-in">
             <a
               target="_tab"
               rel="noopener noreferrer"
               href="https://medium.com/life-after-hello-world"
             ></a>
           </div>
-          <div id="instagram" className="card" data-aos="fade-up-left">
+          <div id="instagram" className="card" data-aos="zoom-in">
             <a
               target="_tab"
               rel="noopener noreferrer"
