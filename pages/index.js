@@ -8,11 +8,11 @@ export default function Home() {
     new Typewriter("#cover-text", {
       strings: [
         "Developer",
-        "Investor",
+        "Teaching Assistant",
         "Petrol-head",
         "Product Manager",
         "Learner",
-        "Teaching Assistant",
+        "Investor",
       ],
       autoStart: true,
       loop: true,
@@ -64,29 +64,56 @@ export default function Home() {
           <div className="content" data-aos="fade-up">
             指數化投資的實踐者，經歷美股兩週四次熔斷和後續V型反轉的洗禮後，領悟了一套適合自己的投資哲學。
           </div>
-          <div className="content" data-aos="fade-up">
-            愛看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等;也喜歡昆丁塔倫提諾獨特的暴力美學和敘事手法，像是惡棍特工、決殺令、八惡人、從前有個好萊塢。
-          </div>
         </div>
       </section>
-      <section id="developer" className="wrapper">
+      {/* <section id="developer" className="wrapper">
         <div className="bg">
           <div className="content" data-aos="fade-up">
             <h3>Developer</h3>
             <p></p>
           </div>
         </div>
-      </section>
-      <section id="petrolHead" className="wrapper">
+      </section> */}
+      <section id="petrolHead" className="downtime-wrapper">
+        <div className="downtime-title" data-aos="fade-up">
+          汽車
+        </div>
         <div className="content" data-aos="fade-up">
-          <h3>汽車愛好者</h3>
-          <p></p>
+          汽車是人類智慧的結晶，力與美的結合，也是個人特色的展現。
+          假日爬得起來的話會在清晨去106縣道兜風，幸運的話可以獲得美美的追焦照。
+          生在資訊爆炸的時代讓玩車更容易，卻也感嘆內燃機的時代已經進入倒數計時。
         </div>
       </section>
-      <section id="sea" className="wrapper">
+      <section id="ta" className="downtime-wrapper">
+        <div className="downtime-title" data-aos="fade-up">
+          教育
+        </div>
         <div className="content" data-aos="fade-up">
-          <h3>看海</h3>
-          <p></p>
+          擔任助教除了批改作業，也時常從學生提出的問題中學習，或是看到自己也可以更進步的地方，教學相長。
+        </div>
+      </section>
+      <section id="sharing" className="downtime-wrapper">
+        <div className="downtime-title" data-aos="fade-up">
+          分享
+        </div>
+        <div className="content" data-aos="fade-up">
+          在 Medium 分享自己撰寫的文章，主題包含程式、轉職、面試、技術筆記。(換工作太忙所以有一陣子沒寫了QQ)
+        </div>
+      </section>
+      <section id="movie" className="downtime-wrapper">
+        <div className="downtime-title" data-aos="fade-up">
+          電影
+        </div>
+        <div className="content" data-aos="fade-up">
+          愛看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等;也喜歡昆丁塔倫提諾獨特的暴力美學和敘事手法，像是惡棍特工、決殺令、八惡人、從前有個好萊塢。
+        </div>
+      </section>
+      <section id="sea" className="downtime-wrapper">
+        <div className="downtime-title" data-aos="fade-up">
+          看海
+        </div>
+        <div className="content" data-aos="fade-up">
+          遠離塵囂靜靜坐在岸邊，看著一望無際的海洋、聽著海浪拍打沙灘的聲音，心靈就療癒了。
         </div>
       </section>
       <section id="contact" className="wrapper">
