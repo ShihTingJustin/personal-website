@@ -66,14 +66,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section id="developer" className="wrapper">
-        <div className="bg">
-          <div className="content" data-aos="fade-up">
-            <h3>Developer</h3>
-            <p></p>
-          </div>
+      <section id="developer" className="downtime-wrapper">
+        <div className="downtime-title" data-aos="fade-up">
+          資訊科技
         </div>
-      </section> */}
+        <div className="content" data-aos="fade-up">
+          資訊科技已經大幅改變人類的生活型態，我們每天都需要用到各式各樣的 Web
+          或 App，能夠親手打造是一件很酷的事情。
+          <br />
+          主要專注於前端領域，擅長用 React.js 生態系工具打造網頁應用程式。
+          對於技術抱持開放的態度，偶而也會自己玩玩後端及 DevOps 相關技術。
+        </div>
+      </section>
       <section id="petrolHead" className="downtime-wrapper">
         <div className="downtime-title" data-aos="fade-up">
           汽車
@@ -97,7 +101,8 @@ export default function Home() {
           分享
         </div>
         <div className="content" data-aos="fade-up">
-          在 Medium 分享自己撰寫的文章，主題包含程式、轉職、面試、技術筆記。(換工作太忙所以有一陣子沒寫了QQ)
+          在 Medium
+          分享自己撰寫的文章，主題包含程式、轉職、面試、技術筆記。(換工作太忙所以有一陣子沒寫了QQ)
         </div>
       </section>
       <section id="movie" className="downtime-wrapper">

@@ -169,18 +169,22 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   // background-attachment: fixed;
+  .content {
+    position: absolute;
+    bottom: 10%;
+  }
 }
 
-.fixed .content {
-  position: absolute;
-  top: 32%;
-  left: 20%;
-  background: rgba(200, 213, 240, 0.5);
-  width: 30%;
-  height: 20vw;
-  color: #fff;
-  font-size: 1.5em;
-}
+// .fixed .content {
+//   position: absolute;
+//   top: 32%;
+//   left: 20%;
+//   background: rgba(200, 213, 240, 0.5);
+//   width: 30%;
+//   height: 20vw;
+//   color: #fff;
+//   font-size: 1.5em;
+// }
 
 .downtime-wrapper {
   .downtime-title {
