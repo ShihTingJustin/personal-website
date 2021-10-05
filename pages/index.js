@@ -89,56 +89,8 @@ export default function Home() {
           <p></p>
         </div>
       </section>
-      <section id="quote" className="wrapper">
-        <div className="content" data-aos="fade-up">
-          <h5>
-            "Your time is limited, so don't waste it living someone else's
-            life."
-          </h5>
-          <p>Steve Jobs</p>
-        </div>
-      </section>
-
-      {/* <section id="contact" className="wrapper">
-        <div className="bg-blur"></div>
-        <h3 className="title" data-aos="fade-up">
-          透過社群媒體
-          <br />
-          更加認識賈斯丁
-        </h3>
-        <div className="content" data-aos="fade-up">
-          <a
-            target="_tab"
-            rel="noopener noreferrer"
-            href="https://linkedin.com/in/justinhuang777"
-          >
-            <div id="linkedIn" className="icon"></div>
-          </a>
-          <a
-            target="_tab"
-            rel="noopener noreferrer"
-            href="https://github.com/ShihTingJustin"
-          >
-            <div id="github" className="icon"></div>
-          </a>
-          <a
-            target="_tab"
-            rel="noopener noreferrer"
-            href="https://medium.com/life-after-hello-world"
-          >
-            <div id="medium" className="icon"></div>
-          </a>
-          <a
-            target="_tab"
-            rel="noopener noreferrer"
-            href="https://www.instagram.com/mb722656355s/"
-          >
-            <div id="instagram" className="icon"></div>
-          </a>
-        </div>
-      </section> */}
       <section id="contact" className="wrapper">
-        <div className="title">點擊社群媒體認識賈斯丁黃</div>
+        <div className="title">Further Information</div>
         <div className="content">
           <div id="linkedIn" className="card" data-aos="zoom-in">
             <a
