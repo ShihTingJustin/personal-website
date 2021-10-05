@@ -51,6 +51,11 @@ a {
   min-height: 100vh;
 }
 
+.downtime-wrapper {
+  position: relative;
+  min-height: 60vh;
+}
+
 #cover {
   display: flex;
   justify-content: center;
@@ -177,12 +182,37 @@ a {
   font-size: 1.5em;
 }
 
+.downtime-wrapper {
+  .downtime-title {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: rgba(200, 213, 240, 0.5);
+    width: 100%;
+    height: 1.25em;
+    color: #000;
+    text-align: center;
+    font-size: 3.5em;
+  }
+  .content {
+    width: 100%;
+    background: rgba(200, 213, 240, 0.5);
+    color: #fff;
+    font-size: 1em;
+    padding: 0.75em;
+    line-height: 1.5em;
+  }
+}
 #petrolHead {
   background: url("../public/image/roadster.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   // background-attachment: fixed;
+  .content {
+    position: absolute;
+    bottom: 10%;
+  }
 }
 
 #sea {
@@ -191,6 +221,50 @@ a {
   background-size: cover;
   background-position: center;
   // background-attachment: fixed;
+
+  .content {
+    position: absolute;
+    bottom: 10%;
+  }
+}
+
+#ta {
+  background: url("../public/image/ac.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
+
+  .content {
+    position: absolute;
+    bottom: 5%;
+  }
+}
+
+#sharing {
+  background: url("../public/image/sharing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
+
+  .content {
+    position: absolute;
+    bottom: 5%;
+  }
+}
+
+#movie {
+  background: url("../public/image/inception.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
+
+  .content {
+    position: absolute;
+    bottom: 5%;
+  }
 }
 
 #contact {
