@@ -164,11 +164,36 @@ a {
 //   }
 // }
 
+.downtime-wrapper {
+  .downtime-title {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: rgba(200, 213, 240, 0.5);
+    width: 100%;
+    height: 1.25em;
+    color: #000;
+    text-align: center;
+    font-size: 3.5em;
+  }
+  .content {
+    width: 100%;
+    background: rgba(200, 213, 240, 0.5);
+    color: #000;
+    font-size: 1em;
+    padding: 0.75em;
+    line-height: 1.5em;
+  }
+}
+
 #developer {
   background: url("../public/image/matrix.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   // background-attachment: fixed;
+  .downtime-title, .content {
+    color: #fff;
+  }
   .content {
     position: absolute;
     bottom: 10%;
@@ -186,27 +211,6 @@ a {
 //   font-size: 1.5em;
 // }
 
-.downtime-wrapper {
-  .downtime-title {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background: rgba(200, 213, 240, 0.5);
-    width: 100%;
-    height: 1.25em;
-    color: #000;
-    text-align: center;
-    font-size: 3.5em;
-  }
-  .content {
-    width: 100%;
-    background: rgba(200, 213, 240, 0.5);
-    color: #fff;
-    font-size: 1em;
-    padding: 0.75em;
-    line-height: 1.5em;
-  }
-}
 #petrolHead {
   background: url("../public/image/roadster.jpg");
   background-repeat: no-repeat;
@@ -216,6 +220,19 @@ a {
   .content {
     position: absolute;
     bottom: 10%;
+  }
+}
+
+#investment {
+  background: url("../public/image/wallstreet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
+
+  .content {
+    position: absolute;
+    bottom: 5%;
   }
 }
 

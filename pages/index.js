@@ -30,14 +30,17 @@ export default function Home() {
         <meta itemProp="name" content="JustinHuang" />
         <meta
           itemProp="image"
-          content="/_next/static/media/matrix.c18336991b6e7bfc1a5c825957d28863.jpg"
+          content="/_next/static/media/roadster.e0c6976b28c7de8583354915f320aa10.jpg"
         />
-        <meta itemProp="description" content="Hi, I'm Justin" />
+        <meta
+          itemProp="description"
+          content="Hi, I'm Justin. Welcome to my personal website. Click in"
+        />
         <meta property="og:title" content="JustinHuang - A Restless Soul" />
         <meta property="og:url" content="網址" />
         <meta
           property="og:image"
-          content="/_next/static/media/matrix.c18336991b6e7bfc1a5c825957d28863.jpg"
+          content="/_next/static/media/roadster.e0c6976b28c7de8583354915f320aa10.jpg"
         />
         <meta property="og:description" content="Hi, I'm Justin"></meta>
       </Head>
@@ -62,7 +65,7 @@ export default function Home() {
             喜歡分析市場和規格，曾在台灣唯一整車研發企業擔任產品經理。
           </div>
           <div className="content" data-aos="fade-up">
-            指數化投資的實踐者，經歷美股兩週四次熔斷和後續V型反轉的洗禮後，領悟了一套適合自己的投資哲學。
+            想知道我喜歡做些什麼就繼續往下滑吧～
           </div>
         </div>
       </section>
@@ -71,11 +74,11 @@ export default function Home() {
           資訊科技
         </div>
         <div className="content" data-aos="fade-up">
-          資訊科技已經大幅改變人類的生活型態，我們每天都需要用到各式各樣的 Web
-          或 App，能夠親手打造是一件很酷的事情。
+          資訊科技大幅改變人類的生活型態，我們每天都需要用到各種軟體服務，我認為有技術能力親手打造產品是一件很酷的事情。
+          前端工程師站在人文與科技的交叉口，結合理性與感性，為產品創造好的使用者體驗，是我喜歡的工作模式。
           <br />
-          主要專注於前端領域，擅長用 React.js 生態系工具打造網頁應用程式。
-          對於技術抱持開放的態度，偶而也會自己玩玩後端及 DevOps 相關技術。
+          目前專注於前端領域，擅長用 React.js 生態系工具打造網頁應用程式。
+          對於技術抱持開放的態度，偶而會玩玩後端及 DevOps 相關技術。
         </div>
       </section>
       <section id="petrolHead" className="downtime-wrapper">
@@ -86,6 +89,15 @@ export default function Home() {
           汽車是人類智慧的結晶，力與美的結合，也是個人特色的展現。
           假日爬得起來的話會在清晨去106縣道兜風，幸運的話可以獲得美美的追焦照。
           生在資訊爆炸的時代讓玩車更容易，卻也感嘆內燃機的時代已經進入倒數計時。
+        </div>
+      </section>
+      <section id="investment" className="downtime-wrapper">
+        <div className="downtime-title" data-aos="fade-up">
+          投資
+        </div>
+        <div className="content" data-aos="fade-up">
+          指數化投資的實踐者，經歷美股兩週四次熔斷和後續V型反轉的洗禮後，領悟了一套適合自己的投資哲學。常看綠角財經筆記和
+          IEObserve國際經濟觀察。
         </div>
       </section>
       <section id="ta" className="downtime-wrapper">
@@ -101,8 +113,7 @@ export default function Home() {
           分享
         </div>
         <div className="content" data-aos="fade-up">
-          在 Medium
-          分享自己撰寫的文章，主題包含程式、轉職、面試、技術筆記。(換工作太忙所以有一陣子沒寫了QQ)
+          平常都在網路上看別人寫的文章，獲益匪淺，所以決定自己也在 Medium 撰寫文章作為回饋，主題包含程式、轉職、面試、技術筆記。(換工作太忙所以有一陣子沒發文了QQ)
         </div>
       </section>
       <section id="movie" className="downtime-wrapper">
