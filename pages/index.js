@@ -34,7 +34,7 @@ export default function Home() {
         />
         <meta
           itemProp="description"
-          content="Hi, I'm Justin. Welcome to my personal website. Click in"
+          content="Hi, I'm Justin! Welcome to my personal website~"
         />
         <meta property="og:title" content="JustinHuang - A Restless Soul" />
         <meta property="og:url" content="網址" />
@@ -42,7 +42,10 @@ export default function Home() {
           property="og:image"
           content="/_next/static/media/roadster.e0c6976b28c7de8583354915f320aa10.jpg"
         />
-        <meta property="og:description" content="Hi, I'm Justin"></meta>
+        <meta
+          property="og:description"
+          content="Hi, I'm Justin! Welcome to my personal website~"
+        ></meta>
       </Head>
       <div id="cover">
         <div id="cover-text"></div>
@@ -113,7 +116,8 @@ export default function Home() {
           分享
         </div>
         <div className="content" data-aos="fade-up">
-          平常都在網路上看別人寫的文章，獲益匪淺，所以決定自己也在 Medium 撰寫文章作為回饋，主題包含程式、轉職、面試、技術筆記。(換工作太忙所以有一陣子沒發文了QQ)
+          平常都在網路上看別人寫的文章，獲益匪淺，所以決定自己也在 Medium
+          撰寫文章作為回饋，主題包含程式、轉職、面試、技術筆記。(換工作太忙所以有一陣子沒發文了QQ)
         </div>
       </section>
       <section id="movie" className="downtime-wrapper">
