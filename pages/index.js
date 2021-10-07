@@ -8,11 +8,11 @@ export default function Home() {
     new Typewriter("#cover-text", {
       strings: [
         "Developer",
-        "Teaching Assistant",
-        "Petrol-head",
         "Product Manager",
-        "Learner",
+        "Petrol-head",
         "Investor",
+        "Teaching Assistant",
+        "Learner",
       ],
       autoStart: true,
       loop: true,
