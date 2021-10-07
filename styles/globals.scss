@@ -200,17 +200,6 @@ a {
   }
 }
 
-// .fixed .content {
-//   position: absolute;
-//   top: 32%;
-//   left: 20%;
-//   background: rgba(200, 213, 240, 0.5);
-//   width: 30%;
-//   height: 20vw;
-//   color: #fff;
-//   font-size: 1.5em;
-// }
-
 #petrolHead {
   background: url("../public/image/roadster.jpg");
   background-repeat: no-repeat;
@@ -236,18 +225,6 @@ a {
   }
 }
 
-#sea {
-  background: url("../public/image/sea.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // background-attachment: fixed;
-
-  .content {
-    position: absolute;
-    bottom: 5%;
-  }
-}
 
 #ta {
   background: url("../public/image/ac.jpg");
@@ -255,7 +232,7 @@ a {
   background-size: cover;
   background-position: center;
   // background-attachment: fixed;
-
+  
   .content {
     position: absolute;
     bottom: 5%;
@@ -268,7 +245,7 @@ a {
   background-size: cover;
   background-position: center;
   // background-attachment: fixed;
-
+  
   .content {
     position: absolute;
     bottom: 5%;
@@ -277,6 +254,19 @@ a {
 
 #movie {
   background: url("../public/image/inception.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
+
+  .content {
+    position: absolute;
+    bottom: 5%;
+  }
+}
+
+#sea {
+  background: url("../public/image/sea.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
