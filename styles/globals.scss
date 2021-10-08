@@ -60,12 +60,29 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   // background-attachment: fixed;
 
   #cover-text {
     width: 100%;
     font-size: 2.5em;
     margin-left: 0.25em;
+  }
+
+  #scroll-indicator-wrapper {
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    svg {
+      animation: bounce 1.5s infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  30% {
+    transform: translateY(-275%);
   }
 }
 
@@ -191,7 +208,8 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   // background-attachment: fixed;
-  .downtime-title, .content {
+  .downtime-title,
+  .content {
     color: #fff;
   }
   .content {
@@ -225,14 +243,13 @@ a {
   }
 }
 
-
 #ta {
   background: url("../public/image/ac.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   // background-attachment: fixed;
-  
+
   .content {
     position: absolute;
     bottom: 5%;
@@ -245,7 +262,7 @@ a {
   background-size: cover;
   background-position: center;
   // background-attachment: fixed;
-  
+
   .content {
     position: absolute;
     bottom: 5%;

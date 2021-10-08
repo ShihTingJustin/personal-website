@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Typewriter from "typewriter-effect/dist/core";
 import Head from "next/head";
+import { IoIosArrowUp } from "react-icons/io";
 
 export default function Home() {
   useEffect(() => {
@@ -49,6 +50,9 @@ export default function Home() {
       </Head>
       <div id="cover">
         <div id="cover-text"></div>
+        <div id="scroll-indicator-wrapper">
+            <IoIosArrowUp />
+        </div>
       </div>
       <section id="intro" className="wrapper">
         <div id="intro-image"></div>
