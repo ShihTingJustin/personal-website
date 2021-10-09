@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <div id="container">
       <Head>
+        <html lang="zh-tw" />
         <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
         <meta
           name="viewport"
