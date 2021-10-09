@@ -55,7 +55,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like Linkedin, GitHub, Medium and Instagram."
+          content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like LinkedIn, GitHub, Medium and Instagram."
         ></meta>
       </Head>
       <div id="cover">
