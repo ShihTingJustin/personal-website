@@ -15,12 +15,12 @@ function MyApp({ Component, pageProps }) {
       {/* Global site tag (gtag.js) - Google Analytics */}
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-GQ88K29S7Z"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
       />
-      <Script>
+      <Script strategy="lazyOnload">
         {`window.dataLayer = window.dataLayer || []; function gtag()
         {dataLayer.push(arguments);}
-        gtag('js', new Date()); gtag('config', ${process.env.GOOGLE_ANALYTICS_ID});`}
+        gtag('js', new Date()); gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');`}
       </Script>
       <Component {...pageProps} />
     </>
