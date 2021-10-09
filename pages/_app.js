@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       <Script>
         {`window.dataLayer = window.dataLayer || []; function gtag()
         {dataLayer.push(arguments);}
-        gtag('js', new Date()); gtag('config', 'G-GQ88K29S7Z');`}
+        gtag('js', new Date()); gtag('config', ${process.env.GOOGLE_ANALYTICS_ID});`}
       </Script>
       <Component {...pageProps} />
     </>
