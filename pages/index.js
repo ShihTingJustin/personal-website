@@ -41,7 +41,7 @@ export default function Home() {
         <meta itemProp="name" content="JustinHuang" />
         <meta
           itemProp="image"
-          content="/_next/static/media/roadster.e0c6976b28c7de8583354915f320aa10.jpg"
+          content="/_next/static/media/roadster.470d51ab0dba6c98c1db22fe8a4f6fe0.webp"
         />
         <meta
           itemProp="description"
@@ -52,7 +52,7 @@ export default function Home() {
         <meta property="og:url" content="https://jhdev.pro" />
         <meta
           property="og:image"
-          content="/_next/static/media/roadster.e0c6976b28c7de8583354915f320aa10.jpg"
+          content="/_next/static/media/roadster.470d51ab0dba6c98c1db22fe8a4f6fe0.webp"
         />
         <meta
           property="og:description"
