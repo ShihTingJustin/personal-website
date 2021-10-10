@@ -24,7 +24,6 @@ function MyApp({ Component, pageProps }) {
         gtag('js', new Date()); gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');`}
       </Script>
       <Head>
-        {/* <html lang="zh-tw" /> */}
         <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
         <meta
           name="viewport"
