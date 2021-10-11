@@ -56,10 +56,10 @@ export default function Home() {
         </div>
         <div className="content" data-aos="fade-up">
           資訊科技大幅改變人類的生活型態，我們每天都需要用到各種軟體服務，我認為有技術能力親手打造產品是一件很酷的事情。
-          前端工程師站在人文與科技的交叉口，結合理性與感性，為產品創造好的使用者體驗，是我喜歡的工作模式。
+          前端工程師站在人文與科技的交叉口，結合理性與感性，為產品打造使用者介面並創造好的使用者體驗，是我喜歡的工作模式。
           <br />
-          目前專注於前端領域，擅長用 React.js 生態系工具打造網頁應用程式。
-          對於技術抱持開放的態度，偶而會玩玩後端及 DevOps 相關技術。
+          目前專注於前端領域，擅長運用 React.js 生態系工具打造網頁應用程式。
+          對於技術抱持開放的態度，會透過 side project 接觸後端及 DevOps 相關技術。
         </div>
       </section>
       <section id="petrolHead" className="downtime-wrapper">
@@ -69,6 +69,7 @@ export default function Home() {
         <div className="content" data-aos="fade-up">
           汽車是人類智慧的結晶，力與美的結合，也是個人特色的展現。
           假日爬得起來的話會在清晨去106縣道兜風，幸運的話可以獲得美美的追焦照。
+          <br/>
           生在資訊爆炸的時代讓玩車更容易，卻也感嘆內燃機的時代已經進入倒數計時。
         </div>
       </section>
@@ -86,7 +87,7 @@ export default function Home() {
           教育
         </div>
         <div className="content" data-aos="fade-up">
-          擔任助教除了批改作業，也時常從學生提出的問題中學習，或是看到自己也可以更進步的地方，教學相長。
+          在程式教育機構擔任助教除了批改作業，也時常從學生提出的問題中學習，或是看到自己也可以更進步的地方，教學相長。
         </div>
       </section>
       <section id="sharing" className="downtime-wrapper">
