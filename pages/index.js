@@ -56,10 +56,11 @@ export default function Home() {
         </div>
         <div className="content" data-aos="fade-up">
           資訊科技大幅改變人類的生活型態，我們每天都需要用到各種軟體服務，我認為有技術能力親手打造產品是一件很酷的事情。
+          <br/>
           前端工程師站在人文與科技的交叉口，結合理性與感性，為產品打造使用者介面並創造好的使用者體驗，是我喜歡的工作模式。
           <br />
           目前專注於前端領域，擅長運用 React.js 生態系工具打造網頁應用程式。
-          對於技術抱持開放的態度，會透過 side project 接觸後端及 DevOps 相關技術。
+          對於技術抱持開放的態度，做 side project 時除了前端之外也接觸後端及 DevOps 相關技術。
         </div>
       </section>
       <section id="petrolHead" className="downtime-wrapper">
