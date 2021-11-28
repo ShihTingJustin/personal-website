@@ -31,9 +31,9 @@ export default function Home() {
       <section id="intro" className="wrapper">
         <div id="intro-image"></div>
         <div id="intro-content">
-          <div className="title" data-aos="fade-up">
-            <h2>賈斯丁黃</h2>
-            <h3>不安分的靈魂</h3>
+          <div className="title-wrapper" data-aos="fade-up">
+            <div className="title">賈斯丁黃</div>
+            <div className="subtitle">不安分的靈魂</div>
           </div>
           <div className="content" data-aos="fade-up">
             一個非典型技術宅，鑽研技術也享受打造產品和琢磨細節的過程，被敏捷開發燒到後決定前往軟體領域一探究竟。
