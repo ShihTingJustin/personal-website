@@ -1,3 +1,6 @@
+$text-glow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
+$web3-gradient: linear-gradient(to right, #30cfd0, #c43ad6);
+
 html,
 body {
   padding: 0;
@@ -13,11 +16,12 @@ body {
 html {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.89);
+  background-color: #000;
+  // background-color: rgba(0, 0, 0, 0.89);
 }
 
 body {
-  max-width: 426px;
+  max-width: 800px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -34,6 +38,7 @@ a {
 #container {
   width: 100%;
   height: 100%;
+  width: 100vw;
   background-color: #000;
   color: #fff;
   position: relative;
@@ -46,14 +51,19 @@ a {
   min-height: 800px;
 }
 
-.wrapper {
-  position: relative;
-  min-height: 800px;
-}
+// .wrapper {
+//   position: relative;
+//   min-height: 800px;
+// }
 
-.downtime-wrapper {
-  position: relative;
-  min-height: 600px;
+// .downtime-wrapper {
+//   position: relative;
+//   min-height: 600px;
+// }
+
+.block {
+  // max-width: 800px;
+  height: 100vh;
 }
 
 #cover {
@@ -67,6 +77,10 @@ a {
     width: 100%;
     font-size: 2.5em;
     margin-left: 0.25em;
+    text-shadow: $text-glow;
+    background: $web3-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   #scroll-indicator-wrapper {
