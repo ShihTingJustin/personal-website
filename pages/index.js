@@ -22,13 +22,13 @@ export default function Home() {
 
   return (
     <div id="container">
-      <div id="cover">
+      <div id="cover" className="block">
         <div id="cover-text"></div>
         <div id="scroll-indicator-wrapper">
           <IoIosArrowUp />
         </div>
       </div>
-      <section id="intro" className="wrapper">
+      <section id="intro" className="wrapper block">
         <div id="intro-image"></div>
         <div id="intro-content">
           <div className="title-wrapper" data-aos="fade-up">
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="developer" className="downtime-wrapper">
+      <section id="developer" className="downtime-wrapper block">
         <div className="downtime-title" data-aos="fade-up">
           資訊科技
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
           相關技術。
         </div>
       </section>
-      <section id="petrolHead" className="downtime-wrapper">
+      <section id="petrolHead" className="downtime-wrapper block">
         <div className="downtime-title" data-aos="fade-up">
           汽車
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
           生在資訊爆炸的時代讓玩車更容易，卻也感嘆內燃機的時代已經進入倒數計時。
         </div>
       </section>
-      <section id="investment" className="downtime-wrapper">
+      <section id="investment" className="downtime-wrapper block">
         <div className="downtime-title" data-aos="fade-up">
           投資
         </div>
@@ -85,7 +85,7 @@ export default function Home() {
           另外也對於加密貨幣的崛起及其與法幣之間的關係會如何變化很感興趣。
         </div>
       </section>
-      <section id="ta" className="downtime-wrapper">
+      <section id="ta" className="downtime-wrapper block">
         <div className="downtime-title" data-aos="fade-up">
           教育
         </div>
@@ -93,7 +93,7 @@ export default function Home() {
           在程式教育機構擔任助教，除了批改作業，也時常從學生提出的問題中學習，或是看到自己也可以更進步的地方，教學相長。
         </div>
       </section>
-      <section id="sharing" className="downtime-wrapper">
+      <section id="sharing" className="downtime-wrapper block">
         <div className="downtime-title" data-aos="fade-up">
           分享
         </div>
@@ -102,7 +102,7 @@ export default function Home() {
           撰寫文章作為回饋，主題包含程式、轉職、面試、技術筆記。(換工作太忙所以有一陣子沒發文了QQ)
         </div>
       </section>
-      <section id="movie" className="downtime-wrapper">
+      <section id="movie" className="downtime-wrapper block">
         <div className="downtime-title" data-aos="fade-up">
           電影
         </div>
@@ -110,7 +110,7 @@ export default function Home() {
           愛看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等;也喜歡昆丁塔倫提諾獨特的暴力美學和敘事手法，像是惡棍特工、決殺令、八惡人、從前有個好萊塢。
         </div>
       </section>
-      <section id="sea" className="downtime-wrapper">
+      <section id="sea" className="downtime-wrapper block">
         <div className="downtime-title" data-aos="fade-up">
           看海
         </div>
@@ -118,7 +118,7 @@ export default function Home() {
           遠離塵囂靜靜坐在岸邊，看著一望無際的海洋、聽著海浪拍打沙灘的聲音，心靈就療癒了。
         </div>
       </section>
-      <section id="contact" className="wrapper">
+      <section id="contact" className="wrapper block">
         <div className="title">Further Information</div>
         <div className="content">
           <div id="linkedIn" className="card" data-aos="zoom-in">
