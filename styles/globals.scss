@@ -7,6 +7,19 @@ body {
   margin: 0;
   // width: 100%;
   // height: 100%;
+  background-color: #07050f;
+  background-image: radial-gradient(
+      circle closest-corner at var(--first-gradient-coords),
+      rgba(40, 72, 122, 0.85),
+      transparent
+    ),
+    radial-gradient(
+      circle closest-corner at var(--second-gradient-coords),
+      rgba(138, 41, 129, 0.7),
+      transparent
+    );
+  --first-gradient-coords: -5% 13%;
+  --second-gradient-coords: 140% 35%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 200;
@@ -16,8 +29,7 @@ body {
 html {
   display: flex;
   justify-content: center;
-  background-color: #000;
-  // background-color: rgba(0, 0, 0, 0.89);
+  scrollbar-width: none;
 }
 
 body {
@@ -39,7 +51,6 @@ a {
   width: 100%;
   height: 100%;
   width: 100vw;
-  background-color: #000;
   color: #fff;
   position: relative;
 }
