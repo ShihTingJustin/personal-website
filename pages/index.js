@@ -1,18 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect } from "react";
-import Typewriter from "typewriter-effect/dist/core";
-import { IoIosArrowUp } from "react-icons/io";
+import { useEffect } from 'react';
+import Typewriter from 'typewriter-effect/dist/core';
+import { IoIosArrowUp } from 'react-icons/io';
 
 export default function Home() {
   useEffect(() => {
-    new Typewriter("#cover-text", {
+    new Typewriter('#cover-text', {
       strings: [
-        "Developer",
-        "Product Manager",
-        "Petrol-head",
-        "Investor",
-        "Teaching Assistant",
-        "Learner",
+        'Developer',
+        'Product Manager',
+        'Petrol-head',
+        'Investor',
+        'Teaching Assistant',
+        'Learner',
       ],
       autoStart: true,
       loop: true,
@@ -60,8 +60,7 @@ export default function Home() {
           前端工程師站在人文與科技的交叉口，結合理性與感性，為產品打造使用者介面並創造好的使用者體驗，是我喜歡的工作模式。
           <br />
           目前專注於前端領域，擅長運用 React 生態系工具打造網頁應用程式。
-          對於技術抱持開放的態度，會利用 side project 接觸後端及 DevOps
-          相關技術。
+          對於技術抱持開放的態度，會利用 side project 接觸後端及 DevOps 相關技術。
         </div>
       </section>
       <section id="petrolHead" className="downtime-wrapper block">
@@ -81,8 +80,7 @@ export default function Home() {
         </div>
         <div className="content" data-aos="fade-up">
           指數化投資的實踐者，經歷美股兩週四次熔斷和後續V型反轉的洗禮後，領悟了一套適合自己的投資哲學。常看綠角財經筆記和
-          IEObserve國際經濟觀察。
-          另外也對於加密貨幣的崛起及其與法幣之間的關係會如何變化很感興趣。
+          IEObserve國際經濟觀察。 另外也對於加密貨幣的崛起及其與法幣之間的關係會如何變化很感興趣。
         </div>
       </section>
       <section id="ta" className="downtime-wrapper block">
@@ -129,11 +127,7 @@ export default function Home() {
             ></a>
           </div>
           <div id="github" className="card" data-aos="zoom-in">
-            <a
-              target="_tab"
-              rel="noopener noreferrer"
-              href="https://github.com/ShihTingJustin"
-            ></a>
+            <a target="_tab" rel="noopener noreferrer" href="https://github.com/ShihTingJustin"></a>
           </div>
           <div id="medium" className="card" data-aos="zoom-in">
             <a
