@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/node": "^17.0.23",
+    "@types/react": "^17.0.43",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "sass": "^1.42.1",
+    "typescript": "^4.6.3",
     "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
