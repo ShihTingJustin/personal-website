@@ -84,19 +84,9 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: radial-gradient(
-      circle closest-corner at var(--first-gradient-coords),
-      rgba(40, 72, 122, 0.85),
-      transparent
-    ),
-    radial-gradient(
-      circle closest-corner at var(--second-gradient-coords),
-      rgba(138, 41, 129, 0.7),
-      transparent
-    );
+  background-image: $bg;
   --first-gradient-coords: -5% 13%;
   --second-gradient-coords: 140% 35%;
-  // background-attachment: fixed;
 
   #cover-text {
     width: 100%;
@@ -129,11 +119,15 @@ a {
   position: relative;
   width: 100%;
   display: grid;
+  grid-template-rows: repeat(auto-fill, 160px);
   grid-template-columns: repeat(auto-fill, 160px);
   gap: 16px;
   flex-wrap: wrap;
   flex-grow: 0;
   justify-content: center;
+  background-image: $bg;
+  --first-gradient-coords: -5% 13%;
+  --second-gradient-coords: 140% 35%;
 }
 
 #intro {
