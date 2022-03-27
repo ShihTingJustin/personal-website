@@ -2,6 +2,65 @@
 import { useEffect } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
 import { IoIosArrowUp } from 'react-icons/io';
+import Card from '../src/components/card/Card.tsx';
+import Image from 'next/image';
+import ReactIcon from '../public/icon/react.svg';
+import MediumIcon from '../public/icon/medium-icon.svg';
+import AcIcon from '../public/icon/ac.png';
+import AutoIcon from '../public/icon/auto-icon.png';
+
+const mockData = [
+  {
+    icon: <ReactIcon style={{ fill: '#149eca' }} width="60" height="60" />,
+    iconBgColor: 'black-1',
+    background: (
+      <ReactIcon className="card--bg" style={{ fill: '#59D4F8' }} width="60" height="60" />
+    ),
+    title: '資訊科技',
+  },
+  {
+    icon: '/icon/auto-icon.png',
+    iconBgColor: 'white',
+    background: <ReactIcon className="card--bg" style={{ fill: '#fff' }} width="60" height="60" />,
+    title: '汽車',
+  },
+  {
+    icon: '/icon/stock.png',
+    iconBgColor: 'green',
+    background: (
+      <ReactIcon className="card--bg" style={{ fill: '#32bf57' }} width="60" height="60" />
+    ),
+    title: '投資',
+  },
+  {
+    icon: '/icon/ac.png',
+    iconBgColor: 'orange',
+    background: <ReactIcon className="card--bg" style={{ fill: '#f60' }} width="60" height="60" />,
+    title: '教育',
+  },
+  {
+    icon: '/icon/medium-icon.svg',
+    iconBgColor: 'black-2',
+    background: (
+      <ReactIcon className="card--bg" style={{ fill: '#59D4F8' }} width="60" height="60" />
+    ),
+    title: '分享',
+  },
+  {
+    icon: '/icon/movie.svg',
+    iconBgColor: 'white',
+    background: <ReactIcon className="card--bg" style={{ fill: '#fff' }} width="60" height="60" />,
+    title: '電影',
+  },
+  {
+    icon: '/icon/link.svg',
+    iconBgColor: 'blue',
+    background: (
+      <ReactIcon className="card--bg" style={{ fill: '#228cc4' }} width="60" height="60" />
+    ),
+    title: '更多資訊',
+  },
+];
 
 export default function Home() {
   useEffect(() => {
@@ -28,7 +87,18 @@ export default function Home() {
           <IoIosArrowUp />
         </div>
       </div>
-      <section id="intro" className="wrapper block">
+      <div id="card-wrapper" className="block">
+        {mockData.map((item, index) => (
+          <Card
+            key={index}
+            icon={item.icon}
+            iconBgColor={item.iconBgColor}
+            background={item.background}
+            title={item.title}
+          />
+        ))}
+      </div>
+      {/* <section id="intro" className="wrapper block">
         <div id="intro-image"></div>
         <div id="intro-content">
           <div className="title-wrapper" data-aos="fade-up">
@@ -144,7 +214,7 @@ export default function Home() {
             ></a>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
