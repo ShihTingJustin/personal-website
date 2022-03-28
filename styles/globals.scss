@@ -41,7 +41,7 @@ a {
   width: 100vw;
   color: #fff;
   position: relative;
-  padding: 0 16px;
+  // padding: 0 16px;
 }
 
 .card--bg {
@@ -77,6 +77,15 @@ a {
 .block {
   // max-width: 800px;
   height: 100vh;
+  padding: 0 16px;
+}
+
+#cover,
+#intro-wrapper,
+#card-wrapper {
+  background-image: $bg;
+  --first-gradient-coords: -5% 13%;
+  --second-gradient-coords: 140% 35%;
 }
 
 #cover {
@@ -84,9 +93,6 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: $bg;
-  --first-gradient-coords: -5% 13%;
-  --second-gradient-coords: 140% 35%;
 
   #cover-text {
     width: 100%;
@@ -115,25 +121,10 @@ a {
   }
 }
 
-#card-wrapper {
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-rows: repeat(auto-fill, 160px);
-  grid-template-columns: repeat(auto-fill, 160px);
-  gap: 16px;
-  flex-wrap: wrap;
-  flex-grow: 0;
-  justify-content: center;
-  background-image: $bg;
-  --first-gradient-coords: -5% 13%;
-  --second-gradient-coords: 140% 35%;
-}
-
-#intro {
+#intro-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   #intro-image {
     width: 100%;
@@ -145,29 +136,93 @@ a {
     // background-attachment: fixed;
   }
 
-  #intro-content {
-    min-height: 400px;
-    text-align: left;
+  min-height: 400px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2em;
+
+  .title-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 2em;
-    .title-wrapper {
-      margin-left: 2em;
-      .title {
-        margin-top: 1em;
-        font-size: 3em;
-      }
-      .subtitle {
-        font-size: 1.25em;
-      }
+    width: 100%;
+    padding: 0 32px;
+    align-items: center;
+    .title {
+      font-size: 3em;
     }
-    .content {
-      margin: 0.75em 2em;
-      line-height: 1.5em;
+    .subtitle {
+      font-size: 1.25em;
+    }
+    .photo {
+      width: 100px;
+      height: 100px;
+      background: url('../public/image/me.webp');
+      background-position: 0% 125%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      zoom: 1.5;
+      border-radius: 50%;
+      margin-right: 20px;
     }
   }
+
+  .content {
+    margin: 0.75em 2em;
+    line-height: 1.5em;
+  }
 }
+
+#card-wrapper {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 160px);
+  grid-template-columns: repeat(auto-fill, 160px);
+  gap: 16px;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  justify-content: center;
+}
+
+// #intro {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+
+//   #intro-image {
+//     width: 100%;
+//     min-height: 800px;
+//     background: url('../public/image/me.webp');
+//     background-repeat: no-repeat;
+//     background-position: 0 45%;
+//     background-size: cover;
+//     // background-attachment: fixed;
+//   }
+
+//   #intro-content {
+//     min-height: 400px;
+//     text-align: left;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     margin-bottom: 2em;
+//     .title-wrapper {
+//       margin-left: 2em;
+//       .title {
+//         margin-top: 1em;
+//         font-size: 3em;
+//       }
+//       .subtitle {
+//         font-size: 1.25em;
+//       }
+//     }
+//     .content {
+//       margin: 0.75em 2em;
+//       line-height: 1.5em;
+//     }
+//   }
+// }
 
 // RWD
 // #intro {
