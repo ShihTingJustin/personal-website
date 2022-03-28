@@ -155,13 +155,12 @@ a {
       font-size: 1.25em;
     }
     .photo {
-      width: 100px;
-      height: 100px;
+      min-width: 150px;
+      min-height: 150px;
       background: url('../public/image/me.webp');
       background-position: 0% 125%;
       background-repeat: no-repeat;
       background-size: cover;
-      zoom: 1.5;
       border-radius: 50%;
       margin-right: 20px;
     }
