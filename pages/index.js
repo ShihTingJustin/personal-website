@@ -1,13 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
 import { IoIosArrowUp } from 'react-icons/io';
 import Card from '../src/components/card/Card.tsx';
+import Modal from '../src/components/modal/Modal.tsx';
 import Image from 'next/image';
 import ReactIcon from '../public/icon/react.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
 import AcIcon from '../public/icon/ac.png';
 import AutoIcon from '../public/icon/auto-icon.png';
+
 
 const mockData = [
   {
@@ -25,7 +27,7 @@ const mockData = [
     title: '汽車',
   },
   {
-    icon: '/icon/stock.png',
+    icon: '/icon/stock.webp',
     iconBgColor: 'green',
     background: (
       <ReactIcon className="card--bg" style={{ fill: '#32bf57' }} width="60" height="60" />
@@ -98,6 +100,10 @@ export default function Home() {
           />
         ))}
       </div>
+      <Modal>
+        <div>123</div>
+      </Modal>
+
       {/* <section id="intro" className="wrapper block">
         <div id="intro-image"></div>
         <div id="intro-content">
