@@ -185,6 +185,23 @@ a {
   justify-content: center;
 }
 
+.further-icon {
+  // width: 50px;
+  // height: 50px;
+  margin: 30px 0;
+  a:first-child {
+    margin-bottom: 10px;
+  }
+  // box-shadow: $text-glow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  a svg {
+    fill: #fff;
+  }
+}
+
 // #intro {
 //   display: flex;
 //   flex-direction: column;
