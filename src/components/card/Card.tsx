@@ -7,11 +7,12 @@ interface CardProps {
   iconBgColor: string;
   background: React.ReactNode;
   title: string;
+  onClick: () => void;
 }
 
-const Card = ({ icon, iconBgColor, background, title }: CardProps) => {
+const Card = ({ icon, iconBgColor, background, title, onClick }: CardProps) => {
   return (
-    <div className={style['card--root']}>
+    <div onClick={onClick} className={style['card--root']}>
       <div className={style['card--image']}>
         <div className={`${style[`card--icon-wrapper`]} ${style[`card--icon-bg-${iconBgColor}`]}`}>
           {typeof icon === 'string' ? (
