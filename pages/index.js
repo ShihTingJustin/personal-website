@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
 import { IoIosArrowUp } from 'react-icons/io';
 import Card from '../src/components/card/Card.tsx';
@@ -9,7 +9,6 @@ import ReactIcon from '../public/icon/react.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
 import AcIcon from '../public/icon/ac.png';
 import AutoIcon from '../public/icon/auto-icon.png';
-
 
 const mockData = [
   {
@@ -65,6 +64,8 @@ const mockData = [
 ];
 
 export default function Home() {
+  const [stateModalOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     new Typewriter('#cover-text', {
       strings: [
@@ -97,12 +98,13 @@ export default function Home() {
             iconBgColor={item.iconBgColor}
             background={item.background}
             title={item.title}
+            onClick={() => setModalOpen(true)}
           />
         ))}
+        <Modal isOpen={stateModalOpen} setModalOpen={setModalOpen}>
+          <div>123</div>
+        </Modal>
       </div>
-      <Modal>
-        <div>123</div>
-      </Modal>
 
       {/* <section id="intro" className="wrapper block">
         <div id="intro-image"></div>
