@@ -27,8 +27,8 @@ const mockData = [
     title: '汽車',
   },
   {
-    icon: '/icon/stock.webp',
-    iconBgColor: 'green',
+    icon: '/icon/stock.svg',
+    iconBgColor: 'black-2',
     background: (
       <ReactIcon className="card--bg" style={{ fill: '#32bf57' }} width="60" height="60" />
     ),
