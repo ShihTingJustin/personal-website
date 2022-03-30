@@ -1,5 +1,6 @@
 @import './variables.scss';
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
+
 html,
 body {
   padding: 0;
@@ -42,6 +43,95 @@ a {
   color: #fff;
   position: relative;
   // padding: 0 16px;
+}
+
+.modal-content {
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.88);
+  // height: 90vh;
+  z-index: 100;
+}
+
+.modal-dialog {
+  &[data-bg='react'] {
+    --url: url('/icon/react-logo.png');
+    --filter: blur(20px);
+  }
+  &[data-bg='auto'] {
+    --url: url('/image/roadster.jpg');
+    --background-position: 50% 50%;
+    --filter: blur(4px);
+    --opacity: 0.7;
+  }
+  &[data-bg='invest'] {
+    --url: url('/image/wallstreet.webp');
+    --background-position: 50% 50%;
+    --filter: blur(20px);
+  }
+  &[data-bg='ta'] {
+    --url: url('/image/ac.webp');
+    --filter: blur(10px);
+  }
+  &[data-bg='share'] {
+    --url: url('/image/sharing.webp');
+    --background-position: 50% 0;
+    --filter: blur(20px);
+  }
+  &[data-bg='movie'] {
+    --url: url('/image/inception.webp');
+    --background-position: 65% 0;
+    --filter: blur(15px);
+  }
+  &[data-bg='share'] {
+    --url: url('/image/sharing.webp');
+    --filter: blur(10px);
+    --opacity: 0.9;
+  }
+  &[data-bg='info']::before {
+    background-image: $bg;
+    --first-gradient-coords: -5% 13%;
+    --second-gradient-coords: 140% 35%;
+  }
+
+  .modal-content {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--url);
+      background-size: cover;
+      overflow: hidden;
+      -webkit-filter: blur(25px);
+      -moz-filter: blur(25px);
+      -o-filter: blur(25px);
+      -ms-filter: blur(25px);
+      filter: var(--filter);
+      opacity: var(--opacity);
+      background-position: var(--background-position);
+      // -webkit-transform: scale(1.2, 1.2);
+      // -moz-transform: scale(1.2, 1.2);
+      // -o-transform: scale(1.2, 1.2);
+      // -ms-transform: scale(1.2, 1.2);
+      // transform: scale(1.2, 1.2);
+    }
+  }
+}
+
+.modal-header {
+  border: 0px;
+  button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 10;
+  }
+}
+
+.modal-body {
+  margin: 0 40px;
+  display: flex;
+  align-items: center;
 }
 
 .card--bg {

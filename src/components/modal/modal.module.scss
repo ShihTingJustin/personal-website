@@ -37,7 +37,9 @@
     padding: 0 15%;
     line-height: 28px;
   }
+}
 
+.modal--bs {
   &[data-bg='react'] {
     --url: url('/icon/react-logo.png');
     --filter: blur(20px);

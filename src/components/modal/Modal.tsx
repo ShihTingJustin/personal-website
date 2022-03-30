@@ -1,7 +1,7 @@
 import React from 'react';
+import { Modal as ModalBootstrap } from 'react-bootstrap';
 
 import style from './modal.module.scss';
-import Close from '../../../public/icon/close.svg';
 
 interface ModalProps {
   bg: string;
@@ -12,12 +12,16 @@ interface ModalProps {
 
 const Modal = ({ bg, isOpen, children, setModalOpen }: ModalProps) => {
   return (
-    <div data-bg={bg} data-open={isOpen} className={style['modal--root']}>
-      <div className={style['close-button']} onClick={() => setModalOpen(false)}>
-        <Close />
-      </div>
-      <div className={style['content']}>{children}</div>
-    </div>
+    <ModalBootstrap
+      data-bg={bg}
+      centered
+      fullscreen
+      show={isOpen}
+      onHide={() => setModalOpen(false)}
+    >
+      <ModalBootstrap.Header closeButton closeVariant="white"></ModalBootstrap.Header>
+      <ModalBootstrap.Body>{children}</ModalBootstrap.Body>
+    </ModalBootstrap>
   );
 };
 
