@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal as ModalBootstrap } from 'react-bootstrap';
 
-import style from './modal.module.scss';
 
 interface ModalProps {
   bg: string;
