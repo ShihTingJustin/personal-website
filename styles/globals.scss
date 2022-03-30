@@ -219,16 +219,6 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  #scroll-indicator-wrapper {
-    position: absolute;
-    bottom: 2%;
-    display: flex;
-    flex-direction: column;
-    svg {
-      animation: bounce 1.5s infinite;
-    }
-  }
 }
 
 @keyframes bounce {
