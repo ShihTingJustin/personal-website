@@ -5,10 +5,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  // width: 100%;
-  // height: 100%;
   background-color: #07050f;
-  // background-color: rgb(35 39 47/1);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 200;
@@ -42,13 +39,11 @@ a {
   width: 100vw;
   color: #fff;
   position: relative;
-  // padding: 0 16px;
 }
 
 .modal-content {
   background-color: #000;
   color: rgba(255, 255, 255, 0.88);
-  // height: 90vh;
   z-index: 100;
 }
 
@@ -104,18 +99,10 @@ a {
       filter: var(--filter);
       opacity: var(--opacity);
       background-position: var(--background-position);
-      // -webkit-transform: scale(1.2, 1.2);
-      // -moz-transform: scale(1.2, 1.2);
-      // -o-transform: scale(1.2, 1.2);
-      // -ms-transform: scale(1.2, 1.2);
-      // transform: scale(1.2, 1.2);
     }
   }
 
   &[data-bg='info'] {
-    // background-image: $bg;
-    // --first-gradient-coords: -5% 13%;
-    // --second-gradient-coords: 140% 35%;
     .modal-content {
       transition: top 0.1s ease 0s;
       background: linear-gradient(
@@ -180,18 +167,7 @@ a {
   min-height: 800px;
 }
 
-// .wrapper {
-//   position: relative;
-//   min-height: 800px;
-// }
-
-// .downtime-wrapper {
-//   position: relative;
-//   min-height: 600px;
-// }
-
 .block {
-  // max-width: 800px;
   height: 100vh;
   padding: 0 16px;
 }
@@ -291,9 +267,6 @@ a {
 }
 
 .further-icon {
-  // width: 50px;
-  // height: 50px;
-  // margin: 40px 0;
   a {
     margin-bottom: 30px;
   }
@@ -302,166 +275,3 @@ a {
   justify-content: center;
   align-items: center;
 }
-
-.downtime-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  .downtime-title {
-    // position: absolute;
-    // top: 0%;
-    // left: 0%;
-    background: rgba(200, 213, 240, 0.5);
-    width: 100%;
-    height: 1.25em;
-    color: #000;
-    text-align: center;
-    font-size: 3.5em;
-  }
-  .content {
-    width: 100%;
-    background: rgba(200, 213, 240, 0.5);
-    color: #000;
-    font-size: 1em;
-    padding: 0.75em;
-    line-height: 1.5em;
-  }
-}
-
-#developer {
-  background: url('../public/image/matrix.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  // background-attachment: fixed;
-  .downtime-title,
-  .content {
-    color: #fff;
-  }
-}
-
-#petrolHead {
-  background: url('../public/image/roadster.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // background-attachment: fixed;
-}
-
-#investment {
-  background: url('../public/image/wallstreet.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // background-attachment: fixed;
-}
-
-#ta {
-  background: url('../public/image/ac.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // background-attachment: fixed;
-}
-
-#sharing {
-  background: url('../public/image/sharing.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // background-attachment: fixed;
-}
-
-#movie {
-  background: url('../public/image/inception.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // background-attachment: fixed;
-}
-
-#sea {
-  background: url('../public/image/sea.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // background-attachment: fixed;
-}
-
-#contact {
-  background-color: #fff;
-
-  .title {
-    position: absolute;
-    top: 47.5%;
-    width: 100%;
-    text-align: center;
-    line-height: 2em;
-    z-index: 2;
-    color: #000;
-  }
-
-  .content {
-    a {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-    }
-
-    #linkedIn {
-      background: url('../public/icon/linkedin-logo.svg');
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-position: center;
-      a {
-        background-color: #007ec221;
-      }
-    }
-
-    #github {
-      background: url('../public/icon/github-logo.svg');
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-position: center;
-      a {
-        background-color: #ad5c5d36;
-        // background-color: #f4cbb246;
-      }
-    }
-
-    #medium {
-      background: url('../public/icon/medium-logo.svg');
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-position: center;
-      object-fit: contain;
-      a {
-        background-color: #caccce2c;
-      }
-    }
-
-    #instagram {
-      background: url('../public/icon/ig-logo.svg');
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-position: center;
-      a {
-        background-color: #dd2a7b33;
-      }
-    }
-  }
-
-  .content {
-    display: grid;
-    width: 100%;
-    height: 800px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-// #contact {
-//   .content {
-//     .icon {
-
-//     }
-//   }
-// }
