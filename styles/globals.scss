@@ -87,11 +87,6 @@ a {
     --filter: blur(10px);
     --opacity: 0.9;
   }
-  &[data-bg='info']::before {
-    background-image: $bg;
-    --first-gradient-coords: -5% 13%;
-    --second-gradient-coords: 140% 35%;
-  }
 
   .modal-content {
     &::before {
@@ -116,6 +111,36 @@ a {
       // transform: scale(1.2, 1.2);
     }
   }
+
+  &[data-bg='info'] {
+    // background-image: $bg;
+    // --first-gradient-coords: -5% 13%;
+    // --second-gradient-coords: 140% 35%;
+    .modal-content {
+      transition: top 0.1s ease 0s;
+      background: linear-gradient(
+          -45deg,
+          rgb(238, 119, 82),
+          rgb(231, 60, 126),
+          rgb(35, 166, 213),
+          rgb(35, 213, 171)
+        )
+        0% 0% / 400% 400%;
+      animation: 10s ease 0s infinite normal none running gradient;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
 }
 
 .modal-header {
@@ -131,6 +156,7 @@ a {
 .modal-body {
   margin: 0 40px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -277,18 +303,14 @@ a {
 .further-icon {
   // width: 50px;
   // height: 50px;
-  margin: 30px 0;
-  a:first-child {
-    margin-bottom: 10px;
+  // margin: 40px 0;
+  a {
+    margin-bottom: 30px;
   }
-  // box-shadow: $text-glow;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  a svg {
-    fill: #fff;
-  }
 }
 
 .downtime-wrapper {

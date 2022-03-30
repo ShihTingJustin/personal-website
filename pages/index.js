@@ -144,7 +144,7 @@ const mockContentData = [
           <GitHubIcon width="70" height="70" />
         </a>
         <a target="_tab" rel="noopener noreferrer" href="https://medium.com/life-after-hello-world">
-          <MediumIcon width="60" height="60" viewBox="0 0 195 195" />
+          <MediumIcon width="50" height="50" viewBox="0 0 195 195" />
         </a>
         <a target="_tab" rel="noopener noreferrer" href="https://www.instagram.com/mb722656355s/">
           <IGIcon width="70" height="70" />
