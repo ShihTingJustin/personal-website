@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
-import { IoIosArrowUp } from 'react-icons/io';
 import Card from '../src/components/card/Card.tsx';
 // import { Modal, Button } from 'react-bootstrap';
 import Modal from '../src/components/modal/Modal.tsx';
@@ -178,9 +177,6 @@ export default function Home() {
     <div id="container">
       <div id="cover" className="block">
         <div id="cover-text"></div>
-        <div id="scroll-indicator-wrapper">
-          <IoIosArrowUp />
-        </div>
       </div>
       <div id="intro-wrapper" className="block">
         <div className="title-wrapper" data-aos="fade-up">
