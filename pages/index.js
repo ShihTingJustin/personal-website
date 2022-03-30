@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
 import { IoIosArrowUp } from 'react-icons/io';
 import Card from '../src/components/card/Card.tsx';
+// import { Modal, Button } from 'react-bootstrap';
 import Modal from '../src/components/modal/Modal.tsx';
 import ReactIcon from '../public/icon/react.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
@@ -96,8 +97,11 @@ const mockContentData = [
     bg: 'invest',
     content: (
       <div>
-        指數化投資的實踐者，經歷美股兩週四次熔斷和後續V型反轉的洗禮後，領悟了一套適合自己的投資哲學。常看綠角財經筆記和
-        IEObserve國際經濟觀察。 另外也對於加密貨幣的崛起及其與法幣之間的關係會如何變化很感興趣。
+        指數化投資的實踐者，經歷美股兩週四次熔斷和後續V型反轉的洗禮後，領悟了一套適合自己的投資哲學。
+        <br />
+        <br />
+        常看綠角財經筆記和 IEObserve國際經濟觀察。
+        另外也對於加密貨幣的崛起及其與法幣之間的關係會如何變化很感興趣。
       </div>
     ),
   },
@@ -122,7 +126,10 @@ const mockContentData = [
     bg: 'movie',
     content: (
       <div>
-        愛看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等;也喜歡昆丁塔倫提諾獨特的暴力美學和敘事手法，像是惡棍特工、決殺令、八惡人、從前有個好萊塢。
+        愛看科幻電影滿足想像力，像是駭客任務、星際大戰、黑暗騎士、全面啟動、普羅米修斯、天能等等。
+        <br />
+        <br />
+        也喜歡昆丁塔倫提諾獨特的暴力美學和敘事手法，像是惡棍特工、決殺令、八惡人、從前有個好萊塢。
       </div>
     ),
   },
