@@ -2,10 +2,10 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   reactStrictMode: true,
-  i18n: {
-    locales: ['zh-tw', 'en'],
-    defaultLocale: 'zh-tw',
-  },
+  // i18n: {
+  //   locales: ['zh-tw', 'en'],
+  //   defaultLocale: 'zh-tw',
+  // },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
