@@ -53,13 +53,11 @@ a {
   }
   &[data-bg='auto'] {
     --url: url('/image/roadster.jpg');
-    --background-position: 50% 50%;
-    --filter: blur(4px);
-    --opacity: 0.7;
+    --filter: blur(6px);
+    --opacity: 0.8;
   }
   &[data-bg='invest'] {
     --url: url('/image/wallstreet.webp');
-    --background-position: 50% 50%;
     --filter: blur(20px);
   }
   &[data-bg='ta'] {
@@ -68,28 +66,22 @@ a {
   }
   &[data-bg='share'] {
     --url: url('/image/sharing.webp');
-    --background-position: 50% 0;
     --filter: blur(20px);
+    --opacity: 0.9;
   }
   &[data-bg='movie'] {
     --url: url('/image/inception.webp');
-    --background-position: 65% 0;
     --filter: blur(15px);
-  }
-  &[data-bg='share'] {
-    --url: url('/image/sharing.webp');
-    --filter: blur(10px);
-    --opacity: 0.9;
   }
 
   .modal-content {
     &::before {
       content: '';
       position: absolute;
+      object-fit: cover;
       width: 100%;
       height: 100%;
-      background: var(--url);
-      background-size: cover;
+      background-image: var(--url);
       overflow: hidden;
       -webkit-filter: var(--filter);
       -moz-filter: var(--filter);
@@ -97,14 +89,14 @@ a {
       -ms-filter: var(--filter);
       filter: var(--filter);
       opacity: var(--opacity);
-      background-position: var(--background-position);
+      background-position: center center;
+      background-repeat: no-repeat;
     }
   }
 
   &[data-bg='info'] {
     .modal-content {
       &::before {
-        // filter: blur(15px);
         transition: top 0.1s ease 0s;
         background: linear-gradient(
             -45deg,
@@ -146,6 +138,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  > div {
+    max-width: 600px;
+  }
 }
 
 .card--bg {
@@ -215,7 +210,7 @@ a {
     background: url('../public/image/me.webp');
     background-repeat: no-repeat;
     background-position: 0 45%;
-    background-size: cover;
+    object-fit: cover;
     // background-attachment: fixed;
   }
 
@@ -229,7 +224,7 @@ a {
   .title-wrapper {
     display: flex;
     width: 100%;
-    padding: 0 32px;
+    padding: 20px 32px;
     align-items: center;
     .title {
       font-size: 3em;
@@ -256,6 +251,7 @@ a {
   .content {
     margin: 0.75em 2em;
     line-height: 1.5em;
+    max-width: 600px;
   }
 }
 
