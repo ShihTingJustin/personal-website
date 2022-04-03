@@ -24,6 +24,7 @@
   &:hover {
     transform: scale(1.15);
     transition: 0.5s;
+    box-shadow: $text-glow;
   }
 
   .card--image {
