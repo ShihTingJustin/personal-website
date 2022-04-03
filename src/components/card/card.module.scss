@@ -25,6 +25,10 @@
     transform: scale(1.15);
     transition: 0.5s;
     box-shadow: $text-glow;
+    text-shadow: $text-glow;
+    background: $web3-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .card--image {
