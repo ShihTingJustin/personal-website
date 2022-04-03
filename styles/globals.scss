@@ -234,6 +234,10 @@ a {
     }
     .subtitle {
       font-size: 1.25em;
+      text-shadow: $text-glow;
+      background: $web3-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .photo {
       min-width: 150px;
