@@ -44,6 +44,7 @@ a {
   background-color: #000;
   color: rgba(255, 255, 255, 0.88);
   z-index: 100;
+  transition: 5s;
 }
 
 .modal-dialog {
@@ -91,6 +92,7 @@ a {
       opacity: var(--opacity);
       background-position: center center;
       background-repeat: no-repeat;
+      transition: 5s;
     }
   }
 
@@ -259,14 +261,15 @@ a {
   position: relative;
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(auto-fill, 140px);
-  grid-template-columns: repeat(auto-fill, 140px);
+  grid-template-rows: repeat(auto-fit, 140px);
+  grid-template-columns: repeat(auto-fit, 140px);
   gap: 16px;
   flex-wrap: wrap;
   flex-grow: 0;
   justify-content: center;
   justify-items: center;
   align-items: center;
+  align-content: center;
 }
 
 .further-icon {
