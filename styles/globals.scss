@@ -56,11 +56,11 @@ a {
 
 .modal-dialog {
   &[data-bg='react'] {
-    --url: url('/icon/react-logo.png');
+    --url: url('/image/react-logo.webp');
     --filter: blur(20px);
   }
   &[data-bg='auto'] {
-    --url: url('/image/roadster.jpg');
+    --url: url('/image/roadster.webp');
     --filter: blur(6px);
     --opacity: 0.8;
   }
