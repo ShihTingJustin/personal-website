@@ -6,6 +6,7 @@ import Modal from '../src/components/modal/Modal.tsx';
 import ReactIcon from '../public/icon/react.svg';
 import AutoIcon from '../public/icon/911.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
+import MovieIcon from '../public/icon/movie.svg';
 import LinkedInIcon from '../public/icon/linkedin-icon.svg';
 import IGIcon from '../public/icon/ig-icon.svg';
 import GitHubIcon from '../public/icon/github-icon.svg';
@@ -50,7 +51,7 @@ const mockData = [
     title: '分享',
   },
   {
-    icon: '/icon/movie.svg',
+    icon: <MovieIcon style={{ fill: '#fff' }} width="90" height="60" viewBox="0 0 744 195" />,
     iconBgColor: 'white',
     background: <ReactIcon className="card--bg" style={{ fill: '#fff' }} width="60" height="60" />,
     title: '電影',
