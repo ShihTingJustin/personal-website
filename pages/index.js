@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect/dist/core';
 import Card from '../src/components/card/Card.tsx';
 import Modal from '../src/components/modal/Modal.tsx';
 import ReactIcon from '../public/icon/react.svg';
+import AutoIcon from '../public/icon/911.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
 import LinkedInIcon from '../public/icon/linkedin-icon.svg';
 import IGIcon from '../public/icon/ig-icon.svg';
@@ -19,7 +20,7 @@ const mockData = [
     title: '資訊科技',
   },
   {
-    icon: '/icon/auto-icon.png',
+    icon: <AutoIcon style={{ fill: '#fff' }} width="60" height="60" />,
     iconBgColor: 'white',
     background: <ReactIcon className="card--bg" style={{ fill: '#fff' }} width="60" height="60" />,
     title: '汽車',
@@ -39,7 +40,9 @@ const mockData = [
     title: '教育',
   },
   {
-    icon: '/icon/medium-icon.svg',
+    icon: (
+      <MediumIcon style={{ borderRadius: '10px' }} width="60" height="60" viewBox="0 0 195 195" />
+    ),
     iconBgColor: 'black-2',
     background: (
       <ReactIcon className="card--bg" style={{ fill: '#59D4F8' }} width="60" height="60" />
