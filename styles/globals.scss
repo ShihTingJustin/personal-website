@@ -10,6 +10,8 @@ body {
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 200;
   scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 html {
@@ -20,6 +22,10 @@ html {
 body {
   max-width: 800px;
   -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {
