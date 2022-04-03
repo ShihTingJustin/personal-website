@@ -91,10 +91,10 @@ a {
       background: var(--url);
       background-size: cover;
       overflow: hidden;
-      -webkit-filter: blur(25px);
-      -moz-filter: blur(25px);
-      -o-filter: blur(25px);
-      -ms-filter: blur(25px);
+      -webkit-filter: var(--filter);
+      -moz-filter: var(--filter);
+      -o-filter: var(--filter);
+      -ms-filter: var(--filter);
       filter: var(--filter);
       opacity: var(--opacity);
       background-position: var(--background-position);
@@ -103,16 +103,18 @@ a {
 
   &[data-bg='info'] {
     .modal-content {
-      transition: top 0.1s ease 0s;
-      background: linear-gradient(
-          -45deg,
-          rgb(238, 119, 82),
-          rgb(231, 60, 126),
-          rgb(35, 166, 213),
-          rgb(35, 213, 171)
-        )
-        0% 0% / 400% 400%;
-      animation: 10s ease 0s infinite normal none running gradient;
+      &::before {
+        // filter: blur(15px);
+        transition: top 0.1s ease 0s;
+        background: linear-gradient(
+            -45deg,
+            hsla(184, 85%, 63%, 1) 0%,
+            hsla(240, 46%, 76%, 1) 50%,
+            hsla(319, 72%, 75%, 1)
+          )
+          0% 0% / 400% 400%;
+        animation: 5s ease 0s infinite normal none running gradient;
+      }
     }
 
     @keyframes gradient {
@@ -274,6 +276,12 @@ a {
 .further-icon {
   a {
     margin-bottom: 30px;
+    transform: scale(1);
+    transition: 0.5s;
+  }
+  a:hover {
+    transform: scale(1.4);
+    transition: 0.5s;
   }
   display: flex;
   flex-direction: column;
