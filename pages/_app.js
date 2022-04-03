@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
         <meta itemProp="name" content="JustinHuang" />
         <meta
           itemProp="image"
-          content="/_next/static/media/roadster.e0c6976b28c7de8583354915f320aa10.jpg"
+          content="/_next/static/media/me.7c0b9d82481ed302a5957ba8b9299c4d.webp"
         />
         <meta
           itemProp="description"
@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://jhdev.pro" />
         <meta
           property="og:image"
-          content="/_next/static/media/roadster.e0c6976b28c7de8583354915f320aa10.jpg"
+          content="/_next/static/media/me.7c0b9d82481ed302a5957ba8b9299c4d.webp"
         />
         <meta
           property="og:description"
