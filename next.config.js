@@ -1,3 +1,5 @@
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
 module.exports = {
   reactStrictMode: true,
   i18n: {
@@ -15,6 +17,16 @@ module.exports = {
 
       use: ['@svgr/webpack'],
     });
+
+    if (process.env.NEXT_ANALYZE) {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          analyzerPort: 8888,
+          openAnalyzer: true,
+        }),
+      );
+    }
 
     return config;
   },
