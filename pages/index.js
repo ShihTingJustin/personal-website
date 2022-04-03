@@ -140,13 +140,13 @@ const mockContentData = [
     content: (
       <div className="further-icon">
         <a target="_tab" rel="noopener noreferrer" href="https://linkedin.com/in/justinhuang777">
-          <LinkedInIcon width="50" height="50" />
+          <LinkedInIcon width="45" height="45" />
         </a>
         <a target="_tab" rel="noopener noreferrer" href="https://github.com/ShihTingJustin">
           <GitHubIcon width="70" height="70" />
         </a>
         <a target="_tab" rel="noopener noreferrer" href="https://medium.com/life-after-hello-world">
-          <MediumIcon width="50" height="50" viewBox="0 0 195 195" />
+          <MediumIcon width="45" height="45" viewBox="0 0 195 195" />
         </a>
         <a target="_tab" rel="noopener noreferrer" href="https://www.instagram.com/mb722656355s/">
           <IGIcon width="70" height="70" />
