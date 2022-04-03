@@ -261,12 +261,14 @@ a {
   position: relative;
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(auto-fill, 160px);
-  grid-template-columns: repeat(auto-fill, 160px);
+  grid-template-rows: repeat(auto-fill, 140px);
+  grid-template-columns: repeat(auto-fill, 140px);
   gap: 16px;
   flex-wrap: wrap;
   flex-grow: 0;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 
 .further-icon {
