@@ -30,7 +30,7 @@ const mockData = [
     icon: '/icon/stock.svg',
     iconBgColor: 'black-2',
     background: (
-      <ReactIcon className="card--bg" style={{ fill: '#32bf57' }} width="60" height="60" />
+      <ReactIcon className="card--bg" style={{ fill: '#FFD700' }} width="60" height="60" />
     ),
     title: '投資',
   },
