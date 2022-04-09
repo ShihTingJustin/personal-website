@@ -27,6 +27,7 @@ const Modal = ({ bg, isOpen, children, setModalOpen }: ModalProps) => {
         width="300"
         height="300"
         alt="pic"
+        objectFit="cover"
       />
       <ModalBootstrap.Header closeButton closeVariant="white"></ModalBootstrap.Header>
       <ModalBootstrap.Body>
