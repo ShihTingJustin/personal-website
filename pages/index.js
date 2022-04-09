@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect, useState } from 'react';
-import Typewriter from 'typewriter-effect/dist/core';
+import React, { useState } from 'react';
+import Typewriter from 'typewriter-effect';
 import Card from '../src/components/card/Card.tsx';
 import Modal from '../src/components/modal/Modal.tsx';
 import ReactIcon from '../public/icon/react.svg';
@@ -160,27 +160,27 @@ export default function Home() {
   const [stateModalOpen, setModalOpen] = useState(false);
   const [stateIndex, setIndex] = useState(0);
 
-  useEffect(() => {
-    new Typewriter('#cover-text', {
-      strings: [
-        'Developer',
-        'Product Manager',
-        'Petrol-head',
-        'Investor',
-        'Teaching Assistant',
-        'Learner',
-      ],
-      autoStart: true,
-      loop: true,
-      delay: 50,
-      deleteSpeed: 25,
-    });
-  }, []);
-
   return (
     <div id="container">
       <div id="cover" className="block">
-        <div id="cover-text"></div>
+        <div id="cover-text">
+          <Typewriter
+            options={{
+              strings: [
+                'Developer',
+                'Product Manager',
+                'Petrol-head',
+                'Investor',
+                'Teaching Assistant',
+                'Learner',
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 50,
+              deleteSpeed: 25,
+            }}
+          />
+        </div>
       </div>
       <div id="intro-wrapper" className="block">
         <div className="title-wrapper">
