@@ -2,6 +2,9 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   reactStrictMode: true,
+  images: {
+    domains: ['images.unsplash.com'],
+  },
   // i18n: {
   //   locales: ['zh-tw', 'en'],
   //   defaultLocale: 'zh-tw',
