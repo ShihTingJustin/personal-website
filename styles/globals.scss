@@ -56,38 +56,16 @@ a {
 .modal-content {
   background-color: #000;
   color: rgba(255, 255, 255, 0.88);
-  z-index: 100;
-  transition: 5s;
+  // z-index: 100;
+}
+
+.modal-body-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .modal-dialog {
-  &[data-bg='react'] {
-    --url: url('/image/react-logo.webp');
-    --filter: blur(20px);
-  }
-  &[data-bg='auto'] {
-    --url: url('/image/roadster.webp');
-    --filter: blur(6px);
-    --opacity: 0.8;
-  }
-  &[data-bg='invest'] {
-    --url: url('/image/wallstreet.webp');
-    --filter: blur(20px);
-  }
-  &[data-bg='ta'] {
-    --url: url('/image/ac.webp');
-    --filter: blur(10px);
-  }
-  &[data-bg='share'] {
-    --url: url('/image/sharing.webp');
-    --filter: blur(20px);
-    --opacity: 0.9;
-  }
-  &[data-bg='movie'] {
-    --url: url('/image/inception.webp');
-    --filter: blur(15px);
-  }
-
   .modal-content {
     &::before {
       content: '';
@@ -95,45 +73,15 @@ a {
       object-fit: cover;
       width: 100%;
       height: 100%;
-      background-image: var(--url);
+      background-image: url('https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
       overflow: hidden;
-      -webkit-filter: var(--filter);
-      -moz-filter: var(--filter);
-      -o-filter: var(--filter);
-      -ms-filter: var(--filter);
-      filter: var(--filter);
-      opacity: var(--opacity);
+      -webkit-filter: blur(30px);
+      -moz-filter: blur(30px);
+      -o-filter: blur(30px);
+      -ms-filter: blur(30px);
+      filter: blur(30px);
       background-position: center center;
       background-repeat: no-repeat;
-      transition: 5s;
-    }
-  }
-
-  &[data-bg='info'] {
-    .modal-content {
-      &::before {
-        transition: top 0.1s ease 0s;
-        background: linear-gradient(
-            -45deg,
-            hsla(184, 85%, 63%, 1) 0%,
-            hsla(240, 46%, 76%, 1) 50%,
-            hsla(319, 72%, 75%, 1)
-          )
-          0% 0% / 400% 400%;
-        animation: 5s ease 0s infinite normal none running gradient;
-      }
-    }
-
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
     }
   }
 }
