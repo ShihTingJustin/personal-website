@@ -22,7 +22,7 @@ const Modal = ({ bg, isOpen, children, setModalOpen }: ModalProps) => {
       <Image
         className={style['modal-bg-image']}
         priority
-        src="/image/space.avif"
+        src="/image/space.jpeg"
         layout="fill"
         width="300"
         height="300"
