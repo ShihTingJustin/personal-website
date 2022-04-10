@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { GetStaticProps } from 'next';
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import Card from '../src/components/card/Card.tsx';
@@ -226,4 +227,10 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {},
+  };
 }
