@@ -204,26 +204,9 @@ export default function Home() {
         <div className="content">想知道我喜歡做些什麼就繼續往下滑吧～</div>
       </div>
       <div id="card-wrapper" className="block">
-        {mockData.map((item, index) => (
-          <Card
-            key={index}
-            icon={item.icon}
-            iconBgColor={item.iconBgColor}
-            background={item.background}
-            title={item.title}
-            onClick={() => {
-              setModalOpen(true);
-              setIndex(index);
-            }}
-          />
-        ))}
-        <Modal
-          bg={mockContentData[stateIndex].bg}
-          isOpen={stateModalOpen}
-          setModalOpen={setModalOpen}
-        >
-          {mockContentData[stateIndex].content}
-        </Modal>
+        {/* {mockData.map((item, index) => (
+
+        ))} */}
       </div>
     </div>
   );
