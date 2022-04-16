@@ -8,19 +8,21 @@
   -webkit-text-fill-color: transparent;
 }
 
-.company-name {
-  // font-weight: 600;
-  transition: 0.5s;
+.company-name:hover {
+  background: $web3-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .period {
   font-size: 12px;
   font-weight: 200;
-  margin-bottom: 20px;
+  margin-bottom: 0.125em;
 }
 
-.company-name:hover {
-  background: $web3-gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.content {
+  p {
+    font-size: 14px;
+    text-align: left;
+  }
 }
