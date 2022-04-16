@@ -41,15 +41,15 @@ a {
   height: 100vh;
   color: #fff;
   position: relative;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+  // overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
+  // scroll-behavior: smooth;
 }
 
 .block {
   height: 100vh;
   padding: 0 16px;
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
 }
 
 .modal-content {

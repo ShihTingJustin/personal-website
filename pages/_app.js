@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
-      delay: 125,
+      delay: 175,
     });
   }, []);
 
