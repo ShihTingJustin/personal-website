@@ -3,7 +3,6 @@ import { GetStaticProps } from 'next';
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import Card from '../src/components/card/Card.tsx';
-import Modal from '../src/components/modal/Modal.tsx';
 import ReactIcon from '../public/icon/react.svg';
 import AutoIcon from '../public/icon/911.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
