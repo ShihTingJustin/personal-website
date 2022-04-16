@@ -2,7 +2,7 @@
 import { GetStaticProps } from 'next';
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import Card from '../src/components/card/Card.tsx';
+import Timeline from '../src/components/timeline/Timeline.tsx';
 import ReactIcon from '../public/icon/react.svg';
 import AutoIcon from '../public/icon/911.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
@@ -202,10 +202,8 @@ export default function Home() {
         </div>
         <div className="content">想知道我喜歡做些什麼就繼續往下滑吧～</div>
       </div>
-      <div id="card-wrapper" className="block">
-        {/* {mockData.map((item, index) => (
-
-        ))} */}
+      <div id="timeline-wrapper" className="block">
+        <Timeline />
       </div>
     </div>
   );
