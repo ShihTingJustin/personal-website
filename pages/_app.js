@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 import '../styles/globals.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    AOS.init({
+      delay: 125,
+    });
+  }, []);
+
   return (
     <>
       {/* Global site tag (gtag.js) - Google Analytics */}
