@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: $text-glow;
+  background: $web3-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.company-name {
+  // font-weight: 600;
+  transition: 0.5s;
+}
+
+.period {
+  font-size: 12px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.company-name:hover {
+  background: $web3-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
