@@ -127,7 +127,7 @@ const Timeline = () => {
           {/* <TimelineOppositeContent>{data.title}</TimelineOppositeContent> */}
           <TimelineSeparator
             sx={{
-              minHeight: '25vh',
+              // minHeight: '25vh',
             }}
           >
             <TimelineDot />
