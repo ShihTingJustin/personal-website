@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  max-width: 800px;
+  // max-width: 800px;
   -ms-overflow-style: none;
 }
 
@@ -50,6 +50,10 @@ a {
   height: 100vh;
   padding: 0 16px;
   // scroll-snap-align: start;
+}
+
+#timeline-wrapper {
+
 }
 
 .modal-content {
@@ -101,7 +105,7 @@ a {
   justify-content: center;
   align-items: center;
   > div {
-    max-width: 600px;
+    // max-width: 600px;
   }
 }
 

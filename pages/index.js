@@ -211,6 +211,7 @@ export default function Home() {
       <div id="timeline-wrapper" className="block">
         <Timeline />
       </div>
+      <div id="timeline-wrapper" className="block"></div>
     </div>
   );
 }
