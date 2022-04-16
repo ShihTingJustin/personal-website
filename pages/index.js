@@ -184,23 +184,29 @@ export default function Home() {
       </div>
       <div id="intro-wrapper" className="block">
         <div className="title-wrapper">
-          <div className="photo"></div>
+          <div className="photo" data-aos="fade-up"></div>
           <div>
-            <div className="title">賈斯丁黃</div>
-            <div className="subtitle">不安分的靈魂</div>
+            <div className="title" data-aos="fade-up">
+              賈斯丁黃
+            </div>
+            <div className="subtitle" data-aos="fade-up">
+              不安分的靈魂
+            </div>
           </div>
         </div>
-        <div className="content">
+        <div className="content" data-aos="fade-up">
           一個非典型技術宅，鑽研技術也享受打造產品和琢磨細節的過程，被敏捷開發燒到後決定前往軟體領域一探究竟。
           <br />
           目前在電商產業擔任前端工程師，也在程式教育機構兼職助教。
         </div>
-        <div className="content">
+        <div className="content" data-aos="fade-up">
           汽車愛好者，對德國工藝特別著迷，尤其是賓士全方位的產品配置和保時捷獨樹一格的德式激情。
           <br />
           喜歡分析市場和規格，曾在台灣唯一整車研發企業擔任產品經理。
         </div>
-        <div className="content">想知道我喜歡做些什麼就繼續往下滑吧～</div>
+        <div className="content" data-aos="fade-up">
+          想知道我喜歡做些什麼就繼續往下滑吧～
+        </div>
       </div>
       <div id="timeline-wrapper" className="block">
         <Timeline />

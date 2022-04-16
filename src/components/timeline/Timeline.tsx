@@ -18,7 +18,9 @@ const Timeline = () => {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>Eat</TimelineContent>
+        <TimelineContent data-aos="fade-left">
+          <div>Eat</div>
+        </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">10:00 am</TimelineOppositeContent>
@@ -26,7 +28,7 @@ const Timeline = () => {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>Code</TimelineContent>
+        <TimelineContent data-aos="fade-right">Code</TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">12:00 am</TimelineOppositeContent>
