@@ -127,7 +127,7 @@ a {
 
 #cover,
 #intro-wrapper,
-#card-wrapper {
+#timeline-wrapper {
   background-image: $bg;
   --first-gradient-coords: -5% 13%;
   --second-gradient-coords: 140% 35%;
@@ -212,19 +212,9 @@ a {
   }
 }
 
-#card-wrapper {
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-rows: repeat(auto-fit, 140px);
-  grid-template-columns: repeat(auto-fit, 140px);
-  gap: 16px;
-  flex-wrap: wrap;
-  flex-grow: 0;
-  justify-content: center;
-  justify-items: center;
+#timeline-wrapper {
+  display: flex;
   align-items: center;
-  align-content: center;
 }
 
 .further-icon {
