@@ -47,6 +47,9 @@ a {
 .block {
   height: 100vh;
   padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #cover {
@@ -106,8 +109,14 @@ a {
 }
 
 #timeline-wrapper {
-  display: flex;
+  height: 100%;
   align-items: center;
+}
+
+#footer {
+  height: 100vh;
+  display: flex;
+  align-items: end;
 }
 
 .further-icon {
