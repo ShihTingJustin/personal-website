@@ -2,6 +2,9 @@
 .title {
   font-size: 18px;
   font-weight: 600;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
   text-shadow: $text-glow;
   background: $web3-gradient;
   -webkit-background-clip: text;

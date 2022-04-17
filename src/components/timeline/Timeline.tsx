@@ -10,6 +10,9 @@ import {
   TimelineOppositeContent,
 } from '@mui/lab';
 import { Box } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import theme from '../../../src/theme';
+
 import LinkIcon from '@mui/icons-material/Link';
 import style from './timeline.module.scss';
 import ReactIcon from '../../../public/icon/react.svg';
@@ -118,8 +121,10 @@ const mockData: TimelineData[] = [
 ];
 
 const Timeline = () => {
+  const matches = useMediaQuery('(max-width:600px)');
+  console.log({ matches });
   return (
-    <TimelineMui position="alternate" sx={{ margin: 0, padding: 0 }}>
+    <TimelineMui position={`${matches ? 'right' : 'alternate'}`}>
       {mockData.map((data, index) => (
         <TimelineItem
           sx={{
@@ -128,20 +133,23 @@ const Timeline = () => {
           }}
           key={index}
         >
-          {/* RWD */}
-          {/* <TimelineOppositeContent>{data.title}</TimelineOppositeContent> */}
-          <TimelineSeparator
-            sx={
-              {
-                // minHeight: '25vh',
-              }
-            }
-          >
+          {/* for RWD */}
+          <TimelineOppositeContent
+            sx={{
+              flex: { sm: 1, xs: 0.1 },
+            }}
+          ></TimelineOppositeContent>
+          <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent data-aos={`${index % 2 ? 'fade-right' : 'fade-left'}`}>
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
               <div className={style['title']}>{data.title}</div>
               <div className={style['company-name']}>
                 <a href={data.url} target="_blank" rel="noreferrer">

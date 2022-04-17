@@ -31,6 +31,9 @@ a {
 .block {
   height: 100vh;
   padding: 0 16px;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,11 +94,6 @@ a {
     line-height: 1.5em;
     max-width: 600px;
   }
-}
-
-#timeline-wrapper {
-  height: 100%;
-  align-items: center;
 }
 
 #further-info {
