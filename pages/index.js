@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next';
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import Timeline from '../src/components/timeline/Timeline.tsx';
+// import '../styles/variables';
 import { Box } from '@mui/material';
 import ReactIcon from '../public/icon/react.svg';
 import AutoIcon from '../public/icon/911.svg';
@@ -158,19 +159,38 @@ export default function Home() {
       <div id="timeline-wrapper" className="block">
         <Timeline />
       </div>
-      <div id="footer" className="block">
+      <div id="further-info" className="block">
         <Box
           sx={{
+            p: {
+              textAlign: 'center',
+            },
             svg: {
               fontSize: '40px',
               margin: '10px',
+              '&:hover,&:active': {
+                cursor: 'pointer',
+                transition: '0.5s',
+                // fill: '$web3-gradient',
+                // '&::WebkitBackgroundClip': 'text',
+                // '&::WebkitTextFillColor': 'transparent',
+              },
             },
           }}
         >
-          <LinkedInIcon />
-          <GitHubIcon />
-          <InstagramIcon />
-          <RssFeedIcon />
+          <p>Further Information</p>
+          <a href="https://linkedin.com/in/justinhuang777" target="_blank" rel="noreferrer">
+            <LinkedInIcon />
+          </a>
+          <a href="https://github.com/ShihTingJustin" target="_blank" rel="noreferrer">
+            <GitHubIcon />
+          </a>
+          <a href="https://medium.com/life-after-hello-world" target="_blank" rel="noreferrer">
+            <RssFeedIcon />
+          </a>
+          <a href="https://www.instagram.com/mb722656355s/" target="_blank" rel="noreferrer">
+            <InstagramIcon />
+          </a>
         </Box>
       </div>
     </div>
