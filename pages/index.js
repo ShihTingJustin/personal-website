@@ -5,6 +5,8 @@ import Typewriter from 'typewriter-effect';
 import Timeline from '../src/components/timeline/Timeline.tsx';
 // import '../styles/variables';
 import { Box } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../src/theme';
 import ReactIcon from '../public/icon/react.svg';
 import AutoIcon from '../public/icon/911.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
@@ -160,38 +162,46 @@ export default function Home() {
         <Timeline />
       </div>
       <div id="further-info" className="block">
-        <Box
-          sx={{
-            p: {
-              textAlign: 'center',
-            },
-            svg: {
-              fontSize: '40px',
-              margin: '10px',
-              '&:hover,&:active': {
-                cursor: 'pointer',
-                transition: '0.5s',
-                // fill: '$web3-gradient',
-                // '&::WebkitBackgroundClip': 'text',
-                // '&::WebkitTextFillColor': 'transparent',
+        <ThemeProvider theme={theme}>
+          <Box
+            sx={{
+              p: {
+                textAlign: 'center',
+                textShadow: theme.textGlow,
+                background: theme.web3Gradient,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
               },
-            },
-          }}
-        >
-          <p>Further Information</p>
-          <a href="https://linkedin.com/in/justinhuang777" target="_blank" rel="noreferrer">
-            <LinkedInIcon />
-          </a>
-          <a href="https://github.com/ShihTingJustin" target="_blank" rel="noreferrer">
-            <GitHubIcon />
-          </a>
-          <a href="https://medium.com/life-after-hello-world" target="_blank" rel="noreferrer">
-            <RssFeedIcon />
-          </a>
-          <a href="https://www.instagram.com/mb722656355s/" target="_blank" rel="noreferrer">
-            <InstagramIcon />
-          </a>
-        </Box>
+              a: {
+                opacity: 0.5,
+                '&:hover,&:active': {
+                  opacity: 1,
+                  svg: {
+                    transform: 'scale(1.3)',
+                  },
+                },
+                svg: {
+                  margin: '10px',
+                  fontSize: '40px',
+                },
+              },
+            }}
+          >
+            <p>Further Information</p>
+            <a href="https://linkedin.com/in/justinhuang777" target="_blank" rel="noreferrer">
+              <LinkedInIcon />
+            </a>
+            <a href="https://github.com/ShihTingJustin" target="_blank" rel="noreferrer">
+              <GitHubIcon />
+            </a>
+            <a href="https://medium.com/life-after-hello-world" target="_blank" rel="noreferrer">
+              <RssFeedIcon />
+            </a>
+            <a href="https://www.instagram.com/mb722656355s/" target="_blank" rel="noreferrer">
+              <InstagramIcon />
+            </a>
+          </Box>
+        </ThemeProvider>
       </div>
     </div>
   );
