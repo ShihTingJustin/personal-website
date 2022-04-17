@@ -34,7 +34,6 @@ const theme = createTheme({
   //   values: {
   //     xs: 0,
   //     sm: 600,
-
   //   },
   // },
   ...cssVariables,

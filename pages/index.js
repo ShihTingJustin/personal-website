@@ -1,16 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import { GetStaticProps } from 'next';
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import Timeline from '../src/components/timeline/Timeline.tsx';
 import { Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../src/theme';
-import ReactIcon from '../public/icon/react.svg';
-import AutoIcon from '../public/icon/911.svg';
-import MediumIcon from '../public/icon/medium-icon.svg';
-import MovieIcon from '../public/icon/movie.svg';
-
 import { getIcon } from '../src/utils';
 
 // const mockContentData = [

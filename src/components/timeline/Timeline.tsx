@@ -67,7 +67,7 @@ const mockData: TimelineData[] = [
 
 const Timeline = () => {
   const matches = useMediaQuery('(max-width:600px)');
-  console.log({ matches });
+
   return (
     <TimelineMui position={`${matches ? 'right' : 'alternate'}`}>
       {mockData.map((data, index) => (
