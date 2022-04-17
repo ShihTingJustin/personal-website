@@ -11,10 +11,8 @@ import ReactIcon from '../public/icon/react.svg';
 import AutoIcon from '../public/icon/911.svg';
 import MediumIcon from '../public/icon/medium-icon.svg';
 import MovieIcon from '../public/icon/movie.svg';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import RssFeedIcon from '@mui/icons-material/RssFeed';
+
+import { getIcon } from '../src/utils';
 
 // const mockContentData = [
 //   {
@@ -106,6 +104,25 @@ import RssFeedIcon from '@mui/icons-material/RssFeed';
 //   },
 // ];
 
+const socialData = [
+  {
+    name: 'linkedin',
+    url: 'https://linkedin.com/in/justinhuang777',
+  },
+  {
+    name: 'github',
+    url: 'https://github.com/ShihTingJustin',
+  },
+  {
+    name: 'blog',
+    url: 'https://medium.com/life-after-hello-world',
+  },
+  {
+    name: 'instagram',
+    url: 'https://www.instagram.com/mb722656355s/',
+  },
+];
+
 export default function Home() {
   const [stateModalOpen, setModalOpen] = useState(false);
   const [stateIndex, setIndex] = useState(0);
@@ -189,18 +206,20 @@ export default function Home() {
             }}
           >
             <p>Further Information</p>
-            <a href="https://linkedin.com/in/justinhuang777" target="_blank" rel="noreferrer">
-              <LinkedInIcon />
-            </a>
-            <a href="https://github.com/ShihTingJustin" target="_blank" rel="noreferrer">
-              <GitHubIcon />
-            </a>
-            <a href="https://medium.com/life-after-hello-world" target="_blank" rel="noreferrer">
-              <RssFeedIcon />
-            </a>
-            <a href="https://www.instagram.com/mb722656355s/" target="_blank" rel="noreferrer">
-              <InstagramIcon />
-            </a>
+            {socialData.map((data, index) => (
+              <a
+                key={index}
+                href={data.url}
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay={200 + Number(index) * 50}
+                data-aos-offset="0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {getIcon(data.name)}
+              </a>
+            ))}
           </Box>
         </ThemeProvider>
       </div>

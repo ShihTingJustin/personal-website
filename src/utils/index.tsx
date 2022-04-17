@@ -17,6 +17,10 @@ import AwsIcon from '../../public/icon/aws.svg';
 import AzureIcon from '../../public/icon/azure.svg';
 import AnsibleIcon from '../../public/icon/ansible.svg';
 import MochaIcon from '../../public/icon/mocha.svg';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
 
 export const getIcon = (icon: string) => {
   switch (icon) {
@@ -58,6 +62,14 @@ export const getIcon = (icon: string) => {
       return <AnsibleIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />;
     case 'mocha':
       return <MochaIcon width="40" height="40" alt="icon" />;
+    case 'linkedin':
+      return <LinkedInIcon />;
+    case 'github':
+      return <GitHubIcon />;
+    case 'blog':
+      return <RssFeedIcon />;
+    case 'instagram':
+      return <InstagramIcon />;
     default:
       return;
   }
