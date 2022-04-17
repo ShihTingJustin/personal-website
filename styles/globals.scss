@@ -4,25 +4,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: 200;
   scrollbar-width: none;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-}
-
-html {
-  display: flex;
-  justify-content: center;
-  background-color: #07050f;
-  background-image: $bg;
-  --first-gradient-coords: -5% 25%;
-  --second-gradient-coords: 120% 60%;
-}
-
-body {
-  -ms-overflow-style: none;
 }
 
 ::-webkit-scrollbar {
@@ -77,12 +61,12 @@ a {
   .title-wrapper {
     display: flex;
     width: 100%;
-    padding: 20px 32px;
     align-items: center;
     .title {
       font-size: 3em;
     }
     .subtitle {
+      padding-top: 0.75em;
       font-size: 1.25em;
       text-shadow: $text-glow;
       background: $web3-gradient;
@@ -101,6 +85,7 @@ a {
     }
   }
 
+  .title-wrapper,
   .content {
     margin: 0.75em 2em;
     line-height: 1.5em;

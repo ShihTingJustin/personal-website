@@ -4,6 +4,16 @@ import Script from 'next/script';
 import '../styles/globals.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import theme from '../src/theme';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+
+const cssVar = {
+  textGlow: '0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%)',
+  web3Gradient: 'linear-gradient(to right, #30cfd0, #c43ad6)',
+  web3Background:
+    'radial-gradient(circle closest-corner at -5% 25%, rgba(40, 72, 122, 0.85), transparent), radial-gradient(circle closest-corner at 120% 60%, rgba(138, 41, 129, 0.7),transparent)',
+};
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -59,7 +69,10 @@ function MyApp({ Component, pageProps }) {
           content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like LinkedIn, GitHub, Medium and Instagram."
         ></meta>
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={{ ...theme, ...cssVar }}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
