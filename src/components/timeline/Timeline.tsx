@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import {
   Timeline as TimelineMui,
   TimelineItem,
@@ -11,7 +10,6 @@ import {
 } from '@mui/lab';
 import { Box } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import theme from '../../../src/theme';
 
 import LinkIcon from '@mui/icons-material/Link';
 import style from './timeline.module.scss';
