@@ -15,6 +15,7 @@ import theme from '../../../src/theme';
 
 import LinkIcon from '@mui/icons-material/Link';
 import style from './timeline.module.scss';
+
 import ReactIcon from '../../../public/icon/react.svg';
 import ReduxIcon from '../../../public/icon/redux.svg';
 import NextIcon from '../../../public/icon/next.svg';
@@ -36,11 +37,12 @@ import AnsibleIcon from '../../../public/icon/ansible.svg';
 import MochaIcon from '../../../public/icon/mocha.svg';
 
 interface TimelineData {
+  title: string;
   companyName: string;
   url: string;
-  title: string;
-  content: React.ReactNode;
   period: string;
+  content: string;
+  skill?: string[];
 }
 
 const mockData: TimelineData[] = [
@@ -49,76 +51,84 @@ const mockData: TimelineData[] = [
     companyName: 'Shoalter Technology (HKTV Group)',
     url: 'https://www.shoalter.com/',
     title: 'Software Engineer',
-    content: (
-      <>
-        <p>
-          負責香港電商巨擘 HKTVmall 所有 IT
-          專案的前端項目，參與需求分析、使用者體驗及可行性評估、開發及維護。
-        </p>
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            svg: {
-              margin: '2px',
-            },
-          }}
-        >
-          <TsIcon width="40" height="40" viewBox="0 0 512 512" alt="icon" />
-          <ReactIcon style={{ fill: '#1993c0' }} width="40" height="40" alt="icon" />
-          <ReduxIcon width="40" height="40" alt="icon" />
-          <NextIcon style={{ fill: '#fff' }} alt="icon" />
-          <SassIcon width="50" height="40" viewBox="0 0 512 512" alt="icon" />
-          <TailwindIcon width="40" height="40" viewBox="0 0 1000 1000" alt="icon" />
-          <AntdIcon width="40" height="40" alt="icon" />
-          <GatsbyIcon width="40" height="40" alt="icon" />
-          <StorybookIcon width="40" height="40" alt="icon" />
-          <GitlabIcon width="50" height="50" alt="icon" />
-          <JestIcon width="40" height="40" alt="icon" />
-        </Box>
-      </>
-    ),
+    content:
+      '負責香港電商巨擘 HKTVmall 所有 IT 專案的前端項目，參與需求分析、使用者體驗及可行性評估、開發及維護。',
+    skill: [
+      'typescript',
+      'react',
+      'redux',
+      'next',
+      'sass',
+      'tailwind',
+      'antd',
+      'gatsby',
+      'storybook',
+      'gitlab',
+      'jest',
+    ],
   },
   {
     period: '2021/01 - 2021/05',
     companyName: 'Askey (ASUS Group)',
     url: 'https://www.askey.com.tw/tw/',
     title: 'Software Engineer',
-    content: (
-      <>
-        <p>
-          使用 Azure Pipeline 及 Ansible 建立 CI pipeline 運行自動化測試，將測試報告儲存至 AWS
-          S3，可透過 AWS CloudFront 從外部存取。
-        </p>
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            svg: {
-              margin: '2px',
-            },
-          }}
-        >
-          <JsIcon width="40" height="40" alt="icon" />
-          <VueIcon width="40" height="40" alt="icon" />
-          <NodeIcon width="40" height="40" alt="icon" />
-          <ExpressIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
-          <AwsIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
-          <AzureIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
-          <AnsibleIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
-          <MochaIcon width="40" height="40" alt="icon" />
-        </Box>
-      </>
-    ),
+    content:
+      '使用 Azure Pipeline 及 Ansible 建立 CI pipeline 運行自動化測試，將測試報告儲存至 AWS S3，可透過 AWS CloudFront 從外部存取。',
+    skill: ['javascript', 'vue', 'node', 'express', 'aws', 'azure', 'ansible', 'mocha'],
   },
   {
     period: '2016/12 - 2019/09',
     companyName: 'HAITEC (Yulon Group)',
     url: 'https://www.foxtronev.com/en/',
     title: 'Product Manager',
-    content: <p>代表華創研發團隊與裕隆集團納智捷價值鏈相關公司合作進行產品企劃及規格配備提案。</p>,
+    content: '代表華創研發團隊與裕隆集團納智捷價值鏈相關公司合作進行產品企劃及規格配備提案。',
   },
 ];
+
+const getIcon = (icon: string) => {
+  switch (icon) {
+    case 'typescript':
+      return <TsIcon width="40" height="40" viewBox="0 0 512 512" alt="icon" />;
+    case 'react':
+      return <ReactIcon style={{ fill: '#1993c0' }} width="40" height="40" alt="icon" />;
+    case 'redux':
+      return <ReduxIcon width="40" height="40" alt="icon" />;
+    case 'next':
+      return <NextIcon style={{ fill: '#fff' }} alt="icon" />;
+    case 'sass':
+      return <SassIcon width="50" height="40" viewBox="0 0 512 512" alt="icon" />;
+    case 'tailwind':
+      return <TailwindIcon width="40" height="40" viewBox="0 0 1000 1000" alt="icon" />;
+    case 'antd':
+      return <AntdIcon width="40" height="40" alt="icon" />;
+    case 'gatsby':
+      return <GatsbyIcon width="40" height="40" alt="icon" />;
+    case 'storybook':
+      return <StorybookIcon width="40" height="40" alt="icon" />;
+    case 'gitlab':
+      return <GitlabIcon width="50" height="50" alt="icon" />;
+    case 'jest':
+      return <JestIcon width="40" height="40" alt="icon" />;
+    case 'javascript':
+      return <JsIcon width="40" height="40" alt="icon" />;
+    case 'vue':
+      return <VueIcon width="40" height="40" alt="icon" />;
+    case 'node':
+      return <NodeIcon width="40" height="40" alt="icon" />;
+    case 'express':
+      return <ExpressIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />;
+    case 'aws':
+      return <AwsIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />;
+    case 'azure':
+      return <AzureIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />;
+    case 'ansible':
+      return <AnsibleIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />;
+    case 'mocha':
+      return <MochaIcon width="40" height="40" alt="icon" />;
+    default:
+      return;
+  }
+};
 
 const Timeline = () => {
   const matches = useMediaQuery('(max-width:600px)');
@@ -160,7 +170,30 @@ const Timeline = () => {
                 </a>
               </div>
               <div className={style['period']}>{data.period}</div>
-              <div className={style['content']}>{data.content}</div>
+              <div className={style['content']}>
+                <p>{data.content}</p>
+              </div>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  svg: {
+                    margin: '2px',
+                  },
+                }}
+              >
+                {data.skill?.map((skillName, index) => (
+                  <div
+                    key={index}
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay={300 + Number(index) * 50}
+                    data-aos-offset="0"
+                  >
+                    {getIcon(skillName)}
+                  </div>
+                ))}
+              </Box>
             </Box>
           </TimelineContent>
         </TimelineItem>
