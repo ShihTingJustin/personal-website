@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React from 'react';
 import Typewriter from 'typewriter-effect';
 import Timeline from '../src/components/timeline/Timeline.tsx';
 import { Box } from '@mui/material';
@@ -117,9 +117,6 @@ const socialData = [
 ];
 
 export default function Home() {
-  const [stateModalOpen, setModalOpen] = useState(false);
-  const [stateIndex, setIndex] = useState(0);
-
   return (
     <div id="container">
       <div id="cover" className="block">

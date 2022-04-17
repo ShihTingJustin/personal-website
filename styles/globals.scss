@@ -97,25 +97,3 @@ a {
     max-width: 600px;
   }
 }
-
-#further-info {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.further-icon {
-  a {
-    margin-bottom: 30px;
-    transform: scale(1);
-    transition: 0.5s;
-  }
-  a:hover {
-    transform: scale(1.4);
-    transition: 0.5s;
-  }
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
