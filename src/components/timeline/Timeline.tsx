@@ -119,18 +119,23 @@ const mockData: TimelineData[] = [
 
 const Timeline = () => {
   return (
-    <TimelineMui
-      position="alternate"
-      // sx={{ marginTop: '-10vw' }}
-    >
+    <TimelineMui position="alternate" sx={{ margin: 0, padding: 0 }}>
       {mockData.map((data, index) => (
-        <TimelineItem key={index}>
+        <TimelineItem
+          sx={{
+            // prevent aos item use extra space
+            overflow: 'hidden',
+          }}
+          key={index}
+        >
           {/* RWD */}
           {/* <TimelineOppositeContent>{data.title}</TimelineOppositeContent> */}
           <TimelineSeparator
-            sx={{
-              // minHeight: '25vh',
-            }}
+            sx={
+              {
+                // minHeight: '25vh',
+              }
+            }
           >
             <TimelineDot />
             <TimelineConnector />
