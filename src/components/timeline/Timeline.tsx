@@ -95,6 +95,7 @@ const Timeline = () => {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
+                alignItems: `${matches ? 'none' : index % 2 ? 'flex-end' : 'none'}`,
               }}
             >
               <div className={style['title']}>{data.title}</div>
@@ -112,6 +113,7 @@ const Timeline = () => {
                 sx={{
                   display: 'flex',
                   flexWrap: 'wrap',
+                  maxWidth: '400px',
                   svg: {
                     margin: '2px',
                   },
