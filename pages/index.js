@@ -158,13 +158,14 @@ export default function Home() {
           想知道我喜歡做些什麼就繼續往下滑吧～
         </div> */}
       </div>
-      <div id="timeline-wrapper" className="block">
+      <div id="timeline-wrapper">
         <Timeline />
       </div>
       <div id="further-info" className="block">
         <ThemeProvider theme={theme}>
           <Box
             sx={{
+              fontSize: { xs: '18px', sm: '24px' },
               p: {
                 textAlign: 'center',
                 textShadow: theme.textGlow,
