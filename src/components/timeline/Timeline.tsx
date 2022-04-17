@@ -143,7 +143,9 @@ const Timeline = () => {
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent data-aos={`${index % 2 ? 'fade-right' : 'fade-left'}`}>
+          <TimelineContent
+            data-aos={`${matches ? 'fade-left' : index % 2 ? 'fade-right' : 'fade-left'}`}
+          >
             <Box
               sx={{
                 display: 'flex',
