@@ -65,8 +65,10 @@ a {
     display: flex;
     width: 100%;
     align-items: center;
+    padding-left: 2em;
     .title {
       font-size: 3em;
+      line-height: 1em;
     }
     .subtitle {
       padding-top: 0.75em;
