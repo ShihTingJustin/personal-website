@@ -23,6 +23,7 @@ import StorybookIcon from '../../../public/icon/storybook.svg';
 import GitlabIcon from '../../../public/icon/gitlab.svg';
 import AntdIcon from '../../../public/icon/antd.svg';
 import JestIcon from '../../../public/icon/jest.svg';
+import JsIcon from '../../../public/icon/javascript.svg';
 import VueIcon from '../../../public/icon/vue.svg';
 import NodeIcon from '../../../public/icon/node.svg';
 import ExpressIcon from '../../../public/icon/express.svg';
@@ -84,7 +85,7 @@ const mockData: TimelineData[] = [
       <>
         <p>
           使用 Azure Pipeline 及 Ansible 建立 CI pipeline 運行自動化測試，將測試報告儲存至 AWS
-          S3，可透過 AWS CloudFront 從外部存取
+          S3，可透過 AWS CloudFront 從外部存取。
         </p>
         <Box
           sx={{
@@ -95,13 +96,14 @@ const mockData: TimelineData[] = [
             },
           }}
         >
+          <JsIcon width="40" height="40" alt="icon" />
           <VueIcon width="40" height="40" alt="icon" />
           <NodeIcon width="40" height="40" alt="icon" />
-          <MochaIcon width="40" height="40" alt="icon" />
           <ExpressIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
           <AwsIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
-          <AnsibleIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
           <AzureIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
+          <AnsibleIcon style={{ background: '#fff' }} width="40" height="40" alt="icon" />
+          <MochaIcon width="40" height="40" alt="icon" />
         </Box>
       </>
     ),
@@ -111,7 +113,7 @@ const mockData: TimelineData[] = [
     companyName: 'HAITEC (Yulon Group)',
     url: 'https://www.foxtronev.com/en/',
     title: 'Product Manager',
-    content: <p>代表華創研發團隊與裕隆集團納智捷價值鏈相關公司合作進行產品企劃及規格配備提案</p>,
+    content: <p>代表華創研發團隊與裕隆集團納智捷價值鏈相關公司合作進行產品企劃及規格配備提案。</p>,
   },
 ];
 
