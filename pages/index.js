@@ -1,11 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import Timeline from '../src/components/timeline/Timeline.tsx';
+import Cookies from 'js-cookie';
+import Timeline from '../src/components/timeline/Timeline';
 import { Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../src/theme';
 import { getIcon } from '../src/utils';
+import { useTranslation } from 'react-i18next';
+import Switch from '../src/components/switch/Switch';
 
 // const mockContentData = [
 //   {
@@ -117,6 +120,14 @@ const socialData = [
 ];
 
 export default function Home() {
+  const { t, i18n } = useTranslation();
+
+  const handleLanguageChange = (e) => {
+    if (e.target.checked) Cookies.set('lang', 'en');
+    else Cookies.set('lang', 'zh');
+    i18n.changeLanguage(Cookies.get('lang'));
+  };
+
   return (
     <div id="container">
       <div id="cover" className="block">
@@ -144,7 +155,7 @@ export default function Home() {
           <div className="photo" data-aos="fade-up"></div>
           <div>
             <div className="title" data-aos="fade-up">
-              賈斯丁黃
+              {t('1_intro_name')}
             </div>
             <div className="subtitle" data-aos="fade-up">
               不安分的靈魂
@@ -215,6 +226,7 @@ export default function Home() {
           </Box>
         </ThemeProvider>
       </div>
+      <Switch onChange={handleLanguageChange} />
     </div>
   );
 }
