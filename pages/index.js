@@ -158,21 +158,19 @@ export default function Home() {
               {t('1_intro_name')}
             </div>
             <div className="subtitle" data-aos="fade-up">
-              不安分的靈魂
+              {t('1_intro_subtitle')}
             </div>
           </div>
         </div>
         <div className="content" data-aos="fade-up">
-          一個非典型技術宅，鑽研技術也享受打造產品和琢磨細節的過程。
-          資訊科技大幅改變人類的生活型態，我們每天都需要用到各種軟體服務，我認為有技術能力親手打造軟體產品是一件很酷的事情。
+          {t('1_intro_content_1')}
           <br />
         </div>
         <div className="content" data-aos="fade-up" data-aos-delay={275}>
-          前端工程師站在人文與科技的交叉口，結合理性與感性，為產品打造使用者介面並創造好的使用者體驗，是我喜歡的工作模式。
-          目前專注於前端領域，擅長運用 React 生態系工具打造網頁應用程式。
+          {t('1_intro_content_2')}
         </div>
         <div className="content" data-aos="fade-up" data-aos-delay={375}>
-          汽車愛好者，對德國工藝特別著迷，尤其是賓士全方位的產品配置和保時捷獨樹一格的德式激情。喜歡分析市場和規格，曾在台灣唯一整車研發企業擔任產品經理。
+          {t('1_intro_content_3')}
         </div>
         {/* <div className="content" data-aos="fade-up">
           想知道我喜歡做些什麼就繼續往下滑吧～
@@ -208,7 +206,7 @@ export default function Home() {
               },
             }}
           >
-            <p>Further Information</p>
+            <p>{t('1_further_info')}</p>
             {socialData.map((data, index) => (
               <a
                 key={index}

@@ -1,3 +1,18 @@
 {
-  "1_intro_name": "賈斯丁黃"
+  "1_intro_name": "賈斯丁黃",
+  "1_intro_subtitle": "不安分的靈魂",
+  "1_intro_content_1": "一個非典型技術宅，鑽研技術也享受打造產品和琢磨細節的過程。資訊科技大幅改變人類的生活型態，我們每天都需要用到各種軟體服務，我認為有技術能力親手打造軟體產品是一件很酷的事情。",
+  "1_intro_content_2": "前端工程師站在人文與科技的交叉口，結合理性與感性，為產品打造使用者介面並創造好的使用者體驗，是我喜歡的工作模式。目前專注於前端領域，擅長運用 React 生態系工具打造網頁應用程式。",
+  "1_intro_content_3": "汽車愛好者，對德國工藝特別著迷，尤其是賓士全方位的產品配置和保時捷獨樹一格的德式激情。喜歡分析市場和規格，曾在台灣唯一整車研發企業擔任產品經理。",
+  "1_intro_content_4": "",
+  "1_timeline_title_1": "軟體工程師",
+  "1_timeline_company_1": "英屬維京群島商易貿股份有限公司 (香港科技探索集團)",
+  "1_timeline_content_1": "負責香港電商巨擘 HKTVmall 所有 IT 專案的前端項目，參與需求分析、使用者體驗及可行性評估、開發及維護。",
+  "1_timeline_title_2": "軟體工程師",
+  "1_timeline_company_2": "亞旭電腦 (華碩集團)",
+  "1_timeline_content_2": "使用 Azure Pipeline 及 Ansible 建立 CI pipeline 運行自動化測試，將測試報告儲存至 AWS S3，可透過 AWS CloudFront 從外部存取。",
+  "1_timeline_title_3": "產品經理",
+  "1_timeline_company_3": "華創車電 (裕隆集團)",
+  "1_timeline_content_3": "代表華創研發團隊與裕隆集團納智捷價值鏈相關公司合作進行產品企劃及規格配備提案。",
+  "1_further_info": "更多資訊"
 }

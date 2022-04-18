@@ -10,6 +10,7 @@ import {
 } from '@mui/lab';
 import { Box } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTranslation } from 'react-i18next';
 
 import LinkIcon from '@mui/icons-material/Link';
 import style from './timeline.module.scss';
@@ -28,11 +29,10 @@ interface TimelineData {
 const mockData: TimelineData[] = [
   {
     period: '2021/05 - Present',
-    companyName: 'Shoalter Technology (HKTV Group)',
+    companyName: '1_timeline_company_1',
     url: 'https://www.shoalter.com/',
-    title: 'Software Engineer',
-    content:
-      '負責香港電商巨擘 HKTVmall 所有 IT 專案的前端項目，參與需求分析、使用者體驗及可行性評估、開發及維護。',
+    title: '1_timeline_title_1',
+    content: '1_timeline_content_1',
     skill: [
       'typescript',
       'react',
@@ -49,24 +49,24 @@ const mockData: TimelineData[] = [
   },
   {
     period: '2021/01 - 2021/05',
-    companyName: 'Askey (ASUS Group)',
+    companyName: '1_timeline_company_2',
     url: 'https://www.askey.com.tw/tw/',
-    title: 'Software Engineer',
-    content:
-      '使用 Azure Pipeline 及 Ansible 建立 CI pipeline 運行自動化測試，將測試報告儲存至 AWS S3，可透過 AWS CloudFront 從外部存取。',
+    title: '1_timeline_title_2',
+    content: '1_timeline_content_2',
     skill: ['javascript', 'vue', 'node', 'express', 'aws', 'azure', 'ansible', 'mocha'],
   },
   {
     period: '2016/12 - 2019/09',
-    companyName: 'HAITEC (Yulon Group)',
+    companyName: '1_timeline_company_3',
     url: 'https://www.foxtronev.com/en/',
-    title: 'Product Manager',
-    content: '代表華創研發團隊與裕隆集團納智捷價值鏈相關公司合作進行產品企劃及規格配備提案。',
+    title: '1_timeline_title_3',
+    content: '1_timeline_content_3',
   },
 ];
 
 const Timeline = () => {
   const matches = useMediaQuery('(max-width:600px)');
+  const { t } = useTranslation();
 
   return (
     <TimelineMui position={`${matches ? 'right' : 'alternate'}`}>
@@ -98,16 +98,16 @@ const Timeline = () => {
                 alignItems: `${matches ? 'none' : index % 2 ? 'flex-end' : 'none'}`,
               }}
             >
-              <div className={style['title']}>{data.title}</div>
+              <div className={style['title']}>{t(data.title)}</div>
               <div className={style['company-name']}>
                 <a href={data.url} target="_blank" rel="noreferrer">
-                  {data.companyName}
+                  {t(data.companyName)}
                   <LinkIcon style={{ fontSize: '16px' }} />
                 </a>
               </div>
               <div className={style['period']}>{data.period}</div>
               <div className={style['content']}>
-                <p>{data.content}</p>
+                <p>{t(data.content)}</p>
               </div>
               <Box
                 sx={{
