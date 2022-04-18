@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import SwitchMui, { SwitchProps } from '@mui/material/Switch';
+import React, { useEffect, useState } from 'react';
+import SwitchMui, { SwitchProps as SwitchPropsMui } from '@mui/material/Switch';
 import Cookies from 'js-cookie';
 import { useTranslation } from 'react-i18next';
 import style from './switch.module.scss';
 
-const Switch = () => {
+interface SwitchProps extends SwitchPropsMui {
+  initialValue: boolean;
+}
+
+const Switch = ({ initialValue }: SwitchProps) => {
   const { i18n } = useTranslation();
-  const [checked, setChecked] = useState<boolean>(false);
+  const [checked, setChecked] = useState<boolean>(initialValue);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);

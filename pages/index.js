@@ -125,7 +125,11 @@ export default function Home() {
   useEffect(() => {
     const language = window.navigator.language.split('-')[0] || 'zh';
     Cookies.set('lang', language);
-    // set html lang attribute 
+    i18n.changeLanguage(Cookies.get('lang'));
+  }, [i18n]);
+
+  // set html lang attribute
+  useEffect(() => {
     document.documentElement.lang = i18n.languages[0];
   }, [i18n.languages]);
 
@@ -225,7 +229,7 @@ export default function Home() {
           </Box>
         </ThemeProvider>
       </div>
-      <Switch />
+      <Switch initialValue={i18n.languages[0] === 'en'} />
     </div>
   );
 }
