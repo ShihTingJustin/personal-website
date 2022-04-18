@@ -113,7 +113,7 @@ const Timeline = () => {
                 sx={{
                   display: 'flex',
                   flexWrap: 'wrap',
-                  maxWidth: '400px',
+                  maxWidth: { xs: '300px', sm: '420px' },
                   svg: {
                     margin: '2px',
                   },
