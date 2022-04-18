@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
+import Cookies from 'js-cookie';
 import '../styles/globals.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import theme from '../src/theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
+import '../src/i18n';
 
 const cssVar = {
   textGlow: '0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%)',
@@ -17,6 +19,7 @@ const cssVar = {
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
+    Cookies.set('lang', window.navigator.language.slice(0, 2));
     AOS.init({
       delay: 175,
     });
