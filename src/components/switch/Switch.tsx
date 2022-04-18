@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
 import SwitchMui, { SwitchProps } from '@mui/material/Switch';
+import Cookies from 'js-cookie';
+import { useTranslation } from 'react-i18next';
 import style from './switch.module.scss';
 
-const Switch = ({ onChange }: SwitchProps) => {
+const Switch = () => {
+  const { i18n } = useTranslation();
+  const [checked, setChecked] = useState<boolean>(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(e.target.checked);
+    if (e.target.checked) Cookies.set('lang', 'en');
+    else Cookies.set('lang', 'zh');
+    i18n.changeLanguage(Cookies.get('lang'));
+  };
+
   return (
     <div className={style['switch--root']}>
-      中文
-      <SwitchMui color="default" onChange={onChange} />
-      EN
+      <div className={style['switch--zh']}>中文</div>
+      <SwitchMui color="default" checked={checked} onChange={handleChange} />
+      <div className={style['switch--en']}>EN</div>
     </div>
   );
 };

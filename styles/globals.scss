@@ -69,9 +69,9 @@ a {
     .title {
       font-size: 3em;
       line-height: 1em;
-    }
-    .title:lang(en) {
-      font-size: 1.75em;
+      &:lang(en) {
+        font-size: 1.75em;
+      }
     }
     .subtitle {
       padding-top: 0.75em;

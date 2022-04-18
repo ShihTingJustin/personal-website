@@ -129,12 +129,6 @@ export default function Home() {
     document.documentElement.lang = i18n.languages[0];
   }, [i18n.languages]);
 
-  const handleLanguageChange = (e) => {
-    if (e.target.checked) Cookies.set('lang', 'en');
-    else Cookies.set('lang', 'zh');
-    i18n.changeLanguage(Cookies.get('lang'));
-  };
-
   return (
     <div id="container">
       <div id="cover" className="block">
@@ -231,7 +225,7 @@ export default function Home() {
           </Box>
         </ThemeProvider>
       </div>
-      <Switch onChange={handleLanguageChange} />
+      <Switch />
     </div>
   );
 }

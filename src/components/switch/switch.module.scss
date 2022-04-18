@@ -1,6 +1,20 @@
+@import '../../../styles/variables.scss';
+
 .switch--root {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 12px;
+
+  &:lang(zh) .switch--zh {
+    text-shadow: $text-glow;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  &:lang(en) .switch--en {
+    text-shadow: $text-glow;
+    color: #fff;
+    font-weight: 600;
+  }
 }
