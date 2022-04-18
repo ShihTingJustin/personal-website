@@ -15,7 +15,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: Cookies.get('lang') || 'zh',
+  lng: Cookies.get('lang'),
   fallbackLng: 'zh',
   interpolation: {
     escapeValue: false,

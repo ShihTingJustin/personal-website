@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
-import Cookies from 'js-cookie';
 import '../styles/globals.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -19,7 +18,6 @@ const cssVar = {
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    Cookies.set('lang', window.navigator.language.slice(0, 2));
     AOS.init({
       delay: 175,
     });
