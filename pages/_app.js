@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Script from 'next/script';
 import '../styles/globals.scss';
@@ -78,4 +79,7 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+// use dynamic to avoid Hydration failed
+// https://github.com/vercel/next.js/discussions/35773
+export default dynamic(() => Promise.resolve(MyApp), { ssr: false });
+
