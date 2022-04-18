@@ -6,12 +6,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Features
 * Dark futuristic web3 design
 * Animate on scroll effect (AOS)
+* i18n (zh & en)
+* Google Analytics
+* Meta data
 
 ## Stack
 * Next.js
-* Material UI
 * TypeScript
-* Scss
+* Material UI
+* SCSS
 
 ## Author
 [ShihTingJustin](https://github.com/ShihTingJustin)
