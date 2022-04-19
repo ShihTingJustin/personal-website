@@ -9,6 +9,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * i18n (zh & en)
 * Google Analytics
 * Meta data
+* DNS-prefetch
 
 ## Stack
 * Next.js
