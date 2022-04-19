@@ -26,17 +26,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* Global site tag (gtag.js) - Google Analytics */}
-      <Script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
-      />
-      <Script strategy="lazyOnload">
-        {`window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments);}
-        gtag('js', new Date()); gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');`}
-      </Script>
       <Head>
+        <link rel="preconnect" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
         <meta
           name="viewport"
@@ -70,6 +62,16 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like LinkedIn, GitHub, Medium and Instagram."
         ></meta>
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+        />
+        <Script strategy="lazyOnload">
+          {`window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments);}
+        gtag('js', new Date()); gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');`}
+        </Script>
       </Head>
       <ThemeProvider theme={{ ...theme, ...cssVar }}>
         <CssBaseline />
@@ -82,4 +84,3 @@ function MyApp({ Component, pageProps }) {
 // use dynamic to avoid Hydration failed
 // https://github.com/vercel/next.js/discussions/35773
 export default dynamic(() => Promise.resolve(MyApp), { ssr: false });
-
