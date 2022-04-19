@@ -43,10 +43,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="author" content="JustinHuang" />
         <meta name="copyright" content="JustinHuang" />
         <meta itemProp="name" content="JustinHuang" />
-        <meta
-          itemProp="image"
-          content="https://drive.google.com/uc?export=view&id=1r3sC-5NXCylP86tskVwP-JOSmyVS1TDK"
-        />
+        <meta itemProp="image" content="/_next/static/media/me.91cfba21.webp" />
         <meta
           itemProp="description"
           content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like Linkedin, GitHub, Medium and Instagram."
@@ -54,10 +51,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="JustinHuang - A Restless Soul" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://jhdev.pro" />
-        <meta
-          property="og:image"
-          content="https://drive.google.com/uc?export=view&id=1r3sC-5NXCylP86tskVwP-JOSmyVS1TDK"
-        />
+        <meta property="og:image" content="/_next/static/media/me.91cfba21.webp" />
         <meta
           property="og:description"
           content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like LinkedIn, GitHub, Medium and Instagram."
