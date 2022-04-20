@@ -3,7 +3,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ['i.imgur.com'],
   },
   // i18n: {
   //   locales: ['zh-tw', 'en'],
