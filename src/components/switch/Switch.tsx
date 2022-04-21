@@ -21,9 +21,13 @@ const Switch = ({ initialValue }: SwitchProps) => {
 
   return (
     <div className={style['switch--root']}>
-      <div className={style['switch--zh']}>中文</div>
-      <SwitchMui color="default" checked={checked} onChange={handleChange} />
-      <div className={style['switch--en']}>EN</div>
+      <label htmlFor="sw" className={style['switch--zh']}>
+        中文
+      </label>
+      <SwitchMui id="sw" color="default" checked={checked} onChange={handleChange} />
+      <label htmlFor="sw" className={style['switch--en']}>
+        EN
+      </label>
     </div>
   );
 };
