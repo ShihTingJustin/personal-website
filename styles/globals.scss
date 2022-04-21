@@ -86,16 +86,10 @@ a {
       min-height: 150px;
       margin-right: 20px;
       border-radius: 50%;
-      background: url('https://i.imgur.com/1eWvhJal.jpg?1');
+      overflow: hidden;
+      background-size: cover;
       background-position: 45% 0;
       background-repeat: no-repeat;
-      background-size: cover;
-      @media (min-width: 768px) {
-        background: url('https://i.imgur.com/1eWvhJah.jpg?1');
-        background-position: 45% 0;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
     }
   }
 

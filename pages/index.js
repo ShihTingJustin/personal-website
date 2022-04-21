@@ -9,6 +9,7 @@ import theme from '../src/theme';
 import { getIcon } from '../src/utils';
 import { useTranslation } from 'react-i18next';
 import Switch from '../src/components/switch/Switch';
+import Image from 'next/image';
 
 // const mockContentData = [
 //   {
@@ -157,7 +158,16 @@ export default function Home() {
       </div>
       <div id="intro-wrapper" className="block">
         <div className="title-wrapper">
-          <div className="photo" data-aos="fade-up"></div>
+          <div className="photo" data-aos="fade-up">
+            <Image
+              width="150"
+              height="150"
+              layout="fill"
+              objectFit="cover"
+              alt="image"
+              src="https://i.imgur.com/1eWvhJah.jpg?1"
+            />
+          </div>
           <div>
             <div className="title" data-aos="fade-up">
               {t('1_intro_name')}
