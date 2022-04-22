@@ -8,10 +8,7 @@ export default function Document() {
         <link rel="preconnect" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=5"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta
           name="keywords"
           content="Justin Huang, Shih-Ting Huang, 黃士庭, frontend developer, frontend engineer"
@@ -20,7 +17,7 @@ export default function Document() {
         <meta name="author" content="JustinHuang" />
         <meta name="copyright" content="JustinHuang" />
         <meta itemProp="name" content="JustinHuang" />
-        <meta itemProp="image" content="https://i.imgur.com/1eWvhJam.jpg?1" />
+        <meta itemProp="image" content="https://i.imgur.com/65OtneAm.jpg" />
         <meta
           itemProp="description"
           content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like Linkedin, GitHub, Medium and Instagram."
@@ -33,7 +30,7 @@ export default function Document() {
           content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like LinkedIn, GitHub, Medium and Instagram."
           key="ogdes"
         />
-        <meta property="og:image" content="https://i.imgur.com/1eWvhJam.jpg?1" key="ogimage" />
+        <meta property="og:image" content="https://i.imgur.com/65OtneAm.jpg" key="ogimage" />
         {/* Global site tag (gtag.js) - Google Analytics */}
         <Script
           async
