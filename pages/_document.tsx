@@ -7,6 +7,8 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="preconnect" href="//i.imgur.com" />
+        <link rel="dns-prefetch" href="//i.imgur.com" />
         <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta
