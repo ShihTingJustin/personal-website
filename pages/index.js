@@ -9,7 +9,7 @@ import { getIcon } from '../src/utils';
 import { useTranslation } from 'react-i18next';
 import Switch from '../src/components/switch/Switch';
 import Image from 'next/image';
-
+import ImgixClient from '@imgix/js-core';
 // const mockContentData = [
 //   {
 //     bg: 'react',
@@ -119,7 +119,13 @@ const socialData = [
   },
 ];
 
-export default function Home() {
+// interface ImageProps {
+//   src: string;
+//   width: number;
+//   quality: number;
+// }
+
+export default function Home({ imgixDomain, imgixSecureURLToken }) {
   const { t, i18n } = useTranslation();
 
   const imageLoader = useCallback(
@@ -176,15 +182,16 @@ export default function Home() {
         <div className="title-wrapper">
           <div className="photo" data-aos="fade-up">
             <Image
-              width="150"
-              height="150"
-              layout="fill"
-              objectFit="cover"
+              priority
+              width={150}
+              height={150}
+              loader={imageLoader}
+              objectFit="contain"
               alt="image"
-              src="https://i.imgur.com/1eWvhJah.jpg?1"
+              src={'me.JPG'}
             />
           </div>
-          <div>
+          <div className="title-and-subtitle-wrapper">
             <div className="title" data-aos="fade-up">
               {t('1_intro_name')}
             </div>
@@ -284,9 +291,11 @@ export default function Home() {
     </div>
   );
 }
-
 export async function getStaticProps(context) {
   return {
-    props: {},
+    props: {
+      imgixDomain: process.env.NEXT_IMGIX_DOMAIN,
+      imgixSecureURLToken: process.env.NEXT_IMGIX_SECURE_TOKEN,
+    },
   };
 }

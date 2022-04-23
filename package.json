@@ -26,6 +26,7 @@
     "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
+    "@imgix/js-core": "^3.6.0",
     "@svgr/webpack": "^6.2.1",
     "@types/js-cookie": "^3.0.1",
     "@types/node": "^17.0.23",

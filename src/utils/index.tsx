@@ -1,3 +1,4 @@
+import ImgixClient from '@imgix/js-core';
 import ReactIcon from '@/Assets/icon/react.svg';
 import ReduxIcon from '@/Assets/icon/redux.svg';
 import NextIcon from '@/Assets/icon/next.svg';
