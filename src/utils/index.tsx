@@ -1,3 +1,6 @@
+import { CustomImageLoaderProps } from '@/Interfaces/I_Index';
+import { ImageLoaderProps } from 'next/image';
+
 import ImgixClient from '@imgix/js-core';
 import ReactIcon from '@/Assets/icon/react.svg';
 import ReduxIcon from '@/Assets/icon/redux.svg';
@@ -75,3 +78,25 @@ export const getIcon = (icon: string) => {
       return;
   }
 };
+
+// closure
+export function getCustomImageLoader({
+  imgixDomain,
+  imgixSecureURLToken,
+  imgixParams,
+}: CustomImageLoaderProps) {
+  return function ({ src, width, quality }: ImageLoaderProps) {
+    const client = new ImgixClient({
+      useHTTPS: true,
+      includeLibraryParam: false,
+      domain: imgixDomain || 'example.imgix.net',
+      secureURLToken: imgixSecureURLToken,
+    });
+    const baseUrl = `/${src}`;
+    const secureUrl = client.buildURL(baseUrl, {
+      w: width,
+      ...imgixParams,
+    });
+    return secureUrl;
+  };
+}

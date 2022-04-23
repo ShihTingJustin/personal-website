@@ -1,12 +1,16 @@
-import React, { useCallback, useEffect } from 'react';
-import Typewriter from 'typewriter-effect';
-import Cookies from 'js-cookie';
-import Timeline from '../src/components/timeline/Timeline';
+import React, { useEffect } from 'react';
+
 import { useTranslation } from 'react-i18next';
+import Cookies from 'js-cookie';
+
+import Typewriter from 'typewriter-effect';
+import Timeline from '@/Components/timeline/Timeline';
 import Switch from '../src/components/switch/Switch';
-import ImgixClient from '@imgix/js-core';
 import { Intro } from '@/Pages/home/intro';
 import { FurtherInfo } from '@/Pages/home/furtherInfo';
+
+import { getCustomImageLoader } from '@/Utils/index';
+
 // const mockContentData = [
 //   {
 //     bg: 'react',
@@ -106,23 +110,6 @@ export default function Home({
 }) {
   const { i18n } = useTranslation();
 
-  const imageLoader = useCallback(
-    ({ src, width, quality }) => {
-      const client = new ImgixClient({
-        useHTTPS: true,
-        includeLibraryParam: false,
-        domain: imgixDomain || 'example.imgix.net',
-        secureURLToken: imgixSecureURLToken,
-      });
-      const baseUrl = `/${src}`;
-      const secureUrl = client.buildURL(baseUrl, {
-        w: width,
-      });
-      return secureUrl;
-    },
-    [imgixDomain, imgixSecureURLToken],
-  );
-
   useEffect(() => {
     const language = window.navigator.language.split('-')[0] || 'zh';
     Cookies.set('lang', language);
@@ -157,7 +144,12 @@ export default function Home({
         </div>
       </div>
       <div id="intro-wrapper" className="block">
-        <Intro imageLoader={imageLoader} />
+        <Intro
+          imageLoader={getCustomImageLoader({
+            imgixDomain,
+            imgixSecureURLToken,
+          })}
+        />
       </div>
       <div id="timeline-wrapper">
         <Timeline />
