@@ -103,3 +103,9 @@ a {
     max-width: 600px;
   }
 }
+
+#image-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

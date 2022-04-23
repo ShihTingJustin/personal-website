@@ -5,7 +5,8 @@ import Cookies from 'js-cookie';
 
 import Typewriter from 'typewriter-effect';
 import Timeline from '@/Components/timeline/Timeline';
-import Switch from '../src/components/switch/Switch';
+import Switch from '@/Components/switch/Switch';
+import ImageList from '@/Components/imageList/ImageList';
 import { Intro } from '@/Pages/home/intro';
 import { FurtherInfo } from '@/Pages/home/furtherInfo';
 
@@ -153,6 +154,15 @@ export default function Home({
       </div>
       <div id="timeline-wrapper">
         <Timeline />
+      </div>
+      <div id="image-list" className="block">
+        <ImageList
+          imageLoader={getCustomImageLoader({
+            imgixDomain,
+            imgixSecureURLToken,
+            imgixParams: { fit: 'crop', ar: '1:1' },
+          })}
+        />
       </div>
       <div id="further-info" className="block">
         <FurtherInfo />
