@@ -10,12 +10,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * Google Analytics
 * Meta data
 * DNS-prefetch
+* Next.js image loader
+
+## Chrome Lighthouse
+![Screen Shot 2022-04-23 at 19 11 32](https://user-images.githubusercontent.com/56827791/164892112-46f31bc4-efb4-459a-b295-5b68bd2d6e3b.png)
+
 
 ## Stack
 * Next.js
 * TypeScript
 * Material UI
 * SCSS
+* Vercel (deployment)
+* imgix (image processing)
+* AWS S3 (image storing)
 
 ## Author
 [ShihTingJustin](https://github.com/ShihTingJustin)
