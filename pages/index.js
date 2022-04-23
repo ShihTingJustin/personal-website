@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import Cookies from 'js-cookie';
@@ -198,44 +197,69 @@ export default function Home() {
         <ThemeProvider theme={theme}>
           <Box
             sx={{
-              fontSize: { xs: '18px', sm: '24px' },
-              p: {
-                textAlign: 'center',
+              textAlign: 'center',
+              '>p': {
                 textShadow: theme.textGlow,
                 background: theme.web3Gradient,
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-              },
-              a: {
-                opacity: 0.5,
-                '&:hover,&:active': {
-                  opacity: 1,
-                  svg: {
-                    transform: 'scale(1.3)',
-                  },
-                },
-                svg: {
-                  margin: '10px',
-                  fontSize: '40px',
-                },
+                fontSize: { xs: '18px', sm: '24px' },
               },
             }}
           >
             <p>{t('1_further_info')}</p>
-            {socialData.map((data, index) => (
-              <a
-                key={index}
-                href={data.url}
-                data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay={200 + Number(index) * 50}
-                data-aos-offset="0"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {getIcon(data.name)}
-              </a>
-            ))}
+            <Box
+              sx={{
+                display: 'flex',
+                '.icon-text': {
+                  bgcolor: '#fff',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  textTransform: 'capitalize',
+                  lineHeight: '18px',
+                  fontSize: { xs: '12px', sm: '14px' },
+                },
+
+                a: {
+                  opacity: 0.3,
+                  svg: {
+                    fill: '#f6f7f9',
+                    m: {
+                      xs: '10px 12px 0',
+                      sm: '10px 24px 4px',
+                    },
+                    fontSize: '40px',
+                  },
+
+                  '&:hover,&:active': {
+                    opacity: 1,
+                    svg: {
+                      fill: '#fff',
+                      transform: 'scale(1.3)',
+                    },
+                    '.icon-text': {
+                      fontSize: { xs: '16px', sm: '18px' },
+                    },
+                  },
+                },
+              }}
+            >
+              {socialData.map((data, index) => (
+                <a
+                  key={index}
+                  href={data.url}
+                  data-aos="fade-zoom-in"
+                  data-aos-easing="ease-in-back"
+                  data-aos-delay={200 + Number(index) * 50}
+                  data-aos-offset="0"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {getIcon(data.name)}
+                  <div className="icon-text">{data.name}</div>
+                </a>
+              ))}
+            </Box>
           </Box>
         </ThemeProvider>
       </div>
