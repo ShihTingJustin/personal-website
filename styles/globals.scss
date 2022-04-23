@@ -66,25 +66,28 @@ a {
     width: 100%;
     align-items: center;
     padding-left: 2em;
+    .title-and-subtitle-wrapper {
+      margin-left: 10px;
+    }
     .title {
-      font-size: 3em;
+      font-size: 2.3em;
       line-height: 1em;
       &:lang(en) {
-        font-size: 1.75em;
+        font-size: 1.7em;
       }
     }
     .subtitle {
       padding-top: 0.75em;
-      font-size: 1.25em;
+      font-size: 1.1em;
       text-shadow: $text-glow;
       background: $web3-gradient;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .photo {
-      min-width: 150px;
-      min-height: 150px;
-      margin-right: 20px;
+      position: relative;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       overflow: hidden;
       background-size: cover;
