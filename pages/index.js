@@ -2,14 +2,12 @@ import React, { useCallback, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import Cookies from 'js-cookie';
 import Timeline from '../src/components/timeline/Timeline';
-import { Box } from '@mui/material';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from '../src/theme';
-import { getIcon } from '../src/utils';
+
 import { useTranslation } from 'react-i18next';
 import Switch from '../src/components/switch/Switch';
-import Image from 'next/image';
 import ImgixClient from '@imgix/js-core';
+import { Intro } from '@/Pages/home/intro';
+import { FurtherInfo } from '@/Pages/home/furtherInfo';
 // const mockContentData = [
 //   {
 //     bg: 'react',
@@ -100,25 +98,6 @@ import ImgixClient from '@imgix/js-core';
 //   },
 // ];
 
-const socialData = [
-  {
-    name: 'linkedin',
-    url: 'https://linkedin.com/in/justinhuang777',
-  },
-  {
-    name: 'github',
-    url: 'https://github.com/ShihTingJustin',
-  },
-  {
-    name: 'blog',
-    url: 'https://medium.com/life-after-hello-world',
-  },
-  {
-    name: 'instagram',
-    url: 'https://www.instagram.com/mb722656355s/',
-  },
-];
-
 // interface ImageProps {
 //   src: string;
 //   width: number;
@@ -179,113 +158,13 @@ export default function Home({ imgixDomain, imgixSecureURLToken }) {
         </div>
       </div>
       <div id="intro-wrapper" className="block">
-        <div className="title-wrapper">
-          <div className="photo" data-aos="fade-up">
-            <Image
-              priority
-              width={150}
-              height={150}
-              loader={imageLoader}
-              objectFit="contain"
-              alt="image"
-              src={'me.JPG'}
-            />
-          </div>
-          <div className="title-and-subtitle-wrapper">
-            <div className="title" data-aos="fade-up">
-              {t('1_intro_name')}
-            </div>
-            <div className="subtitle" data-aos="fade-up">
-              {t('1_intro_subtitle')}
-            </div>
-          </div>
-        </div>
-        <div className="content" data-aos="fade-up">
-          {t('1_intro_content_1')}
-          <br />
-        </div>
-        <div className="content" data-aos="fade-up" data-aos-delay={275}>
-          {t('1_intro_content_2')}
-        </div>
-        <div className="content" data-aos="fade-up" data-aos-delay={375}>
-          {t('1_intro_content_3')}
-        </div>
-        {/* <div className="content" data-aos="fade-up">
-          想知道我喜歡做些什麼就繼續往下滑吧～
-        </div> */}
+        <Intro imageLoader={imageLoader} />
       </div>
       <div id="timeline-wrapper">
         <Timeline />
       </div>
       <div id="further-info" className="block">
-        <ThemeProvider theme={theme}>
-          <Box
-            sx={{
-              textAlign: 'center',
-              '>p': {
-                textShadow: theme.textGlow,
-                background: theme.web3Gradient,
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                fontSize: { xs: '18px', sm: '24px' },
-              },
-            }}
-          >
-            <p>{t('1_further_info')}</p>
-            <Box
-              sx={{
-                display: 'flex',
-                '.icon-text': {
-                  bgcolor: '#fff',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  textTransform: 'capitalize',
-                  lineHeight: '18px',
-                  fontSize: { xs: '12px', sm: '14px' },
-                },
-
-                a: {
-                  opacity: 0.3,
-                  svg: {
-                    fill: '#f6f7f9',
-                    m: {
-                      xs: '10px 12px 0',
-                      sm: '10px 24px 4px',
-                    },
-                    fontSize: '40px',
-                  },
-
-                  '&:hover,&:active': {
-                    opacity: 1,
-                    svg: {
-                      fill: '#fff',
-                      transform: 'scale(1.3)',
-                    },
-                    '.icon-text': {
-                      fontSize: { xs: '16px', sm: '18px' },
-                    },
-                  },
-                },
-              }}
-            >
-              {socialData.map((data, index) => (
-                <a
-                  key={index}
-                  href={data.url}
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay={200 + Number(index) * 50}
-                  data-aos-offset="0"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {getIcon(data.name)}
-                  <div className="icon-text">{data.name}</div>
-                </a>
-              ))}
-            </Box>
-          </Box>
-        </ThemeProvider>
+        <FurtherInfo />
       </div>
       <Switch initialValue={i18n.languages[0] === 'en'} />
     </div>
