@@ -2,7 +2,6 @@ import React, { useCallback, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import Cookies from 'js-cookie';
 import Timeline from '../src/components/timeline/Timeline';
-
 import { useTranslation } from 'react-i18next';
 import Switch from '../src/components/switch/Switch';
 import ImgixClient from '@imgix/js-core';
@@ -98,14 +97,14 @@ import { FurtherInfo } from '@/Pages/home/furtherInfo';
 //   },
 // ];
 
-// interface ImageProps {
-//   src: string;
-//   width: number;
-//   quality: number;
-// }
-
-export default function Home({ imgixDomain, imgixSecureURLToken }) {
-  const { t, i18n } = useTranslation();
+export default function Home({
+  imgixDomain,
+  imgixSecureURLToken,
+}: {
+  imgixDomain: string;
+  imgixSecureURLToken: string;
+}) {
+  const { i18n } = useTranslation();
 
   const imageLoader = useCallback(
     ({ src, width, quality }) => {
@@ -170,7 +169,7 @@ export default function Home({ imgixDomain, imgixSecureURLToken }) {
     </div>
   );
 }
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   return {
     props: {
       imgixDomain: process.env.NEXT_IMGIX_DOMAIN,
