@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import Cookies from 'js-cookie';
 import Timeline from '../src/components/timeline/Timeline';
@@ -121,6 +121,23 @@ const socialData = [
 
 export default function Home() {
   const { t, i18n } = useTranslation();
+
+  const imageLoader = useCallback(
+    ({ src, width, quality }) => {
+      const client = new ImgixClient({
+        useHTTPS: true,
+        includeLibraryParam: false,
+        domain: imgixDomain || 'example.imgix.net',
+        secureURLToken: imgixSecureURLToken,
+      });
+      const baseUrl = `/${src}`;
+      const secureUrl = client.buildURL(baseUrl, {
+        w: width,
+      });
+      return secureUrl;
+    },
+    [imgixDomain, imgixSecureURLToken],
+  );
 
   useEffect(() => {
     const language = window.navigator.language.split('-')[0] || 'zh';
