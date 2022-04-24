@@ -155,7 +155,7 @@ export default function Home({
       <div id="timeline-wrapper">
         <Timeline />
       </div>
-      <div id="image-list" className="block">
+      <div id="image-list">
         <ImageList
           imageLoader={getCustomImageLoader({
             imgixDomain,
