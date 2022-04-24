@@ -81,9 +81,9 @@ export default function StandardImageList({ imageLoader }: { imageLoader: ImageL
           sx={{
             display: 'flex',
             justifyContent: 'center',
-            mb: '4px',
+            mb: { xs: '4px', sm: '12px' },
             'div:nth-of-type(even)': {
-              m: '0 4px',
+              m: { xs: '0 4px', sm: '0 12px' },
             },
           }}
         >
