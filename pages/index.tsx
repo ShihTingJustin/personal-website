@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 
+import { Typography } from '@mui/material';
 import Typewriter from 'typewriter-effect';
 import Timeline from '@/Components/timeline/Timeline';
 import Switch from '@/Components/switch/Switch';
@@ -109,7 +110,7 @@ export default function Home({
   imgixDomain: string;
   imgixSecureURLToken: string;
 }) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const language = window.navigator.language.split('-')[0] || 'zh';
@@ -145,6 +146,16 @@ export default function Home({
         </div>
       </div>
       <div id="intro-wrapper" className="block">
+        <Typography
+          variant="h1"
+          sx={{
+            textAlign: 'center',
+            width: '100%',
+            fontSize: { xs: '4em', sm: '5em', md: '10em' },
+          }}
+        >
+          {t('1_intro_title')}
+        </Typography>
         <Intro
           imageLoader={getCustomImageLoader({
             imgixDomain,
@@ -153,9 +164,30 @@ export default function Home({
         />
       </div>
       <div id="timeline-wrapper">
+        <Typography
+          variant="h1"
+          sx={{
+            textAlign: 'center',
+            width: '100%',
+            fontSize: { xs: '4em', sm: '5em', md: '10em' },
+          }}
+        >
+          {t('1_timeline_title')}
+        </Typography>
         <Timeline />
       </div>
       <div id="image-list">
+        <Typography
+          variant="h1"
+          sx={{
+            mt: { xs: '2em' },
+            textAlign: 'center',
+            width: '100%',
+            fontSize: { xs: '4em', sm: '5em', md: '10em' },
+          }}
+        >
+          {t('1_life_title')}
+        </Typography>
         <ImageList
           imageLoader={getCustomImageLoader({
             imgixDomain,

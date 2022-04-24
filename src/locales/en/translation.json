@@ -1,10 +1,12 @@
 {
+  "1_intro_title": "Intro",
   "1_intro_name": "JustinHuang",
   "1_intro_subtitle": "Restless Soul",
   "1_intro_content_1": "I am a frontend developer with technical skills and product mindset, specialized in React.js ecosystem for web application development.",
   "1_intro_content_2": "Now I am working for the largest E-commerce platform in Hong Kong and working on developing enterprise applications.",
   "1_intro_content_3": "Now I am working for the largest E-commerce platform in Hong Kong and working on developing enterprise applications.",
   "1_intro_content_4": "",
+  "1_timeline_title": "Career",
   "1_timeline_title_1": "Software Engineer",
   "1_timeline_company_1": "Shoalter Technology (HKTV Group)",
   "1_timeline_content_1": "Shoalter Technology is a subsidiary of HKTVmall, the largest E-commerce platform in Hong Kong. The main business of Shoalter is to provide enterprise software solutions for different business models (B2B, B2C, B2B2C).",
@@ -14,5 +16,6 @@
   "1_timeline_title_3": "Product Manager",
   "1_timeline_company_3": "HAITEC (Yulon Group)",
   "1_timeline_content_3": "I am mainly in charge of coordinating with cross-company project teams which includes HAITEC R&D team, Yulon motor manufacturing team and Luxgen Motor brand marketing team on product development and management.",
+  "1_life_title": "Life",
   "1_further_info": "Further Information"
 }
