@@ -1,4 +1,18 @@
-import { createTheme } from '@material-ui/core/styles';
+import { createTheme, Theme } from '@mui/material/styles';
+
+declare module '@mui/material/styles' {
+  interface Theme {
+    textGlow: string;
+    web3Gradient: string;
+    web3Background: string;
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    textGlow: string;
+    web3Gradient: string;
+    web3Background: string;
+  }
+}
 
 const cssVariables = {
   textGlow: '0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%)',
@@ -8,7 +22,7 @@ const cssVariables = {
 };
 
 // Create a theme instance.
-const theme = createTheme({
+const theme: Theme = createTheme({
   palette: {
     primary: {
       main: '#2c2c2d',
