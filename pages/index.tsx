@@ -152,6 +152,7 @@ export default function Home({
             textAlign: 'center',
             width: '100%',
             fontSize: { xs: '4em', sm: '5em', md: '10em' },
+            pb: '0.5em',
           }}
         >
           {t('1_intro_title')}
@@ -170,6 +171,7 @@ export default function Home({
             textAlign: 'center',
             width: '100%',
             fontSize: { xs: '4em', sm: '5em', md: '10em' },
+            pb: '0.5em',
           }}
         >
           {t('1_timeline_title')}
@@ -184,6 +186,7 @@ export default function Home({
             textAlign: 'center',
             width: '100%',
             fontSize: { xs: '4em', sm: '5em', md: '10em' },
+            pb: '0.5em',
           }}
         >
           {t('1_life_title')}

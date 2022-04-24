@@ -73,7 +73,6 @@ export default function StandardImageList({ imageLoader }: { imageLoader: ImageL
     <Box
       sx={{
         height: '100%',
-        paddingTop: { xs: '3em', sm: '10em' },
       }}
     >
       {itemData.map((subArr, index) => (
