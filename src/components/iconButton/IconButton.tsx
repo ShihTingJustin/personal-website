@@ -39,6 +39,7 @@ export default function IconButton({ refs }: { refs: Refs }) {
   return (
     <>
       <IconButtonMui
+        aria-label="menu"
         onClick={handleClick}
         aria-controls={open ? 'account-menu' : undefined}
         aria-haspopup="true"
