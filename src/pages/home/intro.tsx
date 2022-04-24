@@ -13,7 +13,7 @@ export const Intro = ({ imageLoader }: { imageLoader: ImageLoader }) => {
             width={150}
             height={150}
             loader={imageLoader}
-            objectFit="contain"
+            objectFit="cover"
             alt="image"
             src={'me.JPG'}
           />
