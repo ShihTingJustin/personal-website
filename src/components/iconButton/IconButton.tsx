@@ -36,8 +36,6 @@ export default function IconButton({ refs }: { refs: Refs }) {
       });
   };
 
-  console.log(refs);
-
   return (
     <>
       <IconButtonMui
