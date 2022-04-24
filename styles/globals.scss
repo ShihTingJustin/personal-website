@@ -28,6 +28,14 @@ a {
   color: #f6f7f9;
 }
 
+#menu-button {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 10;
+  color: #f6f7f9;
+  }
+
 .block {
   height: 100vh;
   padding: 0 16px;

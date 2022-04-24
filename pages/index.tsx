@@ -5,8 +5,8 @@ import Cookies from 'js-cookie';
 
 import { Typography } from '@mui/material';
 import Typewriter from 'typewriter-effect';
+import IconButton from '@/Components/iconButton/IconButton';
 import Timeline from '@/Components/timeline/Timeline';
-import Switch from '@/Components/switch/Switch';
 import ImageList from '@/Components/imageList/ImageList';
 import { Intro } from '@/Pages/home/intro';
 import { FurtherInfo } from '@/Pages/home/furtherInfo';
@@ -125,6 +125,9 @@ export default function Home({
 
   return (
     <div id="container">
+      <div id="menu-button">
+        <IconButton />
+      </div>
       <div id="cover" className="block">
         <div id="cover-text">
           <Typewriter
@@ -202,7 +205,6 @@ export default function Home({
       <div id="further-info" className="block">
         <FurtherInfo />
       </div>
-      <Switch initialValue={i18n.languages[0] === 'en'} />
     </div>
   );
 }
