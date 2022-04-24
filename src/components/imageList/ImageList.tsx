@@ -82,7 +82,7 @@ export default function StandardImageList({ imageLoader }: { imageLoader: ImageL
             display: 'flex',
             justifyContent: 'center',
             mb: '4px',
-            'div:nth-child(even)': {
+            'div:nth-of-type(even)': {
               m: '0 4px',
             },
           }}
