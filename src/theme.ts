@@ -24,6 +24,7 @@ const cssVariables = {
 // Create a theme instance.
 const theme: Theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
       main: '#2c2c2d',
     },
