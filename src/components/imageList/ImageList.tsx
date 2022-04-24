@@ -96,6 +96,10 @@ export default function StandardImageList({ imageLoader }: { imageLoader: ImageL
                 position: 'relative',
                 overflow: 'hidden',
               }}
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay={300 + Number(subIndex) * 100}
+              data-aos-offset="0"
             >
               <Image
                 loading="lazy"
