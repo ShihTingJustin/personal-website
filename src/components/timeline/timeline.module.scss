@@ -1,6 +1,9 @@
 @import '../../../styles/variables.scss';
 .title {
   width: 6em;
+  &:lang(en) {
+  width: 10em;
+  }
   font-size: 18px;
   font-weight: 600;
   @media (max-width: 768px) {
