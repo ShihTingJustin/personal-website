@@ -16,28 +16,15 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/Assets/*": [
-        "src/assets/*"
-      ],
-      "@/Components/*": [
-        "src/components/*"
-      ],
-      "@/Interfaces/*": [
-        "src/interfaces/*"
-      ],
-      "@/Pages/*": [
-        "src/pages/*"
-      ],
-      "@/Styles/*": [
-        "styles/*"
-      ],
-      "@/Utils/*": [
-        "src/utils/*"
-      ],
-      "@/Constants/*": [
-        "src/constants/*"
-      ],
-    },
+      "@/Assets/*": ["src/assets/*"],
+      "@/Components/*": ["src/components/*"],
+      "@/Google/*": ["src/service/google/*"],
+      "@/Interfaces/*": ["src/interfaces/*"],
+      "@/Pages/*": ["src/pages/*"],
+      "@/Styles/*": ["styles/*"],
+      "@/Utils/*": ["src/utils/*"],
+      "@/Constants/*": ["src/constants/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.tsx"],
   "exclude": ["node_modules"]
