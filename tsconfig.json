@@ -18,7 +18,7 @@
     "paths": {
       "@/Assets/*": ["src/assets/*"],
       "@/Components/*": ["src/components/*"],
-      "@/Google/*": ["src/service/google/*"],
+      "@/Google/*": ["src/google/*"],
       "@/Interfaces/*": ["src/interfaces/*"],
       "@/Pages/*": ["src/pages/*"],
       "@/Styles/*": ["styles/*"],
