@@ -1,11 +1,12 @@
+require('dotenv').config();
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 
 async function googleAuth() {
   try {
-    const doc = new GoogleSpreadsheet(process.env.NEXT_PUBLIC_SPREADSHEET_ID);
+    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID);
     await doc.useServiceAccountAuth({
-      client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL || '',
-      private_key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY || ''.replace(/\\n/g, '\n'),
+      client_email: process.env.GOOGLE_CLIENT_EMAIL || '',
+      private_key: process.env.GOOGLE_PRIVATE_KEY || ''.replace(/\\n/g, '\n'),
     });
     await doc.loadInfo();
     return doc;

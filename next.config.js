@@ -24,6 +24,10 @@ module.exports = {
       use: ['@svgr/webpack'],
     });
 
+    config.module.rules.push({
+      exclude: ['./src/google/'],
+    });
+
     if (process.env.NEXT_ANALYZE) {
       config.plugins.push(
         new BundleAnalyzerPlugin({
