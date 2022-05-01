@@ -1,0 +1,16 @@
+{
+  "name": "google-sheet-i18n-sync",
+  "version": "1.0.0",
+  "description": "google-sheet-i18n-sync",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
