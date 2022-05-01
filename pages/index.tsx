@@ -13,33 +13,13 @@ import { Intro } from '@/Pages/home/intro';
 import { FurtherInfo } from '@/Pages/home/furtherInfo';
 
 import { getCustomImageLoader } from '@/Utils/index';
-import gapi from '@/Google/index';
 
-export default function Home({
-  imgixDomain,
-  imgixSecureURLToken,
-  sheetId,
-  clientEmail,
-  privateKey,
-}: {
-  imgixDomain: string;
-  imgixSecureURLToken: string;
-  sheetId: string;
-  clientEmail: string;
-  privateKey: string;
-}) {
+export default function Home() {
   const introRef = useRef(null);
   const careerRef = useRef(null);
   const lifeRef = useRef(null);
   const infoRef = useRef(null);
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    const doc = gapi({ sheetId, clientEmail, privateKey });
-    // const sheet = doc.sheetsByIndex[0];
-    // console.log(sheet.title);
-    // console.log(sheet.rowCount);
-  }, [sheetId, clientEmail, privateKey]);
 
   useEffect(() => {
     const language = window.navigator.language.split('-')[0] || 'zh';
@@ -101,12 +81,7 @@ export default function Home({
                 >
                   {t('1_intro_title')}
                 </Typography>
-                <Intro
-                  imageLoader={getCustomImageLoader({
-                    imgixDomain,
-                    imgixSecureURLToken,
-                  })}
-                />
+                <Intro imageLoader={getCustomImageLoader({})} />
               </div>
               <div ref={careerRef} id="timeline-wrapper">
                 <Typography
@@ -137,8 +112,6 @@ export default function Home({
                 </Typography>
                 <ImageList
                   imageLoader={getCustomImageLoader({
-                    imgixDomain,
-                    imgixSecureURLToken,
                     imgixParams: { fit: 'crop', ar: '1:1' },
                   })}
                 />
@@ -152,15 +125,4 @@ export default function Home({
       </Routes>
     </BrowserRouter>
   );
-}
-export async function getStaticProps() {
-  return {
-    props: {
-      imgixDomain: process.env.NEXT_IMGIX_DOMAIN,
-      imgixSecureURLToken: process.env.NEXT_IMGIX_SECURE_TOKEN,
-      sheetId: process.env.NEXT_SPREADSHEET_ID,
-      clientEmail: process.env.NEXT_GOOGLE_CLIENT_EMAIL,
-      privateKey: process.env.NEXT_GOOGLE_PRIVATE_KEY,
-    },
-  };
 }

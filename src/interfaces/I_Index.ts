@@ -1,6 +1,4 @@
 interface CustomImageLoaderProps {
-  imgixDomain: string;
-  imgixSecureURLToken: string;
   imgixParams?: {
     // aspect ratio
     ar: string;

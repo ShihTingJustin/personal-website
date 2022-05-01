@@ -81,16 +81,14 @@ export const getIcon = (icon: string) => {
 
 // closure
 export function getCustomImageLoader({
-  imgixDomain,
-  imgixSecureURLToken,
   imgixParams,
 }: CustomImageLoaderProps) {
   return function ({ src, width, quality }: ImageLoaderProps) {
     const client = new ImgixClient({
       useHTTPS: true,
       includeLibraryParam: false,
-      domain: imgixDomain || 'example.imgix.net',
-      secureURLToken: imgixSecureURLToken,
+      domain: process.env.NEXT_PUBLIC_IMGIX_DOMAIN || 'example.imgix.net',
+      secureURLToken: process.env.NEXT_PUBLIC_IMGIX_SECURE_TOKEN,
     });
     const baseUrl = `/${src}`;
     const secureUrl = client.buildURL(baseUrl, {
