@@ -10,6 +10,9 @@ module.exports = {
   //   defaultLocale: 'zh-tw',
   // },
   webpack(config) {
+    config.experiments = {
+      topLevelAwait: true
+    };
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {
@@ -30,7 +33,6 @@ module.exports = {
         }),
       );
     }
-
     return config;
   },
 };
