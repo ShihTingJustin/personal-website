@@ -1,26 +1,39 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 
-interface Credentials {
-  sheetId: string;
-  clientEmail: string;
-  privateKey: string;
-}
-
-async function gapi({ sheetId, clientEmail, privateKey }: Credentials) {
+async function googleAuth() {
   try {
-    const doc = new GoogleSpreadsheet(sheetId);
+    const doc = new GoogleSpreadsheet(process.env.NEXT_PUBLIC_SPREADSHEET_ID);
     await doc.useServiceAccountAuth({
-      client_email: clientEmail,
-      private_key: privateKey.replace(/\\n/g, '\n'),
+      client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL || '',
+      private_key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY || ''.replace(/\\n/g, '\n'),
     });
     await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[0];
-    const rows = await sheet.getRows();
-    // const data = rows.map()
     return doc;
-  } catch (e) {
-    console.log(e);
+  } catch (err) {
+    console.log(err);
   }
 }
 
-export default gapi;
+async function getI18nData() {
+  try {
+    const doc = await googleAuth();
+    const sheet = doc?.sheetsByTitle['personal-website-i18n'];
+    const rows = await sheet?.getRows();
+    let en: [string, string][] = [];
+    let tw: [string, string][] = [];
+
+    rows?.forEach((row) => {
+      en.push([row.index, row.en]);
+      tw.push([row.index, row.tw]);
+    });
+
+    return {
+      en: Object.fromEntries(en),
+      tw: Object.fromEntries(tw),
+    };
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export { getI18nData };
