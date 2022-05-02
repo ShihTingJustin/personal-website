@@ -67,22 +67,20 @@ export const getIcon = (icon: string) => {
     case 'mocha':
       return <MochaIcon width="40" height="40" alt="icon" />;
     case 'linkedin':
-      return <LinkedInIcon />;
+      return <LinkedInIcon width="40" height="40" />;
     case 'github':
-      return <GitHubIcon />;
+      return <GitHubIcon width="40" height="40" />;
     case 'blog':
-      return <RssFeedIcon />;
+      return <RssFeedIcon width="40" height="40" />;
     case 'instagram':
-      return <InstagramIcon />;
+      return <InstagramIcon width="40" height="40" />;
     default:
       return;
   }
 };
 
 // closure
-export function getCustomImageLoader({
-  imgixParams,
-}: CustomImageLoaderProps) {
+export function getCustomImageLoader({ imgixParams }: CustomImageLoaderProps) {
   return function ({ src, width, quality }: ImageLoaderProps) {
     const client = new ImgixClient({
       useHTTPS: true,
