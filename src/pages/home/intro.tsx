@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { getCustomImageLoader } from '@/Utils/index';
+import { useMediaQuery } from '@mui/material';
 
 export const Intro = () => {
   const { t } = useTranslation();
+  const matches = useMediaQuery('(max-width:400px)');
 
   return (
     <>
@@ -13,7 +15,11 @@ export const Intro = () => {
             priority
             width={150}
             height={150}
-            loader={getCustomImageLoader({})}
+            loader={getCustomImageLoader({
+              w: matches ? 200 : 350,
+              fit: 'crop',
+              ar: '1:1',
+            })}
             objectFit="cover"
             alt="image"
             src={'me.JPG'}
