@@ -80,7 +80,7 @@ export const getIcon = (icon: string) => {
 };
 
 // closure
-export function getCustomImageLoader({ imgixParams }: CustomImageLoaderProps) {
+export function getCustomImageLoader({ w, ar, fit }: CustomImageLoaderProps) {
   return function ({ src, width, quality }: ImageLoaderProps) {
     const client = new ImgixClient({
       useHTTPS: true,
@@ -90,8 +90,9 @@ export function getCustomImageLoader({ imgixParams }: CustomImageLoaderProps) {
     });
     const baseUrl = `/${src}`;
     const secureUrl = client.buildURL(baseUrl, {
-      w: width,
-      ...imgixParams,
+      w,
+      ar,
+      fit,
     });
     return secureUrl;
   };

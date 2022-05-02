@@ -81,7 +81,7 @@ export default function Home() {
                 >
                   {t('1_intro_title')}
                 </Typography>
-                <Intro imageLoader={getCustomImageLoader({})} />
+                <Intro />
               </div>
               <div ref={careerRef} id="timeline-wrapper">
                 <Typography
@@ -110,11 +110,7 @@ export default function Home() {
                 >
                   {t('1_life_title')}
                 </Typography>
-                <ImageList
-                  imageLoader={getCustomImageLoader({
-                    imgixParams: { fit: 'crop', ar: '1:1' },
-                  })}
-                />
+                <ImageList />
               </div>
               <div ref={infoRef} id="further-info" className="block">
                 <FurtherInfo />

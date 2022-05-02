@@ -1,5 +1,6 @@
 import React from 'react';
-import Image, { ImageLoader } from 'next/image';
+import Image from 'next/image';
+import { getCustomImageLoader } from '@/Utils/index';
 
 import { useMediaQuery, Box } from '@mui/material';
 
@@ -66,8 +67,8 @@ const itemData = [
   ],
 ];
 
-export default function StandardImageList({ imageLoader }: { imageLoader: ImageLoader }) {
-  const matches = useMediaQuery('(max-width:600px)');
+export default function StandardImageList() {
+  const matches = useMediaQuery('(max-width:400px)');
 
   return (
     <Box
@@ -106,7 +107,11 @@ export default function StandardImageList({ imageLoader }: { imageLoader: ImageL
                 width={matches ? 150 : 250}
                 height={matches ? 150 : 250}
                 objectFit="cover"
-                loader={imageLoader}
+                loader={getCustomImageLoader({
+                  w: matches ? 200 : 350,
+                  fit: 'crop',
+                  ar: '1:1',
+                })}
                 alt={sub.title}
                 src={sub.img}
               />

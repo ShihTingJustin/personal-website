@@ -1,7 +1,8 @@
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import Image, { ImageLoader } from 'next/image';
+import { getCustomImageLoader } from '@/Utils/index';
 
-export const Intro = ({ imageLoader }: { imageLoader: ImageLoader }) => {
+export const Intro = () => {
   const { t } = useTranslation();
 
   return (
@@ -12,7 +13,7 @@ export const Intro = ({ imageLoader }: { imageLoader: ImageLoader }) => {
             priority
             width={150}
             height={150}
-            loader={imageLoader}
+            loader={getCustomImageLoader({})}
             objectFit="cover"
             alt="image"
             src={'me.JPG'}
