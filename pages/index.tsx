@@ -91,6 +91,7 @@ export default function Home() {
                     width: '100%',
                     fontSize: { xs: '4em', sm: '5em', md: '10em' },
                     pb: '0.5em',
+                    pt: i18n.languages[0] === 'en' ? '1em' : 0,
                   }}
                 >
                   {t('1_timeline_title')}
