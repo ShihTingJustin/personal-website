@@ -20,7 +20,8 @@ This is my personal website with features and great performance, it deployed on 
 
 
 ## Chrome Lighthouse Report
-![Screen Shot 2022-04-23 at 19 11 32](https://user-images.githubusercontent.com/56827791/164892112-46f31bc4-efb4-459a-b295-5b68bd2d6e3b.png)
+![Screen Shot 2022-05-02 at 19 25 30](https://user-images.githubusercontent.com/56827791/166227194-c30c3e3f-2ea7-4931-bd18-166fbd25b8ee.png)
+
 
 
 ## Stack
