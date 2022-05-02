@@ -82,6 +82,7 @@ const Timeline = () => {
           <TimelineOppositeContent
             sx={{
               flex: { sm: 1, xs: 0.1 },
+              marginLeft: { xs: -3, sm: 0 },
             }}
           ></TimelineOppositeContent>
           <TimelineSeparator>
