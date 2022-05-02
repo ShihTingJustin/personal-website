@@ -23,12 +23,16 @@ async function getI18nData() {
     let en: [string, string][] = [];
     let tw: [string, string][] = [];
 
+    let languages: string[] | undefined = sheet?.headerValues;
+    languages?.shift();
+
     rows?.forEach((row) => {
       en.push([row.index, row.en]);
       tw.push([row.index, row.tw]);
     });
 
     return {
+      languages,
       en: Object.fromEntries(en),
       tw: Object.fromEntries(tw),
     };
