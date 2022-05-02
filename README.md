@@ -1,18 +1,25 @@
 # Personal Website
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-[**Deployed on Vercel**](https://jhdev.pro/)
+This is my personal website with features and great performance, it deployed on Vercel, [try it now](https://jhdev.pro/).
 
 ## Features
+#### UI
+* RWD
 * Dark futuristic web3 design
 * Animate on scroll effect (AOS)
-* i18n (zh & en)
-* Google Analytics
-* Meta data
-* DNS-prefetch
-* Next.js image loader
 
-## Chrome Lighthouse
+#### Internationalization (i18n)
+* Fetch translation keys from google sheet and convert to JSON in development environment
+
+#### Performance
+* Image optimization by custom image loader and imgix cdn
+* DNS-prefetch
+
+#### SEO and Metrics
+* Meta tags
+* Google Analytics
+
+
+## Chrome Lighthouse Report
 ![Screen Shot 2022-04-23 at 19 11 32](https://user-images.githubusercontent.com/56827791/164892112-46f31bc4-efb4-459a-b295-5b68bd2d6e3b.png)
 
 
@@ -22,8 +29,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * Material UI
 * SCSS
 * Vercel (deployment)
-* imgix (image processing)
+* imgix (image resizing)
 * AWS S3 (image storing)
+* Node.js
+* Google Sheet API
 
 ## Author
 [ShihTingJustin](https://github.com/ShihTingJustin)
