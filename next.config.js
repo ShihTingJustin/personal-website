@@ -1,3 +1,4 @@
+const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
@@ -11,7 +12,7 @@ module.exports = {
   // },
   webpack(config) {
     config.experiments = {
-      topLevelAwait: true
+      topLevelAwait: true,
     };
     config.module.rules.push({
       test: /\.svg$/,
@@ -24,11 +25,7 @@ module.exports = {
       use: ['@svgr/webpack'],
     });
 
-    config.module.rules.push({
-      exclude: ['./src/google/'],
-    });
-
-    if (process.env.NEXT_ANALYZE) {
+    if (process.env.NEXT_PUBLIC_ANALYZE) {
       config.plugins.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'server',
