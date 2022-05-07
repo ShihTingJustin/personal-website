@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <title>JustinHuang - A Restless Soul 👨🏻‍💻</title>
+        <title>JustinHuang - A Curious Soul 👨🏻‍💻</title>
       </Head>
       <ThemeProvider theme={{ ...theme, ...cssVar }}>
         <CssBaseline />
