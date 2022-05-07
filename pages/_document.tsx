@@ -19,7 +19,7 @@ export default function Document() {
           itemProp="description"
           content="Hi, I'm Justin! Welcome to my personal website, you can find more information about me and link to other social media like Linkedin, GitHub, Medium and Instagram."
         />
-        <meta property="og:title" content="JustinHuang - A Restless Soul" key="ogtitle" />
+        <meta property="og:title" content="JustinHuang - A Curious Soul" key="ogtitle" />
         <meta property="og:type" content="website" key="ogtype" />
         <meta property="og:url" content="https://jhdev.pro" key="ogurl" />
         <meta
