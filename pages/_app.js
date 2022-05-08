@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Script from 'next/script';
 import '../styles/globals.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -20,7 +19,7 @@ const cssVar = {
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
-      delay: 175,
+      delay: 350,
     });
   }, []);
 
