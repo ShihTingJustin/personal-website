@@ -19,7 +19,7 @@ export default function Home() {
   const lifeRef = useRef(null);
   const infoRef = useRef(null);
   const { t, i18n } = useTranslation();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const language = window.navigator.language.split('-')[0] || 'zh';
@@ -40,6 +40,10 @@ export default function Home() {
           element={
             <>
               {isLoading ? (
+                <div id="loading-mask">
+                  <Loader setIsLoading={setIsLoading} />
+                </div>
+              ) : (
                 <div id="container">
                   <div id="menu-button" data-aos="fade-up" data-aos-delay={150}>
                     <IconButton
@@ -118,10 +122,6 @@ export default function Home() {
                   <div ref={infoRef} id="further-info" className="block">
                     <FurtherInfo />
                   </div>
-                </div>
-              ) : (
-                <div id="loading-mask">
-                  <Loader setIsLoading={setIsLoading} />
                 </div>
               )}
             </>
