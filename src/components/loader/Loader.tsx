@@ -24,13 +24,13 @@ export default function Loading({ setIsLoading }: { setIsLoading: (data: boolean
       .add({
         targets: '#logo',
         delay: 300,
-        duration: 450,
+        duration: 400,
         easing: 'easeInOutQuart',
         strokeDashoffset: [anime.setDashoffset, 0],
       })
       .add({
         targets: '#logo',
-        duration: 450,
+        duration: 400,
         easing: 'easeInOutQuart',
         opacity: 1,
       })
@@ -57,7 +57,7 @@ export default function Loading({ setIsLoading }: { setIsLoading: (data: boolean
 
   return (
     <div id="logo">
-      <Lottie speed={2.5} width={matches ? 160 : 300} height={matches ? 160 : 300} options={defaultOptions} />
+      <Lottie speed={1.5} width={matches ? 160 : 300} height={matches ? 160 : 300} options={defaultOptions} />
     </div>
   );
 }
