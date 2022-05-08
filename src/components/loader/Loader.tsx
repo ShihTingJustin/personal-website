@@ -17,7 +17,7 @@ export default function Loading({ setIsLoading }: { setIsLoading: (data: boolean
   const matches = useMediaQuery('(max-width:600px)');
   const animate = useCallback(() => {
     const loader = anime.timeline({
-      complete: () => setIsLoading(true),
+      complete: () => setIsLoading(false),
     });
 
     loader
