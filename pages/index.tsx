@@ -41,7 +41,7 @@ export default function Home() {
             <>
               {isLoading ? (
                 <div id="container">
-                  <div id="menu-button">
+                  <div id="menu-button" data-aos="fade-up" data-aos-delay={150}>
                     <IconButton
                       refs={{
                         intro: introRef,
@@ -52,7 +52,7 @@ export default function Home() {
                     />
                   </div>
                   <div id="cover" className="block">
-                    <div id="cover-text">
+                    <div id="cover-text" data-aos="fade-up" data-aos-delay={450}>
                       <Typewriter
                         options={{
                           strings: [
