@@ -97,3 +97,12 @@ export function getCustomImageLoader({ w, ar, fit }: CustomImageLoaderProps) {
     return secureUrl;
   };
 }
+
+export function handleScroll(ref: HTMLElement | null) {
+  if (ref)
+    window.scrollTo({
+      top: ref.offsetTop,
+      left: 0,
+      behavior: 'smooth',
+    });
+}
