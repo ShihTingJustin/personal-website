@@ -119,6 +119,53 @@ a {
   align-items: center;
 }
 
+#further-info {
+  position: relative;
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5em;
+      margin-bottom: 1em;
+      font-size: 0.75em;
+      font-weight: 300;
+      transition: 300ms;
+      text-decoration: none;
+    }
+    @media screen and (min-width: 600px) {
+      a:hover {
+        color: #3cc3e8;
+        transition: 300ms;
+      }
+      a:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        top: 33px;
+        left: 0;
+        background-color: #3cc3e8;
+        transform-origin: bottom right;
+        transition: transform 0.2s ease-out;
+      }
+
+      a:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
 #loading-mask {
   display: flex;
   flex-direction: column;
