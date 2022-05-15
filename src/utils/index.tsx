@@ -25,6 +25,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 export const getIcon = (icon: string) => {
   switch (icon) {
@@ -74,6 +75,8 @@ export const getIcon = (icon: string) => {
       return <RssFeedIcon width="40" height="40" />;
     case 'instagram':
       return <InstagramIcon width="40" height="40" />;
+    case 'mail':
+      return <MailOutlineIcon width="40" height="40" />;
     default:
       return;
   }
@@ -96,4 +99,13 @@ export function getCustomImageLoader({ w, ar, fit }: CustomImageLoaderProps) {
     });
     return secureUrl;
   };
+}
+
+export function handleScroll(ref: HTMLElement | null) {
+  if (ref)
+    window.scrollTo({
+      top: ref.offsetTop,
+      left: 0,
+      behavior: 'smooth',
+    });
 }

@@ -1,5 +1,3 @@
-import { useTranslation } from 'react-i18next';
-
 import { ThemeProvider } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import theme from '../../../src/theme';
@@ -16,6 +14,10 @@ const socialData = [
     url: 'https://github.com/ShihTingJustin',
   },
   {
+    name: 'mail',
+    url: 'mailto:justinhuang777@gmail.com',
+  },
+  {
     name: 'blog',
     url: 'https://medium.com/life-after-hello-world',
   },
@@ -26,7 +28,6 @@ const socialData = [
 ];
 
 export const FurtherInfo = () => {
-  const { t } = useTranslation();
 
   return (
     <ThemeProvider theme={theme}>
@@ -42,7 +43,6 @@ export const FurtherInfo = () => {
           },
         }}
       >
-        <p>{t('1_further_info')}</p>
         <Box
           sx={{
             display: 'flex',

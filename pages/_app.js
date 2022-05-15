@@ -8,6 +8,7 @@ import theme from '../src/theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import '../src/i18n';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const cssVar = {
   textGlow: '0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%)',
@@ -29,10 +30,19 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <title>JustinHuang - A Curious Soul 👨🏻‍💻</title>
       </Head>
-      <ThemeProvider theme={{ ...theme, ...cssVar }}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <ThemeProvider theme={{ ...theme, ...cssVar }}>
+                <CssBaseline />
+                <Component {...pageProps} />
+              </ThemeProvider>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

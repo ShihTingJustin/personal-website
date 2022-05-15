@@ -12,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Switch from '@/Components/switch/Switch';
 import SegmentIcon from '@mui/icons-material/Segment';
 import { useMediaQuery, Box } from '@mui/material';
-
+import { handleScroll } from '@/Utils/index';
 interface Refs {
   [key: string]: React.MutableRefObject<HTMLElement | null>;
 }
@@ -27,15 +27,6 @@ export default function IconButton({ refs }: { refs: Refs }) {
   };
   const handleClose = () => {
     setAnchorEl(null);
-  };
-
-  const handleScroll = (ref: HTMLElement | null) => {
-    if (ref)
-      window.scrollTo({
-        top: ref.offsetTop,
-        left: 0,
-        behavior: 'smooth',
-      });
   };
 
   return (
