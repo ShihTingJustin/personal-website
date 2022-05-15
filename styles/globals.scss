@@ -49,12 +49,11 @@ a {
 
 #cover {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
 
   #cover-text {
-    width: 100%;
     font-size: 2.5em;
     margin-left: 0.25em;
     text-shadow: $text-glow;
