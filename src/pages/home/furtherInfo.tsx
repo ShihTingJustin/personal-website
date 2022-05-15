@@ -28,7 +28,6 @@ const socialData = [
 ];
 
 export const FurtherInfo = () => {
-
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -96,6 +95,15 @@ export const FurtherInfo = () => {
           ))}
         </Box>
       </Box>
+      <footer>
+        <a
+          href="https://github.com/ShihTingJustin/personal-website"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Designed and developed by JustinHuang in Taiwan
+        </a>
+      </footer>
     </ThemeProvider>
   );
 };

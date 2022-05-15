@@ -119,6 +119,28 @@ a {
   align-items: center;
 }
 
+#further-info {
+  position: relative;
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    a {
+      padding: 2em;
+      font-size: 0.75em;
+      font-weight: 300;
+      transition: 300ms;
+    }
+    a:hover {
+      color: #3cc3e8;
+      transition: 300ms;
+    }
+  }
+}
+
 #loading-mask {
   display: flex;
   flex-direction: column;
