@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react';
 import Lottie from 'react-lottie';
-import animationData from '@/Assets/logo/lottie-react-logo.json';
+import animationData from '@/Assets/lottie/react-logo.json';
 import anime from 'animejs';
 import { useMediaQuery } from '@mui/material';
 
