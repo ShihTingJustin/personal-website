@@ -1,6 +1,8 @@
 import { ThemeProvider } from '@mui/material/styles';
-import { Box } from '@mui/material';
+import { useMediaQuery, Box } from '@mui/material';
 import theme from '../../../src/theme';
+import Lottie from 'react-lottie';
+import animationData from '@/Assets/lottie/external-link.json';
 
 import { getIcon } from '@/Utils/index';
 
@@ -27,7 +29,18 @@ const socialData = [
   },
 ];
 
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
 export const FurtherInfo = () => {
+  const matches = useMediaQuery('(max-width:600px)');
+
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -96,13 +109,16 @@ export const FurtherInfo = () => {
         </Box>
       </Box>
       <footer>
-        <a
-          href="https://github.com/ShihTingJustin/personal-website"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Designed and developed by JustinHuang in Taiwan
-        </a>
+        <div>
+          <a
+            href="https://github.com/ShihTingJustin/personal-website"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Designed and developed by JustinHuang in Taiwan
+            {matches && <Lottie speed={1.5} width={45} height={45} options={defaultOptions} />}
+          </a>
+        </div>
       </footer>
     </ThemeProvider>
   );
