@@ -42,3 +42,27 @@ $bg: radial-gradient(
   // animation-play-state: running;
   // animation-name: flow;
 }
+
+@mixin speed-underscore-effect($bottom, $left) {
+  a:hover {
+    color: #3cc3e8;
+    transition: 300ms;
+  }
+  a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: $bottom;
+    left: $left;
+    background-color: #3cc3e8;
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+  }
+
+  a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

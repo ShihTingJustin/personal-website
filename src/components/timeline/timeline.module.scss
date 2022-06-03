@@ -1,6 +1,6 @@
 @import '../../../styles/variables.scss';
 .title {
-  width: 6em;
+  width: fit-content;
   &:lang(en) {
     width: 10em;
   }
@@ -12,10 +12,10 @@
   @include web3-flow-effect();
 }
 
-.company-name:hover {
-  background: $web3-gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.company-name {
+  width: fit-content;
+  position: relative;
+  @include speed-underscore-effect(0, 0);
 }
 
 .period {
