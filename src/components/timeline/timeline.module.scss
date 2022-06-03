@@ -2,17 +2,14 @@
 .title {
   width: 6em;
   &:lang(en) {
-  width: 10em;
+    width: 10em;
   }
   font-size: 18px;
   font-weight: 600;
   @media (max-width: 768px) {
     font-size: 16px;
   }
-  text-shadow: $text-glow;
-  background: $web3-gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include web3-flow-effect();
 }
 
 .company-name:hover {

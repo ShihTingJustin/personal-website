@@ -60,25 +60,6 @@ a {
     background: $web3-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 200%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: rgb(189, 0, 255);
-    background-image: linear-gradient(
-      90deg,
-      rgb(0, 163, 255) 0%,
-      rgb(189, 0, 255) 50%,
-      rgb(0, 163, 255) 100%
-    );
-    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
-    // animation-duration: 3s;
-    // animation-timing-function: ease-in-out;
-    // animation-delay: 0s;
-    // animation-iteration-count: infinite;
-    // animation-direction: normal;
-    // animation-fill-mode: none;
-    // animation-play-state: running;
-    // animation-name: bHafHd;
   }
 }
 
@@ -101,19 +82,18 @@ a {
       margin-left: 10px;
     }
     .title {
-      font-size: 2.3em;
+      font-size: 2.5em;
       line-height: 1em;
-      &:lang(en) {
-        font-size: 1.7em;
+      @media screen and (max-width: 600px) {
+        &:lang(en) {
+          font-size: 2em;
+        }
       }
     }
     .subtitle {
       padding-top: 0.75em;
-      font-size: 1.1em;
-      text-shadow: $text-glow;
-      background: $web3-gradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 1.55em;
+      @include web3-flow-effect();
     }
     .photo {
       position: relative;
