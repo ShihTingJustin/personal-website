@@ -60,6 +60,25 @@ a {
     background: $web3-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: rgb(189, 0, 255);
+    background-image: linear-gradient(
+      90deg,
+      rgb(0, 163, 255) 0%,
+      rgb(189, 0, 255) 50%,
+      rgb(0, 163, 255) 100%
+    );
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
+    // animation-duration: 3s;
+    // animation-timing-function: ease-in-out;
+    // animation-delay: 0s;
+    // animation-iteration-count: infinite;
+    // animation-direction: normal;
+    // animation-fill-mode: none;
+    // animation-play-state: running;
+    // animation-name: bHafHd;
   }
 }
 
@@ -72,7 +91,12 @@ a {
     display: flex;
     width: 100%;
     align-items: center;
-    padding-left: 2em;
+    @media screen and (max-width: 600px) {
+      justify-content: space-around;
+    }
+    @media screen and (min-width: 600px) {
+      justify-content: center;
+    }
     .title-and-subtitle-wrapper {
       margin-left: 10px;
     }
@@ -105,9 +129,13 @@ a {
 
   .title-wrapper,
   .content {
-    margin: 0.75em 2em;
+    margin: 0.75em auto;
     line-height: 1.5em;
-    max-width: 600px;
+    font-weight: 400;
+    max-width: 340px;
+    @media screen and (min-width: 600px) {
+      max-width: 600px;
+    }
   }
 }
 
@@ -135,7 +163,7 @@ a {
       padding: 1.5em;
       margin-bottom: 1em;
       font-size: 0.75em;
-      font-weight: 300;
+      font-weight: 400;
       transition: 300ms;
       text-decoration: none;
     }
