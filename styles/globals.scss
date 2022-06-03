@@ -72,24 +72,28 @@ a {
     display: flex;
     width: 100%;
     align-items: center;
-    padding-left: 2em;
+    @media screen and (max-width: 600px) {
+      justify-content: space-around;
+    }
+    @media screen and (min-width: 600px) {
+      justify-content: center;
+    }
     .title-and-subtitle-wrapper {
       margin-left: 10px;
     }
     .title {
-      font-size: 2.3em;
+      font-size: 2.5em;
       line-height: 1em;
-      &:lang(en) {
-        font-size: 1.7em;
+      @media screen and (max-width: 600px) {
+        &:lang(en) {
+          font-size: 2em;
+        }
       }
     }
     .subtitle {
       padding-top: 0.75em;
-      font-size: 1.1em;
-      text-shadow: $text-glow;
-      background: $web3-gradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 1.55em;
+      @include web3-flow-effect();
     }
     .photo {
       position: relative;
@@ -105,9 +109,13 @@ a {
 
   .title-wrapper,
   .content {
-    margin: 0.75em 2em;
+    margin: 0.75em auto;
     line-height: 1.5em;
-    max-width: 600px;
+    font-weight: 400;
+    max-width: 340px;
+    @media screen and (min-width: 600px) {
+      max-width: 600px;
+    }
   }
 }
 
@@ -132,35 +140,14 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 1.5em;
-      margin-bottom: 1em;
+      margin-bottom: 2.5em;
       font-size: 0.75em;
-      font-weight: 300;
+      font-weight: 400;
       transition: 300ms;
       text-decoration: none;
     }
     @media screen and (min-width: 600px) {
-      a:hover {
-        color: #3cc3e8;
-        transition: 300ms;
-      }
-      a:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 1px;
-        top: 33px;
-        left: 0;
-        background-color: #3cc3e8;
-        transform-origin: bottom right;
-        transition: transform 0.2s ease-out;
-      }
-
-      a:hover:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
+      @include speed-underscore-effect(0, 0);
     }
   }
 }
