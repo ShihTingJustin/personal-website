@@ -6,7 +6,7 @@ This is my personal website with features and great performance, it deployed on 
 * RWD
 * Dark futuristic web3 design
 * Animate on scroll effect ([AOS](https://michalsnik.github.io/aos/))
-* entrance animation ([Loffie](https://lottiefiles.com))
+* entrance animation ([Lottie](https://lottiefiles.com))
 
 #### Internationalization (i18n)
 * Fetch translation keys from google sheet and convert to JSON in development environment
