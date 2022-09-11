@@ -39,7 +39,6 @@ const theme: Theme = createTheme({
           fontWeight: 200,
           fontFamily:
             '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-          backgroundColor: '#07050f',
           backgroundImage: cssVariables.web3Background,
         },
       },
