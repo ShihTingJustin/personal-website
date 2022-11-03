@@ -21,7 +21,7 @@ const socialData = [
   },
   {
     name: 'blog',
-    url: 'https://medium.com/life-after-hello-world',
+    url: 'https://www.sthdev.app',
   },
   {
     name: 'instagram',
