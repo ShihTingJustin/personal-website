@@ -13,9 +13,10 @@
 }
 
 .company-name {
+  color: #000;
   width: fit-content;
   position: relative;
-  @include speed-underscore-effect(0, 0);
+  @include speed-underscore-effect(0, 0, #000);
 }
 
 .period {

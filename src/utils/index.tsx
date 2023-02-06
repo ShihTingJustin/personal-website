@@ -36,7 +36,7 @@ export const getIcon = (icon: string) => {
     case 'redux':
       return <ReduxIcon width="40" height="40" alt="icon" />;
     case 'next':
-      return <NextIcon style={{ fill: '#fff' }} alt="icon" />;
+      return <NextIcon alt="icon" />;
     case 'sass':
       return <SassIcon width="50" height="40" viewBox="0 0 512 512" alt="icon" />;
     case 'tailwind':
