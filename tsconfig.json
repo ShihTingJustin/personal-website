@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -19,6 +19,7 @@
       "@/Assets/*": ["src/assets/*"],
       "@/Components/*": ["src/components/*"],
       "@/Google/*": ["src/google/*"],
+      "@/Hooks/*": ["src/hooks/*"],
       "@/Interfaces/*": ["src/interfaces/*"],
       "@/Pages/*": ["src/pages/*"],
       "@/Styles/*": ["styles/*"],

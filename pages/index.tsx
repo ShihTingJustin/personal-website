@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
-
+import useBgChangeByScroll from '@/Hooks/useBgChangeByScroll';
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 
@@ -34,6 +34,8 @@ export default function Home() {
     [introRef, careerRef, lifeRef, infoRef],
   );
 
+  useBgChangeByScroll({ condition: !isLoading, dependencies: [isLoading] });
+
   useEffect(() => {
     const language = window.navigator.language.split('-')[0] || 'zh';
     Cookies.set('lang', language);
@@ -63,7 +65,7 @@ export default function Home() {
           <div id="menu-button" data-aos="fade-up" data-aos-delay={150}>
             <IconButton refs={refs} />
           </div>
-          <div id="cover" className="block">
+          <div id="cover" className="block section" data-bg="#000">
             <div id="cover-text" data-aos="fade-up" data-aos-delay={450}>
               <Typewriter
                 options={{
@@ -83,7 +85,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div ref={introRef} id="intro-wrapper" className="block">
+          <div ref={introRef} id="intro-wrapper" className="block section" data-bg="#9BB5CE">
             <Typography
               variant="h1"
               sx={{
@@ -97,10 +99,11 @@ export default function Home() {
             </Typography>
             <Intro />
           </div>
-          <div ref={careerRef} id="timeline-wrapper">
+          <div ref={careerRef} id="timeline-wrapper" className="section" data-bg="#F5F5F0">
             <Typography
               variant="h1"
               sx={{
+                // color: '#000',
                 textAlign: 'center',
                 width: '100%',
                 fontSize: { xs: '4em', sm: '5em', md: '10em' },
@@ -112,7 +115,7 @@ export default function Home() {
             </Typography>
             <Timeline />
           </div>
-          <div ref={lifeRef} id="image-list">
+          <div ref={lifeRef} id="image-list" className="section" data-bg="#F9E5C9">
             <Typography
               variant="h1"
               sx={{
@@ -127,7 +130,7 @@ export default function Home() {
             </Typography>
             <ImageList />
           </div>
-          <div ref={infoRef} id="further-info" className="block">
+          <div ref={infoRef} id="further-info" className="block section" data-bg="#171E27">
             <FurtherInfo />
           </div>
         </div>
