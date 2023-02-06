@@ -7,7 +7,8 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  background-color: #121212;
+  // background-color: #121212;
+  transition: background 1s ease-in-out;
 }
 
 ::-webkit-scrollbar {
@@ -35,6 +36,12 @@ a {
   right: 1em;
   z-index: 10;
   color: #f6f7f9;
+}
+
+.section {
+  &[data-bg='yellow'] {
+    color: #333;
+  }
 }
 
 .block {
@@ -68,6 +75,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: rgba(0, 0, 0, 0.87);
 
   .title-wrapper {
     display: flex;
@@ -120,6 +128,10 @@ a {
   }
 }
 
+#timeline-wrapper {
+  color: #000;
+}
+
 #image-list {
   display: flex;
   flex-direction: column;
@@ -148,7 +160,7 @@ a {
       text-decoration: none;
     }
     @media screen and (min-width: 600px) {
-      @include speed-underscore-effect(0, 0);
+      @include speed-underscore-effect(0, 0, #fff);
     }
   }
 }
