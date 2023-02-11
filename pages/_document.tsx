@@ -31,9 +31,10 @@ export default function Document() {
         {/* Global site tag (gtag.js) - Google Analytics */}
         <Script
           async
+          id="ga-script-1"
           src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
         />
-        <Script strategy="lazyOnload">
+        <Script id="ga-script-2" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || []; function gtag()
         {dataLayer.push(arguments);}
         gtag('js', new Date()); gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');`}
