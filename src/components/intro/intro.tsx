@@ -31,7 +31,6 @@ export const Intro = () => {
               fit: 'crop',
               ar: '1:1',
             })}
-            objectFit="cover"
             alt="image"
             src={'me.JPG'}
           />
