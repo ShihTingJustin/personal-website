@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@mui/material/styles';
 import { useMediaQuery, Box } from '@mui/material';
-import theme from '../../../src/theme';
+import theme from '../../theme';
 import Lottie from 'react-lottie';
 import animationData from '@/Assets/lottie/external-link.json';
 

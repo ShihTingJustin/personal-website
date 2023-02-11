@@ -11,8 +11,8 @@ import '../src/i18n';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const cssVar = {
-  textGlow: '0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%)',
-  web3Gradient: 'linear-gradient(to right, #30cfd0, #c43ad6)',
+  // textGlow: '0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%)',
+  // web3Gradient: 'linear-gradient(to right, #30cfd0, #c43ad6)',
 };
 
 function MyApp({ Component, pageProps }) {
@@ -30,15 +30,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <ThemeProvider theme={{ ...theme, ...cssVar }}>
-                <CssBaseline />
-                <Component {...pageProps} />
-              </ThemeProvider>
-            }
-          />
+          <Route path="/" element={<Component {...pageProps} />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -9,6 +9,8 @@ body {
   scrollbar-width: none; /* Firefox */
   // background-color: #121212;
   transition: background 1s ease-in-out;
+  font-weight: 200;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
 ::-webkit-scrollbar {

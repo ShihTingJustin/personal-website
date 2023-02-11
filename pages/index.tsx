@@ -1,19 +1,29 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import useBgChangeByScroll from '@/Hooks/useBgChangeByScroll';
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 
 import { Typography } from '@mui/material';
 import Typewriter from 'typewriter-effect';
-import IconButton from '@/Components/iconButton/IconButton';
-import Timeline from '@/Components/timeline/Timeline';
-import ImageList from '@/Components/imageList/ImageList';
-import { Intro } from '@/Pages/home/intro';
-import { FurtherInfo } from '@/Pages/home/furtherInfo';
 import Loader from '@/Components/loader/Loader';
 import { useLocation } from 'react-router-dom';
 import { handleScroll } from '@/Utils/index';
 import { Heading } from '@/Interfaces/I_Index';
+
+const IconButton = dynamic(() =>
+  import('../src/components/iconButton/IconButton').then((mod) => mod.default),
+);
+const Intro = dynamic(() => import('../src/components/intro/intro').then((mod) => mod.Intro));
+const Timeline = dynamic(() =>
+  import('../src/components/timeline/Timeline').then((mod) => mod.default),
+);
+const ImageList = dynamic(() =>
+  import('../src/components/imageList/ImageList').then((mod) => mod.default),
+);
+const FurtherInfo = dynamic(() =>
+  import('../src/components/furtherInfo/furtherInfo').then((mod) => mod.FurtherInfo),
+);
 
 export default function Home() {
   const introRef = useRef(null);
@@ -85,20 +95,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div ref={introRef} id="intro-wrapper" className="block section" data-bg="#9BB5CE">
-            <Typography
-              variant="h1"
-              sx={{
-                textAlign: 'center',
-                width: '100%',
-                fontSize: { xs: '4em', sm: '5em', md: '10em' },
-                pb: '0.5em',
-              }}
-            >
-              {t('1_intro_title')}
-            </Typography>
-            <Intro />
-          </div>
+          <Intro />
           <div ref={careerRef} id="timeline-wrapper" className="section" data-bg="#F5F5F0">
             <Typography
               variant="h1"
