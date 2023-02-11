@@ -1,6 +1,4 @@
-import { ThemeProvider } from '@mui/material/styles';
 import { useMediaQuery, Box } from '@mui/material';
-import theme from '../../theme';
 import Lottie from 'react-lottie';
 import animationData from '@/Assets/lottie/external-link.json';
 
@@ -42,13 +40,11 @@ export const FurtherInfo = () => {
   const matches = useMediaQuery('(max-width:600px)');
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <Box
         sx={{
           textAlign: 'center',
           '>p': {
-            textShadow: theme.textGlow,
-            background: theme.web3Gradient,
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             fontSize: { xs: '18px', sm: '24px' },
@@ -120,6 +116,6 @@ export const FurtherInfo = () => {
           </a>
         </div>
       </footer>
-    </ThemeProvider>
+    </>
   );
 };
