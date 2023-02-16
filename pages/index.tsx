@@ -3,17 +3,11 @@ import dynamic from 'next/dynamic';
 import useBgChangeByScroll from '@/Hooks/useBgChangeByScroll';
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
-
 import { Typography } from '@mui/material';
 import Typewriter from 'typewriter-effect';
 import Loader from '@/Components/loader/Loader';
-import { useLocation } from 'react-router-dom';
-import { handleScroll } from '@/Utils/index';
-import { Heading } from '@/Interfaces/I_Index';
 
-const IconButton = dynamic(() =>
-  import('../src/components/iconButton/IconButton').then((mod) => mod.default),
-);
+import Navigator from '@/Components/navigator/Navigator';
 const Intro = dynamic(() => import('../src/components/intro/intro').then((mod) => mod.Intro));
 const Timeline = dynamic(() =>
   import('../src/components/timeline/Timeline').then((mod) => mod.default),
@@ -26,23 +20,8 @@ const FurtherInfo = dynamic(() =>
 );
 
 export default function Home() {
-  const introRef = useRef(null);
-  const careerRef = useRef(null);
-  const lifeRef = useRef(null);
-  const infoRef = useRef(null);
   const { t, i18n } = useTranslation();
-  const { hash } = useLocation();
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  const refs = useMemo(
-    () => ({
-      intro: introRef,
-      career: careerRef,
-      life: lifeRef,
-      info: infoRef,
-    }),
-    [introRef, careerRef, lifeRef, infoRef],
-  );
 
   useBgChangeByScroll({ condition: !isLoading, dependencies: [isLoading] });
 
@@ -57,13 +36,6 @@ export default function Home() {
     document.documentElement.lang = i18n.languages[0];
   }, [i18n.languages]);
 
-  useEffect(() => {
-    if (hash && !isLoading && refs) {
-      const position = hash.slice(1, hash.length) as Heading;
-      handleScroll(refs[position].current);
-    }
-  }, [isLoading, refs, hash]);
-
   return (
     <>
       {isLoading ? (
@@ -72,9 +44,7 @@ export default function Home() {
         </div>
       ) : (
         <div id="container">
-          <div id="menu-button" data-aos="fade-up" data-aos-delay={150}>
-            <IconButton refs={refs} />
-          </div>
+          <Navigator />
           <div id="cover" className="block section" data-bg="#000">
             <div id="cover-text" data-aos="fade-up" data-aos-delay={450}>
               <Typewriter
@@ -96,7 +66,7 @@ export default function Home() {
             </div>
           </div>
           <Intro />
-          <div ref={careerRef} id="timeline-wrapper" className="section" data-bg="#F5F5F0">
+          <div id="timeline-wrapper" className="section" data-bg="#F5F5F0">
             <Typography
               variant="h1"
               sx={{
@@ -112,7 +82,7 @@ export default function Home() {
             </Typography>
             <Timeline />
           </div>
-          <div ref={lifeRef} id="image-list" className="section" data-bg="#F9E5C9">
+          <div id="image-list" className="section" data-bg="#F9E5C9">
             <Typography
               variant="h1"
               sx={{
@@ -127,7 +97,7 @@ export default function Home() {
             </Typography>
             <ImageList />
           </div>
-          <div ref={infoRef} id="further-info" className="block section" data-bg="#171E27">
+          <div id="further-info" className="block section" data-bg="#171E27">
             <FurtherInfo />
           </div>
         </div>
