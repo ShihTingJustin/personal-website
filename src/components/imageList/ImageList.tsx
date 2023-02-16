@@ -106,7 +106,6 @@ export default function StandardImageList() {
                 loading="lazy"
                 width={matches ? 150 : 250}
                 height={matches ? 150 : 250}
-                objectFit="cover"
                 loader={getCustomImageLoader({
                   w: matches ? 200 : 350,
                   fit: 'crop',
