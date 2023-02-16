@@ -21,7 +21,7 @@
       "@/Google/*": ["src/google/*"],
       "@/Hooks/*": ["src/hooks/*"],
       "@/Interfaces/*": ["src/interfaces/*"],
-      "@/Pages/*": ["src/pages/*"],
+      "@/Pages/*": ["pages/*"],
       "@/Styles/*": ["styles/*"],
       "@/Utils/*": ["src/utils/*"],
       "@/Constants/*": ["src/constants/*"]
